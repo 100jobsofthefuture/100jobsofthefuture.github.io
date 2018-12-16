@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tool test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <style>
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+              box-sizing: border-box;
+            }
+            *, *:before, *:after {
+              box-sizing: inherit;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+            li {
+                font-size: 1.2rem;
+            }
+            .sortable {
+                padding-left: 0;
+                list-style-type: none;
+            }
+            .sortable li {
+                max-width: 500px;
+                margin-bottom: 5px;
+                color: #555;
+                background: #eee;
+                line-height: 1.2;
+                border-radius: 6px;
+                padding: 0.75em 0.5em;
+                cursor: pointer;
+            }
+            .tool {
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+                overflow-x: hidden;
+            }
+            .wrapper {
+                width: 100%;
+                display: flex;
+                overflow-x: hidden;
+            }
+            .question {
+                width: 100%;
+                flex-shrink: 0;
+                height: 100%;
+                padding: 0 10px;
+            }
+            .scores {
+                text-align: center;
+            }
+            .pagination {
+                display: flex;
+            }
+            .pagination a {
+                display: block;
+                flex: 1;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tool">
+
+            <div class="wrapper">
+                <div id="q1" class="question">
+                    <p>1: Please order the below statements from most like you to least like you:</p>
+                    <p><small>Drag and drop to reorder</small><p>
+                    <ul class="sortable">
+                        <li data-code="R">R: I enjoy making or fixing things with my hands, using tools and equipment</li>
+                        <li data-code="I">I: I enjoy reading and thinking about solutions to problems</li>
+                        <li data-code="A">A: I enjoy using my artistic and creative talents</li>
+                        <li data-code="S">S: I enjoy teaching or helping others</li>
+                        <li data-code="E">E: I enjoy being in charge, leading and persuading others</li>
+                        <li data-code="C">C: I enjoy keeping records and organising things</li>
+                    </ul>
+                    <div class="pagination"><a href="#q2" class="next">Next</a></div>
+                </div>
+                <div id="q2" class="question">
+                    <p>2: Please order the below statements from most like you to least like you:</p>
+                    <p><small>Drag and drop to reorder</small><p>
+                    <ul class="sortable">
+                        <li data-code="R">R: I am good at practical tasks and knowing how things work</li>
+                        <li data-code="I">I: I am good at thinking logically, solving problems and doing research</li>
+                        <li data-code="A">A: I am good at using my imagination and coming up with creative ideas</li>
+                        <li data-code="S">S: I am good at leading, persuading and motivating other people</li>
+                        <li data-code="E">E: I am good at following procedures accurately and keeping careful records</li>
+                        <li data-code="C">C: NOTE: Still confirming wording</li>
+                    </ul>
+                    <div class="pagination"><a href="#q1" class="back">Back</a> <a href="#q3" class="next">Next</a></div>
+                </div>
+                <div id="q3" class="question">
+                    <p>3: Please order the below statements from most like you to least like you:</p>
+                    <p><small>Drag and drop to reorder</small><p>
+                    <ul class="sortable">
+                        <li data-code="R">R: Mechanic, gardener, driver, carpenter, machinery operator, tradesperson</li>
+                        <li data-code="I">I: Biologist, engineer, physicist, botanist, surgeon, mathematician</li>
+                        <li data-code="A">A: Musician, journalist, interior designer, writer, actor, fashion designer</li>
+                        <li data-code="S">S: Teacher, counsellor, nurse, community worker</li>
+                        <li data-code="E">E: Salesperson, manager, lawyer, politician, entrepreneur</li>
+                        <li data-code="C">C: Book keeper, bank worker, postal officer, court reporter, procurement / purchasing officer</li>
+                    </ul>
+                    <div class="pagination"><a href="#q2" class="back">Back</a></div>
+                </div>
+            </div>
+        </div>
+        <p class="scores">R [<span id="Rscore"></span>] I [<span id="Iscore"></span>] A [<span id="Ascore"></span>] S [<span id="Sscore"></span>] E [<span id="Escore"></span>] C [<span id="Cscore"></span>]<p>
+        <script>
+
+        $( document ).ready(function() {
+            function updateScore() {
+                var Rscore = 0;
+                var Iscore = 0;
+                var Ascore = 0;
+                var Sscore = 0;
+                var Escore = 0;
+                var Cscore = 0;
+                $( '.question' ).each( function( index ) {
+                    $( this ).find( 'li' ).each( function( index ) {
+                        var varName = $( this ).attr( 'data-code' )+'score';
+                        switch (varName) {
+                            case 'Rscore':
+                                Rscore += (index-6)*-1;
+                                break;
+                            case 'Iscore':
+                                Iscore += (index-6)*-1;
+                                break;
+                            case 'Ascore':
+                                Ascore += (index-6)*-1;
+                                break;
+                            case 'Sscore':
+                                Sscore += (index-6)*-1;
+                                break;
+                            case 'Escore':
+                                Escore += (index-6)*-1;
+                                break;
+                            case 'Cscore':
+                                Cscore += (index-6)*-1;
+                                break;
+                        }
+                    });
+                });
+                $( '.scores span' ).each( function( index ) {
+                    var spanId = $( this ).attr( 'id' );
+                    switch (spanId) {
+                        case 'Rscore':
+                            $( this ).text( Rscore );
+                            break;
+                        case 'Iscore':
+                            $( this ).text( Iscore );
+                            break;
+                        case 'Ascore':
+                            $( this ).text( Ascore );
+                            break;
+                        case 'Sscore':
+                            $( this ).text( Sscore );
+                            break;
+                        case 'Escore':
+                            $( this ).text( Escore );
+                            break;
+                        case 'Cscore':
+                            $( this ).text(Cscore );
+                            break;
+                    }
+
+                });
+            }
+            // update RIASEC scores on load
+            updateScore();
+
+            // initiate sortable with change
+            $( ".sortable" ).sortable({
+              stop: function( event, ui ) {}
+            });
+            $( ".sortable" ).on( "sortstop", function( event, ui ) {
+                // update RIASEC scores on sort change
+                updateScore();
+            });
+
+            // question pagination
+            $( '.next, .back' ).on( 'click', function( event ) {
+                event.preventDefault();
+                var width = $( '.wrapper' ).width();
+                if( $( this ).hasClass( 'next' ) ) {
+                    scrollLeftValue = "+="+width;
+                } else {
+                    scrollLeftValue = "-="+width;
+                }
+                $( '.wrapper' ).animate({
+                    scrollLeft: scrollLeftValue
+                }, 600, function() {
+                    // Animation complete.
+                });
+            });
+
+        } );
+
+        </script>
+
+    </body>
+</html>
