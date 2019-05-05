@@ -9,6 +9,10 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <style>
+            :root {
+              --green: rgba(75,182,161);
+              --blue: rgba(0,52,120);
+            }
             /* apply a natural box layout model to all elements, but allowing components to change */
             html {
               box-sizing: border-box;
@@ -16,12 +20,94 @@
             *, *:before, *:after {
               box-sizing: inherit;
             }
+
+            body {
+              height: 100vh;
+              overflow-y: hidden;
+              margin: 0;
+              padding: 0;
+              font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+              font-weight: 300;
+              transition: margin-top 1s ease;
+            }
+            h2 {
+              font-weight: 300;
+              font-size: 1.6rem;
+              color: var(--green);
+              margin: 0 0 1em 0;
+            }
             p {
-                font-size: 1.4rem;
+                font-size: 1rem;
+                line-height: 1.6;
             }
             li {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
+            .button, .button:visited {
+              color: var(--blue);
+              display: inline-block;
+              padding: 8px 24px;
+              line-height: 1;
+              border: 1px solid var(--blue);
+              border-radius: 6px;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: 400;
+            }
+            .button:hover {
+              color: #fff;
+              background-color: var(--blue);
+            }
+
+            .logo {
+              margin: 0;
+              padding: 0 10px;
+              line-height: 0;
+              text-indent: -9999px;
+              max-width: 640px;
+              background: #fff;
+            }
+            .logo::after {
+              content: "";
+              display: block;
+              height: 0;
+              width: 100%;
+              padding-bottom: 60%;
+              background-image: url('/img/logo-640by810.png');
+              background-position: bottom;
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+            @media only screen and (min-width: 768px) {
+              .logo {
+
+              }
+            }
+
+            .intro {
+              height: 100vh;
+              overflow-y: auto;
+              position: relative;
+            }
+            .intro .bodycopy {
+              padding: 2em;
+              max-width: 600px;
+              margin: 0 auto;
+            }
+            .cta {
+              position: sticky;
+              bottom: 0;
+              background: rgba(255,255,255,0.9);
+              color: var(--blue);
+              padding: 1em;
+            }
+            .cta p {
+              line-height: 1.4;
+              max-width: 320px;
+              margin: 0 auto 0.5em auto;
+              text-align: center;
+            }
+
             .sortable {
                 padding-left: 0;
                 list-style-type: none;
@@ -52,6 +138,20 @@
                 flex-shrink: 0;
                 height: 100%;
                 padding: 0 10px;
+                overflow-y: auto;
+            }
+            .question p {
+              line-height: 1.4;
+              margin: 1em 0 0.5em 0;
+            }
+            .question p.small {
+              color: var(--green);
+              font-size: 80%;
+              font-weight: 400;
+              margin: 1em 0 0.25em 0;
+            }
+            .question ul {
+              margin: 0 0 0.5em 0;
             }
             .scores {
                 text-align: center;
@@ -60,9 +160,7 @@
                 display: flex;
             }
             .pagination a {
-                display: block;
-                flex: 1;
-                background-color: #000;
+                background-color: var(--blue);
                 color: #fff;
                 text-align: center;
                 padding: 10px;
@@ -71,45 +169,58 @@
         </style>
     </head>
     <body>
-        <div class="tool">
-
+        <section class="intro">
+            <h1 class="logo">100 Jobs of the Future</h1>
+            <div class="bodycopy">
+              <h2>What might future work look like for you?</h2>
+              In the future, could you be a smart dust wrangler? A biofilm plumber? A robot ethicist? An offworld habitat designer? A personal brand manager?</p>
+              <p>Everyone has characteristics that make them unique. Different people have different combinations of interests, aptitudes, and skills.</p>
+              <p>This quiz has been designed to identify some of your career interests and aptitudes. It is not a fully detailed assessment — while you may have stronger interests in some areas than in others, you may also find that you can relate to more than one.</p>
+              <p>On the basis of your career profile, the jobs explorer will recommend some of the ‘100 Jobs of the Future’ that you might like to explore.</p>
+            </div>
+            <div class="cta">
+              <p>Take our short 4 question quiz to find out what jobs of the future you may thrive on</p>
+              <p><a id="start-button" class="button down-arrow" href="#tool">Start</a></p>
+            </div>
+        </section>
+        <div id="tool" class="tool">
             <div class="wrapper">
                 <div id="q1" class="question">
-                    <p>1: Please order the below statements from most like you to least like you:</p>
-                    <p><small>Drag and drop to reorder</small><p>
+                    <p>Please order thses statements from most like you to least like you:</p>
+                    <p class="small">Drag and drop to reorder</p>
                     <ul class="sortable">
-                        <li data-code="R">R: I enjoy making or fixing things with my hands, using tools and equipment</li>
-                        <li data-code="I">I: I enjoy reading and thinking about solutions to problems</li>
-                        <li data-code="A">A: I enjoy using my artistic and creative talents</li>
-                        <li data-code="S">S: I enjoy teaching or helping others</li>
-                        <li data-code="E">E: I enjoy being in charge, leading and persuading others</li>
-                        <li data-code="C">C: I enjoy keeping records and organising things</li>
+                        <li data-code="R">I enjoy making or fixing things with my hands, using tools and equipment</li>
+                        <li data-code="I">I enjoy reading and thinking about solutions to problems</li>
+                        <li data-code="A">I enjoy using my artistic and creative talents</li>
+                        <li data-code="S">I enjoy teaching or helping others</li>
+                        <li data-code="E">I enjoy being in charge, leading and persuading others</li>
+                        <li data-code="C">I enjoy keeping records and organising things</li>
                     </ul>
                     <div class="pagination"><a href="#q2" class="next">Next</a></div>
                 </div>
                 <div id="q2" class="question">
-                    <p>2: Please order the below statements from most like you to least like you:</p>
-                    <p><small>Drag and drop to reorder</small><p>
+                    <p>Please order these statements from most like you to least like you:</p>
+                    <p class="small">Drag and drop to reorder</p>
                     <ul class="sortable">
-                        <li data-code="R">R: I am good at practical tasks and knowing how things work</li>
-                        <li data-code="I">I: I am good at thinking logically, solving problems and doing research</li>
-                        <li data-code="A">A: I am good at using my imagination and coming up with creative ideas</li>
-                        <li data-code="S">S: I am good at leading, persuading and motivating other people</li>
-                        <li data-code="E">E: I am good at following procedures accurately and keeping careful records</li>
-                        <li data-code="C">C: NOTE: Still confirming wording</li>
+                        <li data-code="R">I am good at practical tasks and knowing how things work</li>
+                        <li data-code="I">I am good at thinking logically, solving problems and doing research</li>
+                        <li data-code="A">I am good at using my imagination and coming up with creative ideas</li>
+                        <li data-code="S">I am good at leading, persuading and motivating other people</li>
+                        <li data-code="E">I am good at following procedures accurately and keeping careful records</li>
+                        <li data-code="C">NOTE: Still confirming wording</li>
                     </ul>
                     <div class="pagination"><a href="#q1" class="back">Back</a> <a href="#q3" class="next">Next</a></div>
                 </div>
                 <div id="q3" class="question">
-                    <p>3: Please order the below statements from most like you to least like you:</p>
-                    <p><small>Drag and drop to reorder</small><p>
+                    <p>Please order these statements from most like you to least like you:</p>
+                    <p class="small">Drag and drop to reorder</p>
                     <ul class="sortable">
-                        <li data-code="R">R: Mechanic, gardener, driver, carpenter, machinery operator, tradesperson</li>
-                        <li data-code="I">I: Biologist, engineer, physicist, botanist, surgeon, mathematician</li>
-                        <li data-code="A">A: Musician, journalist, interior designer, writer, actor, fashion designer</li>
-                        <li data-code="S">S: Teacher, counsellor, nurse, community worker</li>
-                        <li data-code="E">E: Salesperson, manager, lawyer, politician, entrepreneur</li>
-                        <li data-code="C">C: Book keeper, bank worker, postal officer, court reporter, procurement / purchasing officer</li>
+                        <li data-code="R">Mechanic, gardener, driver, carpenter, machinery operator, tradesperson</li>
+                        <li data-code="I">Biologist, engineer, physicist, botanist, surgeon, mathematician</li>
+                        <li data-code="A">Musician, journalist, interior designer, writer, actor, fashion designer</li>
+                        <li data-code="S">Teacher, counsellor, nurse, community worker</li>
+                        <li data-code="E">Salesperson, manager, lawyer, politician, entrepreneur</li>
+                        <li data-code="C">Book keeper, bank worker, postal officer, court reporter, procurement / purchasing officer</li>
                     </ul>
                     <div class="pagination"><a href="#q2" class="back">Back</a></div>
                 </div>
@@ -202,6 +313,12 @@
                 }, 600, function() {
                     // Animation complete.
                 });
+            });
+
+            // start button
+            $( '#start-button' ).on( 'click', function( event ) {
+                event.preventDefault();
+                $( 'body' ).css( 'margin-top', '-100vh' );
             });
 
         } );
