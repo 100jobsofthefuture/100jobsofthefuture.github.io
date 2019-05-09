@@ -134,13 +134,14 @@ body.noScroll .overlay {
 }
 .overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0,0,0,0.6);
 }
+
 a {
   color: lighten($ford-blue, 30%);
   text-decoration: none;
@@ -300,21 +301,51 @@ button.mobile-menu::before {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+header {
+  
+}
+.logo {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  max-width: 480px;
+  background: #fff;
+}
+.logo::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 100%;
+  padding-bottom: 60%;
+  background-image: url('/img/logo-640by810.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1180px) {
+  .logo {
+    transform: translateX(-40px);
+  }
+}
+
 .report aside.contents {
   background: #fff;
   color: #555;
   width: 300px;
   height: 100%;
-  position: fixed;
   overflow-y: scroll;
   overflow-x: visible;
+  position: fixed;
+  top: 0px;
   left: -300px;
   transition: left 1s ease;
   z-index: 1;
 }
 .report aside.contents.open {
   top: 0px;
-  left: 0px;
+  left : 0px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 3em;
@@ -352,7 +383,10 @@ button.mobile-menu::before {
 @media only screen and (min-width: 768px) {
   .report aside.contents {
     width: 200px;
-    left:auto;
+    left: auto;
+    position: sticky;
+    top: 20px;
+    float: left;
   }
   .report article {
     margin-left: 220px;
@@ -375,11 +409,13 @@ article {
   /*background: pink;*/
 }
 aside.pullquote {
-  width: 300px;
+  width: 100%;
+  max-width: 600px;
   text-align: center;
   margin: 4em auto;
 }
 aside.pullquote p {
+  font-size: 2em;
   display: inline;
   color: white;
   background: $deakin-green;
