@@ -5,9 +5,9 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Tool test</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <style>
             :root {
               --green: rgba(75,182,161);
@@ -28,8 +28,8 @@
             body {
               margin: 0;
               padding: 0;
-              font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-              font-weight: 300;
+              font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+              font-weight: 400;
               transition: margin-top 1s ease;
             }
             h2 {
@@ -142,6 +142,9 @@
                 height: 100vh;
                 padding: 0 10px;
                 overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             .question p {
               line-height: 1.4;
@@ -160,7 +163,24 @@
                 text-align: center;
             }
             .pagination {
+                margin: auto 0 5px 0;
                 display: flex;
+            }
+            @media only screen and (min-width: 450px) {
+              .pagination {
+                  margin: inherit;
+              }
+            }
+            .pagination .progress {
+              margin: 0;
+              padding: 0;
+              list-style: none;
+              width: 50%;
+              display: flex;
+            }
+            .pagination .progress li {
+              display: block;
+              width: 20%;
             }
             .pagination a {
                 background-color: var(--blue);
@@ -168,6 +188,8 @@
                 text-align: center;
                 padding: 10px;
                 text-decoration: none;
+                display: block;
+                width: 50%;
             }
         </style>
     </head>
@@ -199,7 +221,16 @@
                         <li data-code="E">I enjoy being in charge, leading and persuading others</li>
                         <li data-code="C">I enjoy keeping records and organising things</li>
                     </ul>
-                    <div class="pagination"><a href="#q2" class="next">Next</a></div>
+                    <div class="pagination">
+                      <ul class="progress">
+                        <li class="selected"></li>
+                        <li></li>
+                        <li></li>
+                        <li class="pitstop"></li>
+                        <li></li>
+                      </ul>
+                      <a href="#q2" class="next">Next</a>
+                    </div>
                 </div>
                 <div id="q2" class="question">
                     <p>Please order these statements from most like you to least like you:</p>
@@ -208,29 +239,58 @@
                         <li data-code="R">I am good at practical tasks and knowing how things work</li>
                         <li data-code="I">I am good at thinking logically, solving problems and doing research</li>
                         <li data-code="A">I am good at using my imagination and coming up with creative ideas</li>
-                        <li data-code="S">I am good at leading, persuading and motivating other people</li>
-                        <li data-code="E">I am good at following procedures accurately and keeping careful records</li>
-                        <li data-code="C">NOTE: Still confirming wording</li>
+                        <li data-code="S">I am good at helping people learn new things</li>
+                        <li data-code="E">I am good at leading, persuading and motivating other people</li>
+                        <li data-code="C">I am good at following procedures accurately and keeping careful records</li>
                     </ul>
-                    <div class="pagination"><a href="#q1" class="back">Back</a> <a href="#q3" class="next">Next</a></div>
+                    <div class="pagination">
+                      <ul class="progress">
+                        <li></li>
+                        <li class="selected"></li>
+                        <li></li>
+                        <li class="pitstop"></li>
+                        <li></li>
+                      </ul>
+                      <a href="#q3" class="next">Next</a>
+                    </div>
                 </div>
                 <div id="q3" class="question">
                     <p>Please order these statements from most like you to least like you:</p>
                     <p class="small">Drag and drop to reorder</p>
                     <ul class="sortable">
-                        <li data-code="R">Mechanic, gardener, driver, carpenter, machinery operator, tradesperson</li>
-                        <li data-code="I">Biologist, engineer, physicist, botanist, surgeon, mathematician</li>
-                        <li data-code="A">Musician, journalist, interior designer, writer, actor, fashion designer</li>
+                        <li data-code="R">Mechanic, gardener, hairdresser, driver, carpenter, food worker, machinery operator, tradesperson, chef</li>
+                        <li data-code="I">Biologist, engineer, surgeon, mathematician, software designer</li>
+                        <li data-code="A">Musician, fashion designer, interior designer, actor</li>
                         <li data-code="S">Teacher, counsellor, nurse, community worker</li>
-                        <li data-code="E">Salesperson, manager, lawyer, politician, entrepreneur</li>
-                        <li data-code="C">Book keeper, bank worker, postal officer, court reporter, procurement / purchasing officer</li>
+                        <li data-code="E">Manager, lawyer, politician, running my own small business</li>
+                        <li data-code="C">Office worker, secretary, data entry and organisation, purchasing officer, accounts clerk</li>
                     </ul>
-                    <div class="pagination"><a href="#q2" class="back">Back</a></div>
+                    <div class="pagination">
+                      <ul class="progress">
+                        <li></li>
+                        <li></li>
+                        <li class="selected"></li>
+                        <li class="pitstop"></li>
+                        <li></li>
+                      </ul>
+                      <a href="#q4" class="next">Next</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <p class="scores">R [<span id="Rscore"></span>] I [<span id="Iscore"></span>] A [<span id="Ascore"></span>] S [<span id="Sscore"></span>] E [<span id="Escore"></span>] C [<span id="Cscore"></span>]<p>
         <script>
+
+        /*!
+         * jQuery UI Touch Punch 0.2.3
+         *
+         * Copyright 2011–2014, Dave Furfero
+         * Dual licensed under the MIT or GPL Version 2 licenses.
+         *
+         * Depends:
+         *  jquery.ui.widget.js
+         *  jquery.ui.mouse.js
+         */
+        !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 
         $( document ).ready(function() {
             function updateScore() {
