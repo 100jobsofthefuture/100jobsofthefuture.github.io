@@ -22,9 +22,11 @@
             }
 
             body {
-              height: 100vh;
-              /*height: calc(var(--vh, 1vh) * 100);*/
               overflow-y: hidden;
+            }
+            boy,
+            .full-height {
+              height: 100vh;
             }
             body {
               margin: 0;
@@ -87,12 +89,11 @@
               }
             }
 
-            .intro {
-              height: 100%;
+            #intro {
               overflow-y: auto;
               position: relative;
             }
-            .intro .bodycopy {
+            #intro .bodycopy {
               padding: 2em;
               max-width: 600px;
               margin: 0 auto;
@@ -126,6 +127,10 @@
                 color: var(--blue);
                 border-color: var(--blue);
               }
+              .cta .button:hover {
+                color: #fff;
+                background-color: var(--blue);
+              }
             }
 
             .sortable {
@@ -142,11 +147,15 @@
                 padding: 0.75em 0.5em;
                 cursor: pointer;
             }
-            .tool {
+            #tool {
                 width: 100%;
                 max-width: 500px;
                 margin: 0 auto;
                 overflow-x: hidden;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             .wrapper {
                 width: 100%;
@@ -158,10 +167,6 @@
                 flex-shrink: 0;
                 height: 100%;
                 padding: 0 10px;
-                overflow-y: auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
             }
             .question p {
               line-height: 1.4;
@@ -182,8 +187,9 @@
             .pagination {
                 margin: auto 0 5px 0;
                 display: flex;
+                width: 100%;
             }
-            @media only screen and (min-width: 450px) {
+            @media only screen and (min-width: 375px) {
               .question p {
                 margin-bottom: 0.5em;
               }
@@ -217,10 +223,31 @@
                 display: block;
                 width: 50%;
             }
+
+            #areas {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 2em;
+            }
+            .areasofwork {
+              list-style: none;
+              padding: 0;
+              display: flex;
+              flex-wrap: wrap;
+            }
+            .areasofwork li {
+              display: block;
+              background: #eee;
+              margin: 0 4px 4px 0;
+              padding: 24px 8px;
+              flex-grow: 1;
+              text-align: center;
+            }
         </style>
     </head>
     <body>
-        <section class="intro">
+        <section id="intro" class="full-height">
             <h1 class="logo">100 Jobs of the Future</h1>
             <div class="bodycopy">
               <h2>What might future work look like for you?</h2>
@@ -231,10 +258,10 @@
             </div>
             <div class="cta">
               <p>Take our short 4 question quiz to find out what jobs of the future you may thrive on</p>
-              <p><a id="start-button" class="button down-arrow" href="#tool">Start</a></p>
+              <p><a id="start-button" class="scrollDown button down-arrow" href="#tool">Start</a></p>
             </div>
         </section>
-        <div id="tool" class="tool">
+        <div id="tool" class="full-height">
             <div class="wrapper">
                 <div id="q1" class="question">
                     <p>Please order thses statements from most like you to least like you:</p>
@@ -302,8 +329,51 @@
                       <a href="#q4" class="next">Next</a>
                     </div>
                 </div>
+                <div i="q4" class="question">
+                  <p class="small">Based on your answers to the survey, you are most strongly a:</p>
+                  <div id="primary"></div>
+                  <p class="small">In your second strongest profile area you are a:</p>
+                  <div id="secondary"></div>
+                  <div id="ptypes" style="display: none">
+                    <p class="Rscore"><strong>Practical</strong> person who is likely to be interested in roles that involve physical dexterity or activity, and who likes to solve problems by trying things out rather than sitting and thinking through options.</p>
+                    <p class="Iscore"><strong>Investigative</strong> person who is more theoretical than practical, and may prefer to work alone rather than with other people. ‘Investigating’ people like to work with data and information, and prefer to think things through and make decisions based on the facts.</p>
+                    <p class="Cscore"><strong>Creative</strong> person who tends to like working imaginatively with ideas and concepts and trying out new ways of doing things – whether a new art technique or a new way of understanding information. People in this category tend to dislike structure and rules, and will often enjoy working with people.</p>
+                    <p class="Sscore"><strong>Social</strong> person who tends to enjoy helping people. ‘Social’ people are more likely to enjoy working directly with others and building relationships, and tend to most enjoy activities where they can show their caring nature and do work that helps others.</p>
+                    <p class="Escore"><strong>Enterprising</strong> person who tends to enjoy presenting persuading arguments and leading others. ‘Enterprising’ people are more likely to enjoy working with people in a leadership role, are good at communicating and persuading other people. They can also display a tendency towards caring what others think of them, and can be ambitious.</p>
+                    <p class="Cscore"><strong>Enterprising</strong> person who tends to be data focused and methodical. ’Organised’ people are likely to enjoy working within clear guidelines. They may be less likely to enjoy working with people or in roles with little structure or order.</p>
+                  </div>
+                  <p>This doesn't sound like me</p>
+                  <p><a class="button up-arrow" href="">Start again</a></p>
+                  <p>Fair enough</p>
+                  <p><a id="continue-button" class="scrollDown button down-arrow" href="#areas">Continue</a></p>
             </div>
         </div>
+      </div>
+      <div id="areas" class="full-height">
+          <p>Here is a list of areas of future work. Select up to three to explore examples of future jobs</p>
+          <p class="small">Scroll over ? for more detail.</p>
+          <ul class="areasofwork">
+            <li class="R I A S E C">Strengthening local communities and neighbourhoods</li>
+            <li class="R I A S E C">Personalising information and communication</li>
+            <li class="R I S E C">Advanced farming and food production</li>
+            <li class="R I A S E">Leisure and entertainment</li>
+            <li class="I A S E">Extended lifespans</li>
+            <li class="I S E C">Education and lifelong learning</li>
+            <li class="I A S E C">Law and ethics</li>
+            <li class="R I A S E C">Health and wellbeing</li>
+            <li class="R I A S C">Scientific discovery</li>
+            <li class="R I A S E C">Environmental restoration and renewal</li>
+            <li class="R I A S E C">Advanced city design</li>
+            <li class="R I A S E C">Business innovation</li>
+            <li class="R I A S E C">Space exploration</li>
+            <li class="R I A S E C">Micro- and nano-technology</li>
+            <li class="R I A S E C">Virtual and augmented reality</li>
+            <li class="R I A S E C">Robotics and drones</li>
+            <li class="R I A S E C">Artificial intelligence</li>
+            <li class="R I A S E C">Digital networks</li>
+            <li class="R I A E C">3D printing and new materials</li>
+          </ul>
+      </div>
         <script>
 
         /*!
@@ -321,60 +391,46 @@
 
         $( document ).ready(function() {
             function updateScore() {
-                var Rscore = 0;
-                var Iscore = 0;
-                var Ascore = 0;
-                var Sscore = 0;
-                var Escore = 0;
-                var Cscore = 0;
+                var scores = { Rscore: 0, Iscore: 0, Ascore: 0, Sscore: 0, Escore: 0, Cscore: 0 };
                 $( '.question' ).each( function( index ) {
                     $( this ).find( 'li' ).each( function( index ) {
                         var varName = $( this ).attr( 'data-code' )+'score';
                         switch (varName) {
                             case 'Rscore':
-                                Rscore += (index-6)*-1;
+                                scores.Rscore += (index-6)*-1;
                                 break;
                             case 'Iscore':
-                                Iscore += (index-6)*-1;
+                                scores.Iscore += (index-6)*-1;
                                 break;
                             case 'Ascore':
-                                Ascore += (index-6)*-1;
+                                scores.Ascore += (index-6)*-1;
                                 break;
                             case 'Sscore':
-                                Sscore += (index-6)*-1;
+                                scores.Sscore += (index-6)*-1;
                                 break;
                             case 'Escore':
-                                Escore += (index-6)*-1;
+                                scores.Escore += (index-6)*-1;
                                 break;
                             case 'Cscore':
-                                Cscore += (index-6)*-1;
+                                scores.Cscore += (index-6)*-1;
                                 break;
                         }
                     });
                 });
-                $( '.scores span' ).each( function( index ) {
-                    var spanId = $( this ).attr( 'id' );
-                    switch (spanId) {
-                        case 'Rscore':
-                            $( this ).text( Rscore );
-                            break;
-                        case 'Iscore':
-                            $( this ).text( Iscore );
-                            break;
-                        case 'Ascore':
-                            $( this ).text( Ascore );
-                            break;
-                        case 'Sscore':
-                            $( this ).text( Sscore );
-                            break;
-                        case 'Escore':
-                            $( this ).text( Escore );
-                            break;
-                        case 'Cscore':
-                            $( this ).text(Cscore );
-                            break;
-                    }
+                console.log('R:' + scores.Rscore +'; I:' + scores.Iscore +'; A:' + scores.Ascore +'; S:' + scores.Sscore +'; E:' + scores.Escore +'; C:' + scores.Cscore);
+                var highest = Object.keys(scores).reduce(function(a, b){ return scores[a] > scores[b] ? a : b });
+                console.log('highest:' + highest);
+                scores[highest] = -Infinity;
+                var secondHighest = Object.keys(scores).reduce(function(a, b){ return scores[a] > scores[b] ? a : b });
+                console.log('2nd highest:' + secondHighest);
 
+                //update primary and secondary results
+                // remove current primary and secondary descriptions then copy new highest descriptions
+                $.when($('#primary').empty()).done(function() {
+                  $('#primary').append($('.'+highest).clone());
+                });
+                $.when($('#secondary').empty()).done(function() {
+                  $('#secondary').append($('.'+secondHighest).clone());
                 });
             }
             // update RIASEC scores on load
@@ -422,10 +478,14 @@
                 });
             });
 
-            // start button
+            // scrollDown
             $( '#start-button' ).on( 'click', function( event ) {
                 event.preventDefault();
                 $( 'body' ).css( 'margin-top', '-100vh' );
+            });
+            $( '#continue-button' ).on( 'click', function( event ) {
+                event.preventDefault();
+                $( 'body' ).css( 'margin-top', '-200vh' );
             });
 
         } );
