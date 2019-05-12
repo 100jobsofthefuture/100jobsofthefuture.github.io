@@ -23,7 +23,7 @@
 
             body {
               height: 100vh;
-              height: calc(var(--vh, 1vh) * 100);
+              /*height: calc(var(--vh, 1vh) * 100);*/
               overflow-y: hidden;
             }
             body {
@@ -101,8 +101,8 @@
               position: sticky;
               bottom: 0;
               z-index: 999;
-              background: rgba(255,255,255,0.9);
-              color: var(--blue);
+              background: rgba(0,52,120,0.9);
+              color: #fff;
               padding: 1em;
             }
             .cta p {
@@ -110,6 +110,22 @@
               max-width: 320px;
               margin: 0 auto 0.5em auto;
               text-align: center;
+            }
+            .cta .button,
+            .cta .button:visited {
+              color: #fff;
+              border-color: #fff;
+            }
+            @media only screen and (min-width: 768px) {
+              .cta {
+                background: transparent;
+                color: var(--blue);
+              }
+              .cta .button,
+              .cta .button:visited {
+                color: var(--blue);
+                border-color: var(--blue);
+              }
             }
 
             .sortable {
@@ -149,25 +165,34 @@
             }
             .question p {
               line-height: 1.4;
-              margin: 1em 0 0.5em 0;
+              margin: 1em 0 0 0;
             }
             .question p.small {
               color: var(--green);
               font-size: 80%;
               font-weight: 400;
-              margin: 1em 0 0.25em 0;
+              margin: 0 0 0.25em 0;
             }
             .question ul {
               margin: 0 0 0.5em 0;
             }
-            .scores {
-                text-align: center;
+            .question ul li {
+              font-size: 0.9em;
             }
             .pagination {
                 margin: auto 0 5px 0;
                 display: flex;
             }
             @media only screen and (min-width: 450px) {
+              .question p {
+                margin-bottom: 0.5em;
+              }
+              .question p.small {
+                margin-top: 1em;
+              }
+              .question ul li {
+                font-size: 1em;
+              }
               .pagination {
                   margin: inherit;
               }
@@ -293,17 +318,6 @@
          */
         !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-        let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-        // We listen to the resize event
-        window.addEventListener('resize', () => {
-          // We execute the same script as before
-          let vh = window.innerHeight * 0.01;
-          document.documentElement.style.setProperty('--vh', `${vh}px`);
-        });
 
         $( document ).ready(function() {
             function updateScore() {
@@ -375,14 +389,31 @@
                 updateScore();
             });
 
+            // reset scroll left on page refresh
+            $( '.wrapper' ).scrollLeft(0);
+            // reset scroll left on page resize
+            $( window ).resize(function() {
+              var width = $( '.wrapper' ).width();
+              var scrollLeftValue = $( '.wrapper' ).scrollLeft();
+              console.log(scrollLeftValue);
+              if (scrollLeftValue < width/3) {
+                $( '.wrapper' ).scrollLeft(0);
+              }
+              else if (scrollLeftValue < width*2/3) {
+                $( '.wrapper' ).scrollLeft(width);
+              }
+              else {
+                $( '.wrapper' ).scrollLeft(2*width);
+              }
+            });
             // question pagination
             $( '.next, .back' ).on( 'click', function( event ) {
                 event.preventDefault();
                 var width = $( '.wrapper' ).width();
                 if( $( this ).hasClass( 'next' ) ) {
-                    scrollLeftValue = "+="+width;
+                    var scrollLeftValue = "+="+width;
                 } else {
-                    scrollLeftValue = "-="+width;
+                    var scrollLeftValue = "-="+width;
                 }
                 $( '.wrapper' ).animate({
                     scrollLeft: scrollLeftValue
