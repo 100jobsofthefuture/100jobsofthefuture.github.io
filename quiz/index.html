@@ -105,7 +105,7 @@
               margin: 0 auto;
             }
             .cta {
-
+              position: sticky;
               width: 100%;
               bottom: 0;
               z-index: 999;
@@ -231,29 +231,66 @@
                 width: 50%;
             }
 
-            #areas {
 
-            }
             .areas-wrapper {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              padding: 2em;
+              padding: 0 10px;
               max-width: 700px;
             }
             .areasofwork {
               list-style: none;
               padding: 0;
-              display: flex;
-              flex-wrap: wrap;
+            }
+            @media only screen and (min-width: 700px) {
+              #areas {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              }
+              .areasofwork {
+                display: flex;
+                flex-wrap: wrap;
+              }
             }
             .areasofwork li {
+              font-size: 0.9em;
               display: block;
+              flex-grow: 1;
+            }
+            @media only screen and (min-width: 640px) {
+              .areasofwork li {
+                font-size: 1em;
+              }
+            }
+            .areasofwork input[type="checkbox"] {
+              opacity: 0;
+              position: absolute;
+              left: -9999px;
+            }
+            .areasofwork label {
               background: #eee;
               margin: 0 4px 4px 0;
-              padding: 24px 8px;
-              flex-grow: 1;
-              text-align: center;
+              padding: 12px 8px 12px 28px;
+              display: block;
+              position: relative;
+            }
+            .areasofwork label::before {
+              content: "";
+              display: inline-block;
+              height: 16px;
+              width: 16px;
+              background-image: url('../css/feather/square.svg');
+              background-repeat: no-repeat;
+              background-size: 100%;
+              position: absolute;
+              left: 4px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            .areasofwork  input[type="checkbox"]:checked + label {
+              background: var(--green);
+            }
+            .areasofwork  input[type="checkbox"]:checked + label::before {
+              background-image: url('../css/feather/check-square.svg');
             }
         </style>
     </head>
@@ -366,25 +403,25 @@
           <p>Here is a list of areas of future work. Select up to three to explore examples of future jobs</p>
           <p class="small">Scroll over ? for more detail.</p>
           <ul class="areasofwork">
-            <li class="R I A S E C">Strengthening local communities and neighbourhoods</li>
-            <li class="R I A S E C">Personalising information and communication</li>
-            <li class="R I S E C">Advanced farming and food production</li>
-            <li class="R I A S E">Leisure and entertainment</li>
-            <li class="I A S E">Extended lifespans</li>
-            <li class="I S E C">Education and lifelong learning</li>
-            <li class="I A S E C">Law and ethics</li>
-            <li class="R I A S E C">Health and wellbeing</li>
-            <li class="R I A S C">Scientific discovery</li>
-            <li class="R I A S E C">Environmental restoration and renewal</li>
-            <li class="R I A S E C">Advanced city design</li>
-            <li class="R I A S E C">Business innovation</li>
-            <li class="R I A S E C">Space exploration</li>
-            <li class="R I A S E C">Micro- and nano-technology</li>
-            <li class="R I A S E C">Virtual and augmented reality</li>
-            <li class="R I A S E C">Robotics and drones</li>
-            <li class="R I A S E C">Artificial intelligence</li>
-            <li class="R I A S E C">Digital networks</li>
-            <li class="R I A E C">3D printing and new materials</li>
+            <li class="R I A S E C"><input id="aow1" type="checkbox"><label for="aow1">Strengthening local communities and neighbourhoods</label></li>
+            <li class="R I A S E C"><input id="aow2" type="checkbox"><label for="aow2">Personalising information and communication</label></li>
+            <li class="R I S E C"><input id="aow3" type="checkbox"><label for="aow3">Advanced farming and food production</label></li>
+            <li class="R I A S E"><input id="aow4" type="checkbox"><label for="aow4">Leisure and entertainment</label></li>
+            <li class="I A S E"><input id="aow5" type="checkbox"><label for="aow5">Extended lifespans</label></li>
+            <li class="I S E C"><input id="aow6" type="checkbox"><label for="aow6">Education and lifelong learning</label></li>
+            <li class="I A S E C"><input id="aow7" type="checkbox"><label for="aow7">Law and ethics</label></li>
+            <li class="R I A S E C"><input id="aow8" type="checkbox"><label for="aow8">Health and wellbeing</label></li>
+            <li class="R I A S C"><input id="aow9" type="checkbox"><label for="aow9">Scientific discovery</label></li>
+            <li class="R I A S E C"><input id="aow10" type="checkbox"><label for="aow10">Environmental restoration and renewal</label></li>
+            <li class="R I A S E C"><input id="aow11" type="checkbox"><label for="aow11">Advanced city design</label></li>
+            <li class="R I A S E C"><input id="aow12" type="checkbox"><label for="aow12">Business innovation</label></li>
+            <li class="R I A S E C"><input id="aow13" type="checkbox"><label for="aow13">Space exploration</label></li>
+            <li class="R I A S E C"><input id="aow14" type="checkbox"><label for="aow14">Micro- and nano-technology</label></li>
+            <li class="R I A S E C"><input id="aow15" type="checkbox"><label for="aow15">Virtual and augmented reality</label></li>
+            <li class="R I A S E C"><input id="aow16" type="checkbox"><label for="aow16">Robotics and drones</label></li>
+            <li class="R I A S E C"><input id="aow17" type="checkbox"><label for="aow17">Artificial intelligence</label></li>
+            <li class="R I A S E C"><input id="aow18" type="checkbox"><label for="aow18">Digital networks</label></li>
+            <li class="R I A E C"><input id="aow19" type="checkbox"><label for="aow19">3D printing and new materials</label></li>
           </ul>
         </div>
       </div>
