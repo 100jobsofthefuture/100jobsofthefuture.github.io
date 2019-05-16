@@ -232,9 +232,10 @@
             }
 
 
-            .areas-wrapper {
+            #areas {
               padding: 0 10px;
               max-width: 700px;
+              margin: 0 auto;
             }
             .areasofwork {
               list-style: none;
@@ -252,6 +253,8 @@
               }
             }
             .areasofwork li {
+              display: none;
+              position: relative;
               font-size: 0.9em;
               display: block;
               flex-grow: 1;
@@ -269,7 +272,7 @@
             .areasofwork label {
               background: #eee;
               margin: 0 4px 4px 0;
-              padding: 12px 8px 12px 28px;
+              padding: 12px 28px;
               display: block;
               position: relative;
             }
@@ -291,6 +294,30 @@
             }
             .areasofwork  input[type="checkbox"]:checked + label::before {
               background-image: url('../css/feather/check-square.svg');
+            }
+            .areasofwork li a {
+              display: inline-block;
+              height: 16px;
+              width: 16px;
+              background-image: url('../css/feather/help-circle.svg');
+              background-repeat: no-repeat;
+              background-size: 100%;
+              position: absolute;
+              right: 16px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+            .areasofwork li .more-info {
+              display: block;
+              width: 100%;
+              padding: 12px;
+            }
+            .areasofwork input[disabled="disabled"] + label {
+              opacity: 0.6;
+            }
+
+            .button.results {
+              display: none;
             }
         </style>
     </head>
@@ -403,7 +430,7 @@
           <p>Here is a list of areas of future work. Select up to three to explore examples of future jobs</p>
           <p class="small">Scroll over ? for more detail.</p>
           <ul class="areasofwork">
-            <li class="R I A S E C"><input id="aow1" type="checkbox"><label for="aow1">Strengthening local communities and neighbourhoods</label></li>
+            <li class="R I A S E C"><input id="aow1" type="checkbox"><label for="aow1">Strengthening local communities and neighbourhoods</label><a class="info" href="" title="Localisation is a trend that is about reconnecting people with their local places, cultures and communities. It is a counter movement to globalisation and the development of big cities."></a></li>
             <li class="R I A S E C"><input id="aow2" type="checkbox"><label for="aow2">Personalising information and communication</label></li>
             <li class="R I S E C"><input id="aow3" type="checkbox"><label for="aow3">Advanced farming and food production</label></li>
             <li class="R I A S E"><input id="aow4" type="checkbox"><label for="aow4">Leisure and entertainment</label></li>
@@ -423,6 +450,7 @@
             <li class="R I A S E C"><input id="aow18" type="checkbox"><label for="aow18">Digital networks</label></li>
             <li class="R I A E C"><input id="aow19" type="checkbox"><label for="aow19">3D printing and new materials</label></li>
           </ul>
+          <p><a class="button results" href="">See results</a></p>
         </div>
       </div>
     </main>
@@ -481,6 +509,29 @@
                 scores[highest] = -Infinity;
                 var secondHighest = Object.keys(scores).reduce(function(a, b){ return scores[a] > scores[b] ? a : b });
                 console.log('2nd highest:' + secondHighest);
+
+                /* show appropriate areas of work in question 4 */
+                $('.areasofwork li').hide();
+                switch (highest) {
+                  case 'Rscore':
+                      $('.areasofwork li.R').show();
+                      break;
+                  case 'Iscore':
+                      $('.areasofwork li.I').show();
+                      break;
+                  case 'Ascore':
+                      $('.areasofwork li.A').show();
+                      break;
+                  case 'Sscore':
+                      $('.areasofwork li.S').show();
+                      break;
+                  case 'Escore':
+                      $('.areasofwork li.E').show();
+                      break;
+                  case 'Cscore':
+                      $('.areasofwork li.C').show();
+                      break;
+                }
 
                 //update primary and secondary results
                 // remove current primary and secondary descriptions then copy new highest descriptions
@@ -546,7 +597,38 @@
                 $( '#intro' ).css( 'margin-top', '-' + vh*200 + 'px' );
             });
 
-        } );
+            // click handler for areas of work help
+            $('.areasofwork li a').on('click', function( event ) {
+              event.preventDefault();
+              var text = $(this).attr('title');
+              $(this).parent().append('<span class="more-info">' + text + '</span>');
+            });
+
+            var howmanychecked = 0;
+            $('.areasofwork input').on('change', function(){
+              if($(this).prop('checked')){
+                howmanychecked++;
+              } else {
+                howmanychecked--;
+              }
+              if(howmanychecked == 1){
+                $('.results.button').fadeIn();
+              } else if(howmanychecked == 0){
+                $('.results.button').fadeOut();
+              }
+              if(howmanychecked == 3){
+                $('.areasofwork input').each(function (index){
+                  if(!$(this).prop('checked')){
+                    $(this).attr('disabled', 'disabled');
+                  }
+                });
+              } else if(howmanychecked < 3){
+                $('.areasofwork input[disabled="disabled"]').removeAttr('disabled');
+              }
+              console.log('how many checked:' + howmanychecked);
+            });
+
+        });
 
         </script>
 
