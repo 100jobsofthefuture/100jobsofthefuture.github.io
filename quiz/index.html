@@ -22,18 +22,21 @@
             }
 
             body {
-              overflow-y: hidden;
-            }
-            body, main,
-            .full-height {
-              height: 100vh;
-            }
-            body {
               margin: 0;
               padding: 0;
               font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
               font-weight: 400;
-              transition: margin-top 1s ease;
+            }
+            main {
+              position: fixed;
+              top: 0;
+              height: 100vh;
+              width: 100%;
+              overflow-y: hidden;
+            }
+            .full-height {
+              height: 100vh;
+              overflow-y: auto;
             }
             h2 {
               font-weight: 300;
@@ -92,6 +95,7 @@
             #intro {
               overflow-y: auto;
               position: relative;
+              transition: margin-top 1s ease;
             }
             #intro .bodycopy {
               padding: 2em;
@@ -225,10 +229,14 @@
             }
 
             #areas {
+
+            }
+            .areas-wrapper {
               display: flex;
               flex-direction: column;
               justify-content: center;
               padding: 2em;
+              max-width: 700px;
             }
             .areasofwork {
               list-style: none;
@@ -351,6 +359,7 @@
         </div>
       </div>
       <div id="areas" class="full-height">
+        <div class="areas-wrapper">
           <p>Here is a list of areas of future work. Select up to three to explore examples of future jobs</p>
           <p class="small">Scroll over ? for more detail.</p>
           <ul class="areasofwork">
@@ -374,6 +383,7 @@
             <li class="R I A S E C">Digital networks</li>
             <li class="R I A E C">3D printing and new materials</li>
           </ul>
+        </div>
       </div>
     </main>
         <script>
@@ -483,11 +493,11 @@
             // scrollDown
             $( '#start-button' ).on( 'click', function( event ) {
                 event.preventDefault();
-                $( 'body' ).css( 'margin-top', '-100vh' );
+                $( '#intro' ).css( 'margin-top', '-100vh' );
             });
             $( '#continue-button' ).on( 'click', function( event ) {
                 event.preventDefault();
-                $( 'body' ).css( 'margin-top', '-200vh' );
+                $( '#intro' ).css( 'margin-top', '-200vh' );
             });
 
         } );
