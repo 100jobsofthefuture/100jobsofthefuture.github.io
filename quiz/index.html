@@ -1,644 +1,164 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Tool test</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-        <style>
-            :root {
-              --green: rgba(75,182,161);
-              --blue: rgba(0,52,120);
-            }
-            /* apply a natural box layout model to all elements, but allowing components to change */
-            html {
-              box-sizing: border-box;
-            }
-            *, *:before, *:after {
-              box-sizing: inherit;
-            }
+---
+#Jekyll front matter
 
-            body {
-              margin: 0;
-              padding: 0;
-              font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-              font-weight: 400;
-            }
-            main {
-              position: fixed;
-              top: 0;
-              height: 100vh;
-              height: calc(var(--vh, 1vh) * 100);
-              width: 100%;
-              overflow-y: hidden;
-            }
-            .full-height {
-              height: 100vh;
-              height: calc(var(--vh, 1vh) * 100);
-              overflow-y: auto;
-            }
-            h2 {
-              font-weight: 300;
-              font-size: 1.6rem;
-              color: var(--green);
-              margin: 0 0 1em 0;
-            }
-            p {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-            li {
-                font-size: 1rem;
-            }
-            .button, .button:visited {
-              color: var(--blue);
-              display: inline-block;
-              padding: 8px 24px;
-              line-height: 1;
-              border: 1px solid var(--blue);
-              border-radius: 6px;
-              text-decoration: none;
-              text-transform: uppercase;
-              font-weight: 400;
-            }
-            .button:hover {
-              color: #fff;
-              background-color: var(--blue);
-            }
-
-            .logo {
-              margin: 0;
-              padding: 0 10px;
-              line-height: 0;
-              text-indent: -9999px;
-              max-width: 480px;
-              background: #fff;
-            }
-            .logo::after {
-              content: "";
-              display: block;
-              height: 0;
-              width: 100%;
-              padding-bottom: 60%;
-              background-image: url('/img/logo-640by810.png');
-              background-position: bottom;
-              background-size: cover;
-              background-repeat: no-repeat;
-            }
-            @media only screen and (min-width: 768px) {
-              .logo {
-
-              }
-            }
-
-            #intro {
-              overflow-y: auto;
-              position: relative;
-              transition: margin-top 1s ease;
-            }
-            #intro .bodycopy {
-              padding: 2em;
-              max-width: 600px;
-              margin: 0 auto;
-            }
-            .cta {
-              position: sticky;
-              width: 100%;
-              bottom: 0;
-              z-index: 999;
-              background: rgba(0,52,120,0.9);
-              color: #fff;
-              padding: 1em;
-            }
-            .cta p {
-              line-height: 1.4;
-              max-width: 320px;
-              margin: 0 auto 0.5em auto;
-              text-align: center;
-            }
-            .cta .button,
-            .cta .button:visited {
-              color: #fff;
-              border-color: #fff;
-            }
-            @media only screen and (min-width: 768px) {
-              .cta {
-                background: transparent;
-                color: var(--blue);
-              }
-              .cta .button,
-              .cta .button:visited {
-                color: var(--blue);
-                border-color: var(--blue);
-              }
-              .cta .button:hover {
-                color: #fff;
-                background-color: var(--blue);
-              }
-            }
-
-            .sortable {
-                padding-left: 0;
-                list-style-type: none;
-            }
-            .sortable li {
-                max-width: 500px;
-                margin-bottom: 5px;
-                color: #555;
-                background: #eee;
-                line-height: 1.2;
-                border-radius: 6px;
-                padding: 0.75em 0.5em;
-                cursor: pointer;
-            }
-            #tool {
-                width: 100%;
-                max-width: 500px;
-                margin: 0 auto;
-                overflow-x: hidden;
-                overflow-y: auto;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            .wrapper {
-                width: 100%;
-                display: flex;
-                overflow-x: hidden;
-            }
-            .question {
-                width: 100%;
-                flex-shrink: 0;
-                height: 100%;
-                padding: 0 10px;
-            }
-            .question p {
-              line-height: 1.4;
-              margin: 1em 0 0 0;
-            }
-            .question p.small {
-              color: var(--green);
-              font-size: 80%;
-              font-weight: 400;
-              margin: 0 0 0.25em 0;
-            }
-            .question ul {
-              margin: 0 0 0.5em 0;
-            }
-            .question ul li {
-              font-size: 0.9em;
-            }
-            .pagination {
-                margin: auto 0 5px 0;
-                display: flex;
-                width: 100%;
-            }
-            @media only screen and (min-width: 375px) {
-              .question p {
-                margin-bottom: 0.5em;
-              }
-              .question p.small {
-                margin-top: 1em;
-              }
-              .question ul li {
-                font-size: 1em;
-              }
-              .pagination {
-                  margin: inherit;
-              }
-            }
-            .pagination .progress {
-              margin: 0;
-              padding: 0;
-              list-style: none;
-              width: 50%;
-              display: flex;
-            }
-            .pagination .progress li {
-              display: block;
-              width: 20%;
-            }
-            .pagination a {
-                background-color: var(--blue);
-                color: #fff;
-                text-align: center;
-                padding: 10px;
-                text-decoration: none;
-                display: block;
-                width: 50%;
-            }
-
-
-            #areas {
-              padding: 0 10px;
-              max-width: 700px;
-              margin: 0 auto;
-            }
-            .areasofwork {
-              list-style: none;
-              padding: 0;
-            }
-            @media only screen and (min-width: 700px) {
-              #areas {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-              }
-              .areasofwork {
-                display: flex;
-                flex-wrap: wrap;
-              }
-            }
-            .areasofwork li {
-              display: none;
-              position: relative;
-              font-size: 0.9em;
-              display: block;
-              flex-grow: 1;
-            }
-            @media only screen and (min-width: 640px) {
-              .areasofwork li {
-                font-size: 1em;
-              }
-            }
-            .areasofwork input[type="checkbox"] {
-              opacity: 0;
-              position: absolute;
-              left: -9999px;
-            }
-            .areasofwork label {
-              background: #eee;
-              margin: 0 4px 4px 0;
-              padding: 12px 28px;
-              display: block;
-              position: relative;
-            }
-            .areasofwork label::before {
-              content: "";
-              display: inline-block;
-              height: 16px;
-              width: 16px;
-              background-image: url('../css/feather/square.svg');
-              background-repeat: no-repeat;
-              background-size: 100%;
-              position: absolute;
-              left: 4px;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-            .areasofwork  input[type="checkbox"]:checked + label {
-              background: var(--green);
-            }
-            .areasofwork  input[type="checkbox"]:checked + label::before {
-              background-image: url('../css/feather/check-square.svg');
-            }
-            .areasofwork li a {
-              display: inline-block;
-              height: 16px;
-              width: 16px;
-              background-image: url('../css/feather/help-circle.svg');
-              background-repeat: no-repeat;
-              background-size: 100%;
-              position: absolute;
-              right: 16px;
-              top: 12px;
-            }
-            .areasofwork li .more-info {
-              display: none;
-              width: 100%;
-              padding: 12px;
-            }
-            .areasofwork input[disabled="disabled"] + label {
-              opacity: 0.6;
-            }
-
-            .button.results {
-              display: none;
-            }
-        </style>
-    </head>
-    <body>
-        <main>
-        <section id="intro" class="full-height">
-            <h1 class="logo">100 Jobs of the Future</h1>
-            <div class="bodycopy">
-              <h2>What might future work look like for you?</h2>
-              In the future, could you be a smart dust wrangler? A biofilm plumber? A robot ethicist? An offworld habitat designer? A personal brand manager?</p>
-              <p>Everyone has characteristics that make them unique. Different people have different combinations of interests, aptitudes, and skills.</p>
-              <p>This quiz has been designed to identify some of your career interests and aptitudes. It is not a fully detailed assessment — while you may have stronger interests in some areas than in others, you may also find that you can relate to more than one.</p>
-              <p>On the basis of your career profile, the jobs explorer will recommend some of the ‘100 Jobs of the Future’ that you might like to explore.</p>
-            </div>
-            <div class="cta">
-              <p>Take our short 4 question quiz to find out what jobs of the future you may thrive on</p>
-              <p><a id="start-button" class="scrollDown button down-arrow" href="#tool">Start</a></p>
-            </div>
-        </section>
-        <div id="tool" class="full-height">
-            <div class="wrapper">
-                <div id="q1" class="question">
-                    <p>Please order thses statements from most like you to least like you:</p>
-                    <p class="small">Drag and drop to reorder</p>
-                    <ul class="sortable">
-                        <li data-code="R">I enjoy making or fixing things with my hands, using tools and equipment</li>
-                        <li data-code="I">I enjoy reading and thinking about solutions to problems</li>
-                        <li data-code="A">I enjoy using my artistic and creative talents</li>
-                        <li data-code="S">I enjoy teaching or helping others</li>
-                        <li data-code="E">I enjoy being in charge, leading and persuading others</li>
-                        <li data-code="C">I enjoy keeping records and organising things</li>
-                    </ul>
-                    <div class="pagination">
-                      <ul class="progress">
-                        <li class="selected"></li>
-                        <li></li>
-                        <li></li>
-                        <li class="pitstop"></li>
-                        <li></li>
-                      </ul>
-                      <a href="#q2" class="next">Next</a>
-                    </div>
-                </div>
-                <div id="q2" class="question">
-                    <p>Please order these statements from most like you to least like you:</p>
-                    <p class="small">Drag and drop to reorder</p>
-                    <ul class="sortable">
-                        <li data-code="R">I am good at practical tasks and knowing how things work</li>
-                        <li data-code="I">I am good at thinking logically, solving problems and doing research</li>
-                        <li data-code="A">I am good at using my imagination and coming up with creative ideas</li>
-                        <li data-code="S">I am good at helping people learn new things</li>
-                        <li data-code="E">I am good at leading, persuading and motivating other people</li>
-                        <li data-code="C">I am good at following procedures accurately and keeping careful records</li>
-                    </ul>
-                    <div class="pagination">
-                      <ul class="progress">
-                        <li></li>
-                        <li class="selected"></li>
-                        <li></li>
-                        <li class="pitstop"></li>
-                        <li></li>
-                      </ul>
-                      <a href="#q3" class="next">Next</a>
-                    </div>
-                </div>
-                <div id="q3" class="question">
-                    <p>Please order these statements from most like you to least like you:</p>
-                    <p class="small">Drag and drop to reorder</p>
-                    <ul class="sortable">
-                        <li data-code="R">Mechanic, gardener, hairdresser, driver, carpenter, food worker, machinery operator, tradesperson, chef</li>
-                        <li data-code="I">Biologist, engineer, surgeon, mathematician, software designer</li>
-                        <li data-code="A">Musician, fashion designer, interior designer, actor</li>
-                        <li data-code="S">Teacher, counsellor, nurse, community worker</li>
-                        <li data-code="E">Manager, lawyer, politician, running my own small business</li>
-                        <li data-code="C">Office worker, secretary, data entry and organisation, purchasing officer, accounts clerk</li>
-                    </ul>
-                    <div class="pagination">
-                      <ul class="progress">
-                        <li></li>
-                        <li></li>
-                        <li class="selected"></li>
-                        <li class="pitstop"></li>
-                        <li></li>
-                      </ul>
-                      <a href="#q4" class="next">Next</a>
-                    </div>
-                </div>
-                <div i="q4" class="question">
-                  <p class="small">Based on your answers to the survey, you are most strongly a:</p>
-                  <div id="primary"></div>
-                  <p class="small">In your second strongest profile area you are a:</p>
-                  <div id="secondary"></div>
-                  <div id="ptypes" style="display: none">
-                    <p class="Rscore"><strong>Practical</strong> person who is likely to be interested in roles that involve physical dexterity or activity, and who likes to solve problems by trying things out rather than sitting and thinking through options.</p>
-                    <p class="Iscore"><strong>Investigative</strong> person who is more theoretical than practical, and may prefer to work alone rather than with other people. ‘Investigating’ people like to work with data and information, and prefer to think things through and make decisions based on the facts.</p>
-                    <p class="Cscore"><strong>Creative</strong> person who tends to like working imaginatively with ideas and concepts and trying out new ways of doing things – whether a new art technique or a new way of understanding information. People in this category tend to dislike structure and rules, and will often enjoy working with people.</p>
-                    <p class="Sscore"><strong>Social</strong> person who tends to enjoy helping people. ‘Social’ people are more likely to enjoy working directly with others and building relationships, and tend to most enjoy activities where they can show their caring nature and do work that helps others.</p>
-                    <p class="Escore"><strong>Enterprising</strong> person who tends to enjoy presenting persuading arguments and leading others. ‘Enterprising’ people are more likely to enjoy working with people in a leadership role, are good at communicating and persuading other people. They can also display a tendency towards caring what others think of them, and can be ambitious.</p>
-                    <p class="Cscore"><strong>Enterprising</strong> person who tends to be data focused and methodical. ’Organised’ people are likely to enjoy working within clear guidelines. They may be less likely to enjoy working with people or in roles with little structure or order.</p>
-                  </div>
-                  <p>This doesn't sound like me</p>
-                  <p><a class="button up-arrow" href="">Start again</a></p>
-                  <p>Fair enough</p>
-                  <p><a id="continue-button" class="scrollDown button down-arrow" href="#areas">Continue</a></p>
-            </div>
-        </div>
-      </div>
-      <div id="areas" class="full-height">
-        <div class="areas-wrapper">
-          <p>Here is a list of areas of future work.</p>
-          <p><b>Select up to 3</b> to explore examples of future jobs</p>
-          <ul class="areasofwork">
-            <li class="R I A S E C"><input id="aow1" type="checkbox"><label for="aow1">Strengthening local communities and neighbourhoods</label><a class="info" href="" title="Localisation is a trend that is about reconnecting people with their local places, cultures and communities. It is a counter movement to globalisation and the development of big cities."></a></li>
-            <li class="R I A S E C"><input id="aow2" type="checkbox"><label for="aow2">Personalising information and communication</label><a class="info" href="" title="As more and more data can be collected about people’s specific interests and needs, it becomes possible to create personalised products, services and experiences for them."></a></li>
-            <li class="R I S E C"><input id="aow3" type="checkbox"><label for="aow3">Advanced farming and food production</label><a class="info" href="" title="Advances in digital technologies and food science mean that highly nutritious food can be produced efficiently and with minimum environmental impact."></a></li>
-            <li class="R I A S E"><input id="aow4" type="checkbox"><label for="aow4">Leisure and entertainment</label><a class="info" href="" title="The future of leisure and entertainment is immersive, digital, and personalised. "></a></li>
-            <li class="I A S E"><input id="aow5" type="checkbox"><label for="aow5">Extended lifespans</label><a class="info" href="" title="With advances in healthcare and nutrition, we will live longer, and have more opportunities to enjoy life."></a></li>
-            <li class="I S E C"><input id="aow6" type="checkbox"><label for="aow6">Education and lifelong learning</label><a class="info" href="" title="Constant change means that people will also constantly be watching the future, retraining and upskilling."></a></li>
-            <li class="I A S E C"><input id="aow7" type="checkbox"><label for="aow7">Law and ethics</label><a class="info" href="" title="With advances in artificial intelligence and other digital technologies, we need to have new regulations and laws to make sure everyone is safe"></a></li>
-            <li class="R I A S E C"><input id="aow8" type="checkbox"><label for="aow8">Health and wellbeing</label><a class="info" href="" title="New digital technologies and advances in science mean that there will be many new ways to enhance our health and wellbeing"></a></li>
-            <li class="R I A S C"><input id="aow9" type="checkbox"><label for="aow9">Scientific discovery</label><a class="info" href="" title="Key areas of predicted future scientific discovery include the microbiome (microbes living inside us), and human and food genetics."></a></li>
-            <li class="R I A S E C"><input id="aow10" type="checkbox"><label for="aow10">Environmental restoration and renewal</label></li>
-            <li class="R I A S E C"><input id="aow11" type="checkbox"><label for="aow11">Advanced city design</label><a class="info" href="" title="Technological advancements will help us ensure environmental sustainability and restore the natural environment. "></a></li>
-            <li class="R I A S E C"><input id="aow12" type="checkbox"><label for="aow12">Business innovation</label><a class="info" href="" title="Advanced city design will improve liveability and environmental sustainability of our urban areas."></a></li>
-            <li class="R I A S E C"><input id="aow13" type="checkbox"><label for="aow13">Space exploration</label><a class="info" href="" title="Advances in digital technology and use of big data mean constant new ideas and innovations. People will drive many of these innovations and new business ideas, and other people will regulate and make sure that the ideas are lawful and ethical."></a></li>
-            <li class="R I A S E C"><input id="aow14" type="checkbox"><label for="aow14">Micro- and nano-technology</label></li>
-            <li class="R I A S E C"><input id="aow15" type="checkbox"><label for="aow15">Virtual and augmented reality</label><a class="info" href="" title="Our activities in space will expand, from space tourism to advanced satellite technologies and offworld living."></a></li>
-            <li class="R I A S E C"><input id="aow16" type="checkbox"><label for="aow16">Robotics and drones</label><a class="info" href="" title="Much of the future of science and technology is very small indeed. Nanotechnology happens at the level of atoms and molecules and has applications across health, the environment, the design of cities, and what we eat."></a></li>
-            <li class="R I A S E C"><input id="aow17" type="checkbox"><label for="aow17">Artificial intelligence</label><a class="info" href="" title="Our lives will be enhanced by the digital world superimposed onto the ‘real world’ such as through visual overlays and immersive digital experiences"></a></li>
-            <li class="R I A S E C"><input id="aow18" type="checkbox"><label for="aow18">Digital networks</label><a class="info" href="" title="Thanks to the Internet of Things, in the future sensors will collect data about every aspect of our lives, from our health and eating habits to levels of pollution in the environment. The Sensors are networked, and the data is used to provide advice and make decisions."></a></li>
-            <li class="R I A E C"><input id="aow19" type="checkbox"><label for="aow19">3D printing and new materials</label><a class="info" href="" title="In the future, enormous printers will be able to print entire buildings or vehicles, while advances in materials science mean items can be made of new materials with different properties such as greater strength and flexibility."></a></li>
+layout: report
+title: Quiz
+---
+<main>
+  <section id="intro" class="full-height">
+    <h1 class="logo">100 Jobs of the Future</h1>
+    <div class="bodycopy">
+      <h2>What might future work look like for you?</h2>
+      In the future, could you be a smart dust wrangler? A biofilm plumber? A robot ethicist? An offworld habitat designer? A personal brand manager?</p>
+      <p>Everyone has characteristics that make them unique. Different people have different combinations of interests, aptitudes, and skills.</p>
+      <p>This quiz has been designed to identify some of your career interests and aptitudes. It is not a fully detailed assessment — while you may have stronger interests in some areas than in others, you may also find that you can relate to more
+        than one.</p>
+      <p>On the basis of your career profile, the jobs explorer will recommend some of the ‘100 Jobs of the Future’ that you might like to explore.</p>
+    </div>
+    <div class="cta">
+      <p>Take our short 4 question quiz to find out what jobs of the future you may thrive on</p>
+      <p><a id="start-button" class="scrollDown button down-arrow" href="#tool">Start</a></p>
+    </div>
+  </section>
+  <div id="tool" class="full-height">
+    <div class="wrapper">
+      <div id="q1" class="question">
+        <p>Please order thses statements from most like you to least like you:</p>
+        <p class="small">Drag and drop to reorder</p>
+        <ul class="sortable">
+          <li data-code="R">I enjoy making or fixing things with my hands, using tools and equipment</li>
+          <li data-code="I">I enjoy reading and thinking about solutions to problems</li>
+          <li data-code="A">I enjoy using my artistic and creative talents</li>
+          <li data-code="S">I enjoy teaching or helping others</li>
+          <li data-code="E">I enjoy being in charge, leading and persuading others</li>
+          <li data-code="C">I enjoy keeping records and organising things</li>
+        </ul>
+        <div class="pagination">
+          <ul class="progress">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li class="pitstop"></li>
+            <li></li>
           </ul>
-          <p><a class="button results" href="results?">See results</a></p>
+          <a href="#q2" class="next">Next</a>
         </div>
       </div>
-    </main>
-        <script>
-
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-        let vh = window.innerHeight * 0.01;
-        console.log(vh);
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-        /*!
-         * jQuery UI Touch Punch 0.2.3
-         *
-         * Copyright 2011–2014, Dave Furfero
-         * Dual licensed under the MIT or GPL Version 2 licenses.
-         *
-         * Depends:
-         *  jquery.ui.widget.js
-         *  jquery.ui.mouse.js
-         */
-        !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
-
-
-        $( document ).ready(function() {
-            function updateScore() {
-                var scores = { Rscore: 0, Iscore: 0, Ascore: 0, Sscore: 0, Escore: 0, Cscore: 0 };
-                $( '.question' ).each( function( index ) {
-                    $( this ).find( 'li' ).each( function( index ) {
-                        var varName = $( this ).attr( 'data-code' )+'score';
-                        switch (varName) {
-                            case 'Rscore':
-                                scores.Rscore += (index-6)*-1;
-                                break;
-                            case 'Iscore':
-                                scores.Iscore += (index-6)*-1;
-                                break;
-                            case 'Ascore':
-                                scores.Ascore += (index-6)*-1;
-                                break;
-                            case 'Sscore':
-                                scores.Sscore += (index-6)*-1;
-                                break;
-                            case 'Escore':
-                                scores.Escore += (index-6)*-1;
-                                break;
-                            case 'Cscore':
-                                scores.Cscore += (index-6)*-1;
-                                break;
-                        }
-                    });
-                });
-                console.log('R:' + scores.Rscore +'; I:' + scores.Iscore +'; A:' + scores.Ascore +'; S:' + scores.Sscore +'; E:' + scores.Escore +'; C:' + scores.Cscore);
-                var highest = Object.keys(scores).reduce(function(a, b){ return scores[a] > scores[b] ? a : b });
-                console.log('highest:' + highest);
-                scores[highest] = -Infinity;
-                var secondHighest = Object.keys(scores).reduce(function(a, b){ return scores[a] > scores[b] ? a : b });
-                console.log('2nd highest:' + secondHighest);
-
-
-                /* show appropriate areas of work in question 4 */
-                $('.areasofwork li').hide();
-                switch (highest) {
-                  case 'Rscore':
-                      $('.areasofwork li.R').show();
-                      break;
-                  case 'Iscore':
-                      $('.areasofwork li.I').show();
-                      break;
-                  case 'Ascore':
-                      $('.areasofwork li.A').show();
-                      break;
-                  case 'Sscore':
-                      $('.areasofwork li.S').show();
-                      break;
-                  case 'Escore':
-                      $('.areasofwork li.E').show();
-                      break;
-                  case 'Cscore':
-                      $('.areasofwork li.C').show();
-                      break;
-                }
-
-                //update primary and secondary results
-                // remove current primary and secondary descriptions then copy new highest descriptions
-                $.when($('#primary').empty()).done(function() {
-                  $('#primary').append($('.'+highest).clone());
-                });
-                $.when($('#secondary').empty()).done(function() {
-                  $('#secondary').append($('.'+secondHighest).clone());
-                });
-            }
-            // update RIASEC scores on load
-            updateScore();
-
-            // initiate sortable with change
-            $( ".sortable" ).sortable({
-              stop: function( event, ui ) {}
-            });
-            $( ".sortable" ).on( "sortstop", function( event, ui ) {
-                // update RIASEC scores on sort change
-                updateScore();
-            });
-
-            // reset scroll left on page refresh
-            $( '.wrapper' ).scrollLeft(0);
-            // reset scroll left on page resize
-            $( window ).resize(function() {
-              var width = $( '.wrapper' ).width();
-              var scrollLeftValue = $( '.wrapper' ).scrollLeft();
-              console.log(scrollLeftValue);
-              if (scrollLeftValue < width/3) {
-                $( '.wrapper' ).scrollLeft(0);
-              }
-              else if (scrollLeftValue < width*2/3) {
-                $( '.wrapper' ).scrollLeft(width);
-              }
-              else {
-                $( '.wrapper' ).scrollLeft(2*width);
-              }
-            });
-            // question pagination
-            $( '.next, .back' ).on( 'click', function( event ) {
-                event.preventDefault();
-                var width = $( '.wrapper' ).width();
-                if( $( this ).hasClass( 'next' ) ) {
-                    var scrollLeftValue = "+="+width;
-                } else {
-                    var scrollLeftValue = "-="+width;
-                }
-                $( '.wrapper' ).animate({
-                    scrollLeft: scrollLeftValue
-                }, 600, function() {
-                    // Animation complete.
-                });
-            });
-
-            // scrollDown
-            $( '#start-button' ).on( 'click', function( event ) {
-                event.preventDefault();
-                $( '#intro' ).css( 'margin-top', '-' + vh*100 + 'px' );
-            });
-            $( '#continue-button' ).on( 'click', function( event ) {
-                event.preventDefault();
-                $( '#intro' ).css( 'margin-top', '-' + vh*200 + 'px' );
-            });
-
-            //
-            $('.areasofwork li a').each(function(){
-              var text = $(this).attr('title');
-              $(this).parent().append('<div class="more-info">' + text + '</div>');
-            });
-            // click handler for areas of work help
-            $('.areasofwork li a').on('click', function( event ) {
-              event.preventDefault();
-              $(this).parent().find('.more-info').slideToggle();
-            });
-
-            var howmanychecked = 0;
-            $('.areasofwork input').on('change', function(){
-              if($(this).prop('checked')){
-                howmanychecked++;
-              } else {
-                howmanychecked--;
-              }
-              if(howmanychecked == 1){
-                $('.results.button').fadeIn();
-              } else if(howmanychecked == 0){
-                $('.results.button').fadeOut();
-              }
-              if(howmanychecked == 3){
-                $('.areasofwork input').each(function (index){
-                  if(!$(this).prop('checked')){
-                    $(this).attr('disabled', 'disabled');
-                  }
-                });
-              } else if(howmanychecked < 3){
-                $('.areasofwork input[disabled="disabled"]').removeAttr('disabled');
-              }
-              console.log('how many checked:' + howmanychecked);
-            });
-
-
-            /* click handler for results button */
-            var params;
-
-        });
-
-        </script>
-
-    </body>
-</html>
+      <div id="q2" class="question">
+        <p>Please order these statements from most like you to least like you:</p>
+        <p class="small">Drag and drop to reorder</p>
+        <ul class="sortable">
+          <li data-code="R">I am good at practical tasks and knowing how things work</li>
+          <li data-code="I">I am good at thinking logically, solving problems and doing research</li>
+          <li data-code="A">I am good at using my imagination and coming up with creative ideas</li>
+          <li data-code="S">I am good at helping people learn new things</li>
+          <li data-code="E">I am good at leading, persuading and motivating other people</li>
+          <li data-code="C">I am good at following procedures accurately and keeping careful records</li>
+        </ul>
+        <div class="pagination">
+          <ul class="progress">
+            <li></li>
+            <li class="selected"></li>
+            <li></li>
+            <li class="pitstop"></li>
+            <li></li>
+          </ul>
+          <a href="#q3" class="next">Next</a>
+        </div>
+      </div>
+      <div id="q3" class="question">
+        <p>Please order these statements from most like you to least like you:</p>
+        <p class="small">Drag and drop to reorder</p>
+        <ul class="sortable">
+          <li data-code="R">Mechanic, gardener, hairdresser, driver, carpenter, food worker, machinery operator, tradesperson, chef</li>
+          <li data-code="I">Biologist, engineer, surgeon, mathematician, software designer</li>
+          <li data-code="A">Musician, fashion designer, interior designer, actor</li>
+          <li data-code="S">Teacher, counsellor, nurse, community worker</li>
+          <li data-code="E">Manager, lawyer, politician, running my own small business</li>
+          <li data-code="C">Office worker, secretary, data entry and organisation, purchasing officer, accounts clerk</li>
+        </ul>
+        <div class="pagination">
+          <ul class="progress">
+            <li></li>
+            <li></li>
+            <li class="selected"></li>
+            <li class="pitstop"></li>
+            <li></li>
+          </ul>
+          <a href="#q4" class="next">Next</a>
+        </div>
+      </div>
+      <div i="q4" class="question">
+        <p class="small">Based on your answers to the survey, you are most strongly a:</p>
+        <div id="primary"></div>
+        <p class="small">In your second strongest profile area you are a:</p>
+        <div id="secondary"></div>
+        <div id="ptypes" style="display: none">
+          <p id="Rdescrip"><strong>Practical</strong> person who is likely to be interested in roles that involve physical dexterity or activity, and who likes to solve problems by trying things out rather than sitting and thinking through options.
+          </p>
+          <p id="Idescrip"><strong>Investigative</strong> person who is more theoretical than practical, and may prefer to work alone rather than with other people. ‘Investigating’ people like to work with data and information, and prefer to think
+            things through and make decisions based on the facts.</p>
+          <p id="Cdescrip"><strong>Creative</strong> person who tends to like working imaginatively with ideas and concepts and trying out new ways of doing things – whether a new art technique or a new way of understanding information. People in
+            this category tend to dislike structure and rules, and will often enjoy working with people.</p>
+          <p id="Sdescrip"><strong>Social</strong> person who tends to enjoy helping people. ‘Social’ people are more likely to enjoy working directly with others and building relationships, and tend to most enjoy activities where they can show their
+            caring nature and do work that helps others.</p>
+          <p id="Edescrip"><strong>Enterprising</strong> person who tends to enjoy presenting persuading arguments and leading others. ‘Enterprising’ people are more likely to enjoy working with people in a leadership role, are good at communicating
+            and persuading other people. They can also display a tendency towards caring what others think of them, and can be ambitious.</p>
+          <p id="Cdescrip"><strong>Enterprising</strong> person who tends to be data focused and methodical. ’Organised’ people are likely to enjoy working within clear guidelines. They may be less likely to enjoy working with people or in roles with
+            little structure or order.</p>
+        </div>
+        <p>This doesn't sound like me</p>
+        <p><a class="button up-arrow" href="">Start again</a></p>
+        <p>Fair enough</p>
+        <p><a id="continue-button" class="scrollDown button down-arrow" href="#areas">Continue</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="areas" class="full-height">
+    <div class="areas-wrapper">
+      <p>Here is a list of areas of future work.</p>
+      <p><b>Select up to 3</b> to explore examples of future jobs</p>
+      <ul class="areasofwork">
+        <li class="R I A S E C"><input id="aow1" type="checkbox" value="aow1"><label for="aow1">Strengthening local communities and neighbourhoods</label><a class="info" href=""
+            title="Localisation is a trend that is about reconnecting people with their local places, cultures and communities. It is a counter movement to globalisation and the development of big cities."></a></li>
+        <li class="R I A S E C"><input id="aow2" type="checkbox" value="aow2"><label for="aow2">Personalising information and communication</label><a class="info" href=""
+            title="As more and more data can be collected about people’s specific interests and needs, it becomes possible to create personalised products, services and experiences for them."></a></li>
+        <li class="R I S E C"><input id="aow3" type="checkbox" value="aow3"><label for="aow3">Advanced farming and food production</label><a class="info" href=""
+            title="Advances in digital technologies and food science mean that highly nutritious food can be produced efficiently and with minimum environmental impact."></a></li>
+        <li class="R I A S E"><input id="aow4" type="checkbox" value="aow4"><label for="aow4">Leisure and entertainment</label><a class="info" href="" title="The future of leisure and entertainment is immersive, digital, and personalised. "></a></li>
+        <li class="I A S E"><input id="aow5" type="checkbox" value="aow5"><label for="aow5">Extended lifespans</label><a class="info" href=""
+            title="With advances in healthcare and nutrition, we will live longer, and have more opportunities to enjoy life."></a></li>
+        <li class="I S E C"><input id="aow6" type="checkbox" value="aow6"><label for="aow6">Education and lifelong learning</label><a class="info" href=""
+            title="Constant change means that people will also constantly be watching the future, retraining and upskilling."></a></li>
+        <li class="I A S E C"><input id="aow7" type="checkbox" value="aow7"><label for="aow7">Law and ethics</label><a class="info" href=""
+            title="With advances in artificial intelligence and other digital technologies, we need to have new regulations and laws to make sure everyone is safe"></a></li>
+        <li class="R I A S E C"><input id="aow8" type="checkbox" value="aow8"><label for="aow8">Health and wellbeing</label><a class="info" href=""
+            title="New digital technologies and advances in science mean that there will be many new ways to enhance our health and wellbeing"></a></li>
+        <li class="R I A S C"><input id="aow9" type="checkbox" value="aow9"><label for="aow9">Scientific discovery</label><a class="info" href=""
+            title="Key areas of predicted future scientific discovery include the microbiome (microbes living inside us), and human and food genetics."></a></li>
+        <li class="R I A S E C"><input id="aow10" type="checkbox" value="aow10"><label for="aow10">Environmental restoration and renewal</label></li>
+        <li class="R I A S E C"><input id="aow11" type="checkbox" value="aow11"><label for="aow11">Advanced city design</label><a class="info" href=""
+            title="Technological advancements will help us ensure environmental sustainability and restore the natural environment. "></a></li>
+        <li class="R I A S E C"><input id="aow12" type="checkbox" value="aow12"><label for="aow12">Business innovation</label><a class="info" href=""
+            title="Advanced city design will improve liveability and environmental sustainability of our urban areas."></a></li>
+        <li class="R I A S E C"><input id="aow13" type="checkbox" value="aow13"><label for="aow13">Space exploration</label><a class="info" href=""
+            title="Advances in digital technology and use of big data mean constant new ideas and innovations. People will drive many of these innovations and new business ideas, and other people will regulate and make sure that the ideas are lawful and ethical."></a>
+        </li>
+        <li class="R I A S E C"><input id="aow14" type="checkbox" value="aow14"><label for="aow14">Micro- and nano-technology</label></li>
+        <li class="R I A S E C"><input id="aow15" type="checkbox" value="aow15"><label for="aow15">Virtual and augmented reality</label><a class="info" href=""
+            title="Our activities in space will expand, from space tourism to advanced satellite technologies and offworld living."></a></li>
+        <li class="R I A S E C"><input id="aow16" type="checkbox" value="aow16"><label for="aow16">Robotics and drones</label><a class="info" href=""
+            title="Much of the future of science and technology is very small indeed. Nanotechnology happens at the level of atoms and molecules and has applications across health, the environment, the design of cities, and what we eat."></a></li>
+        <li class="R I A S E C"><input id="aow17" type="checkbox" value="aow17"><label for="aow17">Artificial intelligence</label><a class="info" href=""
+            title="Our lives will be enhanced by the digital world superimposed onto the ‘real world’ such as through visual overlays and immersive digital experiences"></a></li>
+        <li class="R I A S E C"><input id="aow18" type="checkbox" value="aow18"><label for="aow18">Digital networks</label><a class="info" href=""
+            title="Thanks to the Internet of Things, in the future sensors will collect data about every aspect of our lives, from our health and eating habits to levels of pollution in the environment. The Sensors are networked, and the data is used to provide advice and make decisions."></a>
+        </li>
+        <li class="R I A E C"><input id="aow19" type="checkbox" value="aow19"><label for="aow19">3D printing and new materials</label><a class="info" href=""
+            title="In the future, enormous printers will be able to print entire buildings or vehicles, while advances in materials science mean items can be made of new materials with different properties such as greater strength and flexibility."></a>
+        </li>
+      </ul>
+      <p><a id="results-button" class="button results" href="results">See results</a></p>
+    </div>
+  </div>
+</main>

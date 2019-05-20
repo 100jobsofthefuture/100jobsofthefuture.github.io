@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">{% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --green: rgba(75, 182, 161);
+      --blue: rgba(0, 52, 120);
+    }
+
+    /* apply a natural box layout model to all elements, but allowing components to change */
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 400;
+    }
+
+    main {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      width: 100%;
+      overflow-y: hidden;
+    }
+
+    .full-height {
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      overflow-y: auto;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--green);
+      margin: 0 0 1em 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    li {
+      font-size: 1rem;
+    }
+
+    .button,
+    .button:visited {
+      color: var(--blue);
+      display: inline-block;
+      padding: 8px 24px;
+      line-height: 1;
+      border: 1px solid var(--blue);
+      border-radius: 6px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .button:hover {
+      color: #fff;
+      background-color: var(--blue);
+    }
+
+    .logo {
+      margin: 0;
+      padding: 0 10px;
+      line-height: 0;
+      text-indent: -9999px;
+      max-width: 480px;
+      background: #fff;
+    }
+
+    .logo::after {
+      content: "";
+      display: block;
+      height: 0;
+      width: 100%;
+      padding-bottom: 60%;
+      background-image: url('/img/logo-640by810.png');
+      background-position: bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .logo {}
+    }
+
+    #intro {
+      overflow-y: auto;
+      position: relative;
+      transition: margin-top 1s ease;
+    }
+
+    #intro .bodycopy {
+      padding: 2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta {
+      position: sticky;
+      width: 100%;
+      bottom: 0;
+      z-index: 999;
+      background: rgba(0, 52, 120, 0.9);
+      color: #fff;
+      padding: 1em;
+    }
+
+    .cta p {
+      line-height: 1.4;
+      max-width: 320px;
+      margin: 0 auto 0.5em auto;
+      text-align: center;
+    }
+
+    .cta .button,
+    .cta .button:visited {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .cta {
+        background: transparent;
+        color: var(--blue);
+      }
+
+      .cta .button,
+      .cta .button:visited {
+        color: var(--blue);
+        border-color: var(--blue);
+      }
+
+      .cta .button:hover {
+        color: #fff;
+        background-color: var(--blue);
+      }
+    }
+
+    .sortable {
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    .sortable li {
+      max-width: 500px;
+      margin-bottom: 5px;
+      color: #555;
+      background: #eee;
+      line-height: 1.2;
+      border-radius: 6px;
+      padding: 0.75em 0.5em;
+      cursor: pointer;
+    }
+
+    #tool {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    .question {
+      width: 100%;
+      flex-shrink: 0;
+      height: 100%;
+      padding: 0 10px;
+    }
+
+    .question p {
+      line-height: 1.4;
+      margin: 1em 0 0 0;
+    }
+
+    .question p.small {
+      color: var(--green);
+      font-size: 80%;
+      font-weight: 400;
+      margin: 0 0 0.25em 0;
+    }
+
+    .question ul {
+      margin: 0 0 0.5em 0;
+    }
+
+    .question ul li {
+      font-size: 0.9em;
+    }
+
+    .pagination {
+      margin: auto 0 5px 0;
+      display: flex;
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 375px) {
+      .question p {
+        margin-bottom: 0.5em;
+      }
+
+      .question p.small {
+        margin-top: 1em;
+      }
+
+      .question ul li {
+        font-size: 1em;
+      }
+
+      .pagination {
+        margin: inherit;
+      }
+    }
+
+    .pagination .progress {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 50%;
+      display: flex;
+    }
+
+    .pagination .progress li {
+      display: block;
+      width: 20%;
+    }
+
+    .pagination a {
+      background-color: var(--blue);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+      width: 50%;
+    }
+
+
+    #areas {
+      padding: 0 10px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .areasofwork {
+      list-style: none;
+      padding: 0;
+    }
+
+    @media only screen and (min-width: 700px) {
+      #areas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .areasofwork {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .areasofwork li {
+      display: none;
+      position: relative;
+      font-size: 0.9em;
+      display: block;
+      flex-grow: 1;
+    }
+
+    @media only screen and (min-width: 640px) {
+      .areasofwork li {
+        font-size: 1em;
+      }
+    }
+
+    .areasofwork input[type="checkbox"] {
+      opacity: 0;
+      position: absolute;
+      left: -9999px;
+    }
+
+    .areasofwork label {
+      background: #eee;
+      margin: 0 4px 4px 0;
+      padding: 12px 28px;
+      display: block;
+      position: relative;
+    }
+
+    .areasofwork label::before {
+      content: "";
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background-image: url('../css/feather/square.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .areasofwork input[type="checkbox"]:checked+label {
+      background: var(--green);
+    }
+
+    .areasofwork input[type="checkbox"]:checked+label::before {
+      background-image: url('../css/feather/check-square.svg');
+    }
+
+    .areasofwork li a {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background-image: url('../css/feather/help-circle.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      right: 16px;
+      top: 12px;
+    }
+
+    .areasofwork li .more-info {
+      display: none;
+      width: 100%;
+      padding: 12px;
+    }
+
+    .areasofwork input[disabled="disabled"]+label {
+      opacity: 0.6;
+    }
+
+    .button.results {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
