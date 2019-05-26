@@ -8,7 +8,7 @@
   {% if page.description %}
   <meta name="description" content="{{ page.description }}">{% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -46,8 +46,7 @@
     }
 
     .full-height {
-      height: 100vh;
-      height: calc(var(--vh, 1vh) * 100);
+      height: 100%;
       overflow-y: auto;
     }
 
@@ -61,6 +60,10 @@
     p {
       font-size: 1rem;
       line-height: 1.6;
+    }
+
+    .centered {
+      text-align: center;
     }
 
     li {
@@ -106,9 +109,7 @@
       background-repeat: no-repeat;
     }
 
-    @media only screen and (min-width: 768px) {
-      .logo {}
-    }
+
 
     #intro {
       overflow-y: auto;
@@ -121,15 +122,32 @@
       max-width: 600px;
       margin: 0 auto;
     }
+    #intro .readmore {
+      color: var(--green);
+      text-decoration: none;
+      font-style: italic;
+    }
+    #intro .readmore::before {
+      content: "… ";
+    }
+    #intro .bodycopy .more {
+      display: none;
+    }
+    #intro .bodycopy p.p1 {
+      display: block;
+    }
+    @media only screen and (min-width: 450px) {
+      #intro .readmore {
+        display: none;
+      }
+      #intro .bodycopy .more {
+        display: block;
+      }
+    }
 
     .cta {
-      position: sticky;
-      width: 100%;
-      bottom: 0;
-      z-index: 999;
-      background: rgba(0, 52, 120, 0.9);
-      color: #fff;
-      padding: 1em;
+      margin-top: 2em;
+      color: var(--blue);
     }
 
     .cta p {
@@ -139,27 +157,19 @@
       text-align: center;
     }
 
-    .cta .button,
-    .cta .button:visited {
-      color: #fff;
-      border-color: #fff;
+
+    @media only screen and (min-width: 1140px) {
+      .logo::after {
+        float: left;
+      }
+      #intro .bodycopy {
+        margin-top: 15vh;
+        margin-left: 500px;
+      }
     }
-
-    @media only screen and (min-width: 768px) {
-      .cta {
-        background: transparent;
-        color: var(--blue);
-      }
-
-      .cta .button,
-      .cta .button:visited {
-        color: var(--blue);
-        border-color: var(--blue);
-      }
-
-      .cta .button:hover {
-        color: #fff;
-        background-color: var(--blue);
+    @media only screen and (min-width: 1600px) {
+      #intro .bodycopy {
+        margin-left: auto;
       }
     }
 
@@ -181,23 +191,40 @@
 
     #tool {
       width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
       overflow-x: hidden;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
 
-    .wrapper {
+    #tool .wrapper {
+      margin: auto 0;
+
+    }
+    @media only screen and (min-width: 1140px) {
+      #tool {
+        background-image: url(/css/img/hud.svg);
+        background-size: 1140px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    @media only screen and (min-width: 1280px) {
+      #tool {
+        background-size: 1280px;
+      }
+    }
+    .scroll-wrapper {
+      margin: 0 auto;
       width: 100%;
+      max-width: 500px;
       display: flex;
       overflow-x: hidden;
     }
 
     .question {
       width: 100%;
+      max-width: 500px;
       flex-shrink: 0;
       height: 100%;
       padding: 0 10px;
@@ -211,7 +238,7 @@
     .question p.small {
       color: var(--green);
       font-size: 80%;
-      font-weight: 400;
+      font-weight: 600;
       margin: 0 0 0.25em 0;
     }
 
@@ -270,28 +297,57 @@
       width: 50%;
     }
 
+    #q4 p.small {
+      margin-top: 1em;
+    }
+    #primary p,
+    #secondary p {
+      margin-top: 0;
+    }
 
     #areas {
       padding: 0 10px;
-      max-width: 700px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .areas-wrapper {
+      max-width: 1000px;
+      margin: auto;
     }
 
     .areasofwork {
       list-style: none;
       padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 4px;
+    }
+    @media only screen and (min-width: 640px) {
+      .areasofwork {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media only screen and (min-width: 900px) {
+      .areasofwork {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
     }
 
-    @media only screen and (min-width: 700px) {
+    @media only screen and (min-width: 1140px) {
       #areas {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        background-image: url(/css/img/hud.svg);
+        background-size: 1140px;
+        background-repeat: no-repeat;
+        background-position: center;
       }
-
       .areasofwork {
-        display: flex;
-        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    @media only screen and (min-width: 1280px) {
+      #areas {
+        background-size: 1280px;
       }
     }
 
@@ -300,7 +356,6 @@
       position: relative;
       font-size: 0.9em;
       display: block;
-      flex-grow: 1;
     }
 
     @media only screen and (min-width: 640px) {
@@ -318,23 +373,24 @@
     .areasofwork label {
       background: #eee;
       margin: 0 4px 4px 0;
-      padding: 12px 28px;
+      padding: 12px 42px;
       display: block;
       position: relative;
+      height: 100%;
     }
 
     .areasofwork label::before {
       content: "";
       display: inline-block;
-      height: 16px;
-      width: 16px;
+      height: 20px;
+      width: 20px;
       background-image: url('../css/feather/square.svg');
       background-repeat: no-repeat;
       background-size: 100%;
       position: absolute;
       left: 4px;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 12px;
+      opacity: 0.5;
     }
 
     .areasofwork input[type="checkbox"]:checked+label {
@@ -368,10 +424,20 @@
     }
 
     .button.results {
-      display: none;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .ui-tooltip {
+      width: 300px;
+      padding: 8px;
+      background: var(--blue);
+      color: #fff;
+    }
+    .ui-helper-hidden-accessible {
+      text-indent: -9999px;
     }
   </style>
 </head>
 
 <body>
-  <main>

@@ -1,11 +1,4 @@
 <script>
-
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-console.log(vh);
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
 /*!
  * jQuery UI Touch Punch 0.2.3
  *
@@ -18,8 +11,26 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
  */
 !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 
-
 $( document ).ready(function() {
+  /*
+   * https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+   */
+  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+  let vh = window.innerHeight * 0.01;
+  console.log(vh);
+  // Then we set the value in the --vh custom property to the root of the document
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  // We listen to the resize event
+  window.addEventListener('resize', () => {
+    // We execute the same script as before
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    console.log(currentVerticalFrame);
+    // reset vertical position on page resize
+    $( '#intro' ).css( 'margin-top', '-' + vh*currentVerticalFrame*100 + 'px' );
+  });
+
     var highest;
 
     function updateScore() {
@@ -55,7 +66,6 @@ $( document ).ready(function() {
         scores[highest] = -Infinity;
         var secondHighest = Object.keys(scores).reduce(function(a, b){ return scores[a] > scores[b] ? a : b });
         console.log('2nd highest:' + secondHighest);
-
 
         /* show appropriate areas of work in question 4 */
         $('.areasofwork li').hide();
@@ -102,7 +112,7 @@ $( document ).ready(function() {
     });
 
     // reset scroll left on page refresh
-    $( '.wrapper' ).scrollLeft(0);
+    $( '.scroll-wrapper' ).scrollLeft(0);
     // reset scroll left on page resize
     $( window ).resize(function() {
       var width = $( '.wrapper' ).width();
@@ -121,39 +131,39 @@ $( document ).ready(function() {
     // question pagination
     $( '.next, .back' ).on( 'click', function( event ) {
         event.preventDefault();
-        var width = $( '.wrapper' ).width();
+        var width = $( '.scroll-wrapper' ).width();
         if( $( this ).hasClass( 'next' ) ) {
             var scrollLeftValue = "+="+width;
         } else {
             var scrollLeftValue = "-="+width;
         }
-        $( '.wrapper' ).animate({
+        $( '.scroll-wrapper' ).animate({
             scrollLeft: scrollLeftValue
         }, 600, function() {
             // Animation complete.
         });
     });
 
+
+
+    function verticalScroll(currentVerticalFrame) {
+      $( '#intro' ).css( 'margin-top', '-' + vh*currentVerticalFrame*100 + 'px' );
+    }
+    var currentVerticalFrame = 0;
     // scrollDown
     $( '#start-button' ).on( 'click', function( event ) {
         event.preventDefault();
-        $( '#intro' ).css( 'margin-top', '-' + vh*100 + 'px' );
+        verticalScroll(1);
+        currentVerticalFrame = 1;
     });
     $( '#continue-button' ).on( 'click', function( event ) {
         event.preventDefault();
-        $( '#intro' ).css( 'margin-top', '-' + vh*200 + 'px' );
+        verticalScroll(2);
+        currentVerticalFrame = 2;
     });
 
     //
-    $('.areasofwork li a').each(function(){
-      var text = $(this).attr('title');
-      $(this).parent().append('<div class="more-info">' + text + '</div>');
-    });
-    // click handler for areas of work help
-    $('.areasofwork li a').on('click', function( event ) {
-      event.preventDefault();
-      $(this).parent().find('.more-info').slideToggle();
-    });
+    $( document ).tooltip();
 
     var howmanychecked = 0;
     $('.areasofwork input').on('change', function(){
@@ -163,9 +173,9 @@ $( document ).ready(function() {
         howmanychecked--;
       }
       if(howmanychecked == 2){
-        $('.results.button').fadeIn();
-      } else if(howmanychecked == 0){
-        $('.results.button').fadeOut();
+        $('.results.button').css('opacity', 100);
+      } else if(howmanychecked <= 1){
+        $('.results.button').css('opacity', 0);
       }
       if(howmanychecked == 3){
         $('.areasofwork input').each(function (index){
@@ -192,6 +202,15 @@ $( document ).ready(function() {
       window.location.assign("results?"+params);
     });
 
+    $('.readmore').on( 'click', function( event ) {
+      event.preventDefault();
+      $(this).hide();
+      $('#intro .more').slideDown();
+    });
+
+});
+$( window ).resize(function() {
+  //setHeight();
 });
 
 </script>
