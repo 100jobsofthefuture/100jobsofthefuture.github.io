@@ -29,6 +29,10 @@ title: Quiz results
         <div class="job-card-descrip">
           <p>{{ jobs.description }}</p>
         </div>
+        <div class="job-card-full-descrip">
+          <h4>{{ jobs.title }}</h4>
+          <p>{{ jobs.full-description  | newline_to_br }}</p>
+        </div>
       </li>
     {% endfor %}
     </ul>
@@ -98,6 +102,13 @@ title: Quiz results
           $(this).show();
         }
       }
+    });
+
+    $('.job-card-header').on('click', function(){
+      $(this).parent().find('.job-card-full-descrip').show();
+    });
+    $('.job-card-full-descrip').on('click', function(){
+      $(this).hide();
     });
   });
 </script>
