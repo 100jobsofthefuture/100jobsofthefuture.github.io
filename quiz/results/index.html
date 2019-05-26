@@ -36,6 +36,7 @@ title: Quiz results
       </li>
     {% endfor %}
     </ul>
+    <button id="showMoreJobs">Show more</button>
   </div>
   <div class="container">
     <div class="right text-container">
@@ -92,16 +93,30 @@ title: Quiz results
 
   $( document ).ready(function() {
 
-    $('.job-card').each(function(){
-      if($(this).hasClass(type)) {
-        if($(this).hasClass(aow1)) {
-          $(this).show();
-        } else if($(this).hasClass(aow2)) {
-          $(this).show();
-        } else if($(this).hasClass(aow3)) {
-          $(this).show();
+    var counter = 1;
+    function showJobs(max) {
+      $('.job-card').each(function(index, value){
+        if(counter < max+1) {
+          if($(this).hasClass(type)) {
+            if($(this).hasClass(aow1)) {
+              $(this).fadeIn();
+              counter++;
+            } else if($(this).hasClass(aow2)) {
+              $(this).fadeIn();
+              counter++;
+            } else if($(this).hasClass(aow3)) {
+              $(this).fadeIn();
+              counter++;
+            }
+          }
         }
-      }
+      });
+    }
+    showJobs(5);
+
+    $('#showMoreJobs').on('click', function(){
+      showJobs(Infinity);
+      $(this).hide();
     });
 
     $('.job-card-header').on('click', function(){
