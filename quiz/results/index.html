@@ -12,70 +12,28 @@ title: Quiz results
   </div>
   <div class="container">
     <h2>Jobs</h2>
-  </div>
-  <div class="wide container">
-    <ul class="job-card-listing">
-      <li class="job-card aow19 I A E">
-        <header class="job-card-header">
-          <h3>Additive Manufacturing Engineer</h3>
-        </header class="job-card-header">
-        <div class="job-card-descrip">
-          <p>Additive manufacturing engineers will be
-            responsible for making everything from
-            satellite dishes to refarigerators.</p>
-        </div>
-      </li>
-      <li class="job-card aow17 aow18 I E C">
-        <header class="job-card-header">
-          <h3>Automation Anomaly Analyst</h3>
-        </header class="job-card-header">
-        <div class="job-card-descrip">
-          <p>Automation Anomaly Analysts specialise in
-            tweaking algorithms to make them better
-            suit people’s needs, and ‘winding back’ the
-            data inputs that have led to the strange result.</p>
-        </div>
-      </li>
-      <li class="job-card aow12 I A E">
-        <header class="job-card-header">
-          <h3>Biomimicry Innovator</h3>
-        </header class="job-card-header">
-        <div class="job-card-descrip">
-          <p>The Biomimicry Innovator seeks sustainable
-            solutions to human challenges by emulating
-            nature’s engineering processes.</p>
-        </div>
-      </li>
-      <li class="job-card aow3 aow19 I A S C">
-        <header class="job-card-header">
-          <h3>Bioprinting Engineer</h3>
-        </header class="job-card-header">
-        <div class="job-card-descrip">
-          <p>A Bioprinting Engineer will create viable
-            tissue for human implants, using hardware
-            and software associated with next generation
-            3D printers.</p>
-        </div>
-      </li>
-      <li class="job-card aow8 I C aow16 aow 17">
-        <header class="job-card-header">
-          <h3>Child Assistant Bot Programmer</h3>
-        </header class="job-card-header">
-        <div class="job-card-descrip">
-          <p>A Child Assistant Bot Programmer designs
-            humanoid robots (kiddobots) that will
-            support children to play safely.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="container">
     <div class="left text-container">
     <p><strong>Keep in mind:</strong><br>
       While these jobs have been suggested to you based on your quiz answers, it’s important to remember that this is not a complete list of all the things you might like or could do. Use these jobs as inspiration for finding out more!
       Remember, these are jobs that are different to those that currently exist. There are other jobs today that may continue relatively unchanged into the near future but are not listed in these ‘future jobs’. Perhaps the job you really want is one
       of those! Good luck!</p>
     </div>
+  </div>
+  <div class="wide container">
+    <ul class="job-card-listing">
+    {% for jobs in site.data.jobs %}
+      <li class="job-card {{ jobs.aow | remove: "," }} {{ jobs.riasec  | remove: "," }}">
+        <header class="job-card-header">
+          <h3>{{ jobs.title }}</h3>
+        </header class="job-card-header">
+        <div class="job-card-descrip">
+          <p>{{ jobs.description }}</p>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="container">
     <div class="right text-container">
 
 <h2>How can I find out more?</h2>
@@ -123,10 +81,10 @@ title: Quiz results
     return (false);
   }
 
-  var type = getQueryVariable("type");
-  var aow1 = getQueryVariable("aow1");
-  var aow2 = getQueryVariable("aow2");
-  var aow3 = getQueryVariable("aow3");
+  var type = getQueryVariable("type").toUpperCase();
+  var aow1 = getQueryVariable("aow1").toUpperCase();
+  var aow2 = getQueryVariable("aow2").toUpperCase();
+  var aow3 = getQueryVariable("aow3").toUpperCase();
 
   $( document ).ready(function() {
 
