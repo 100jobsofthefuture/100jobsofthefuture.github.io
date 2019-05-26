@@ -157,6 +157,17 @@
       text-align: center;
     }
 
+    #start-button::after {
+      display: inline-block;
+      vertical-align: bottom;
+      content: "";
+      width: 1em;
+      height: 1em;
+      background-image: url('../css/feather/play.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      margin-left: 12px;
+    }
 
     @media only screen and (min-width: 1140px) {
       .logo::after {
@@ -306,6 +317,17 @@
       display: none;
     }
 
+    #start-again::after {
+      display: inline-block;
+      content: "";
+      width: 1em;
+      height: 1em;
+      background-image: url('../css/feather/rotate-ccw.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      margin-left: 12px;
+    }
+
     #areas {
       padding: 0 10px;
       margin: 0 auto;
@@ -403,15 +425,20 @@
     }
 
     .areasofwork li a {
-      display: inline-block;
-      height: 16px;
-      width: 16px;
-      background-image: url('../css/feather/help-circle.svg');
-      background-repeat: no-repeat;
-      background-size: 100%;
-      position: absolute;
-      right: 16px;
-      top: 12px;
+      display: none;
+    }
+    @media (hover: hover) {
+      .areasofwork li a {
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        background-image: url('../css/feather/help-circle.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+      }
     }
 
     .areasofwork li .more-info {
