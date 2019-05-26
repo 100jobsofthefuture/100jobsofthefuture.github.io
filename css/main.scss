@@ -305,7 +305,7 @@ textarea {
      padding: 0 20px;
    }
    .wide.container {
-     max-width: 1340px;
+     max-width: 1356px;
    }
    .text-container {
      max-width: 780px;
@@ -438,38 +438,44 @@ textarea {
    .job-card-listing {
      display: flex;
      flex-wrap: wrap;
+     justify-content: center;
      list-style: none;
      padding: 0;
-     margin-left: -12px;
+     margin-right: -12px;
    }
    .job-card {
      display: none;
      list-style: none;
-     width: 250px;
-     height: 375px;
-     border: 1px solid #eee;
+     width: 300px;
+     height: 361px;
+     /*border: 1px solid #eee;*/
      margin: 0 12px 12px 0;
+     background: url('../css/img/hud-vertical-short.svg');
+     background-repeat: no-repeat;
+     background-size: cover;
    }
    .job-card-header {
-     padding: 8px;
-     background: $ford-blue;
-     height: 110px;
+     padding: 16px 32px;
+     /*background: $ford-blue;*/
+     height: 70px;
      display: flex;
      cursor: pointer;
    }
    .job-card-header h3 {
      font-family: 'Montserrat', sans-serif;
-     font-size: 1.2rem;
+     font-size: 1rem;
+     font-weight: bold;
      text-align: center;
      margin: auto 0;
      width: 100%;
-     color: #fff;
+     /*color: #fff;*/
    }
    .job-card-descrip {
-     padding: 8px;
+     padding: 8px 32px;
    }
    .job-card-descrip p {
      margin: 8px;
+     font-size: 0.9em;
    }
    .job-card-full-descrip {
      display: none;
