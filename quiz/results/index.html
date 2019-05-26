@@ -95,7 +95,7 @@ title: Quiz results
     var counter = 1;
     function showJobs(max) {
       $('.job-card').each(function(index, value){
-        if(counter < max+1) {
+        if(counter < max) {
           if($(this).hasClass(type)) {
             if($(this).hasClass(aow1)) {
               $(this).fadeIn();
