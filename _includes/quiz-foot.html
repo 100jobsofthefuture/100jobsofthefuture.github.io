@@ -91,13 +91,10 @@ $( document ).ready(function() {
         }
 
         //update primary and secondary results
-        // remove current primary and secondary descriptions then copy new highest descriptions
-        $.when($('#primary').empty()).done(function() {
-          $('#primary').append($('#'+highest+'descrip').clone());
-        });
-        $.when($('#secondary').empty()).done(function() {
-          $('#secondary').append($('#'+secondHighest+'descrip').clone());
-        });
+        // remove current primary and secondary descriptions then show new highest descriptions
+        $('#primary p, #secondary p').hide();
+        $('#primary #'+highest+'descrip').show();
+        $('#secondary #'+secondHighest+'descrip').show();
     }
     // update RIASEC scores on load
     updateScore();
