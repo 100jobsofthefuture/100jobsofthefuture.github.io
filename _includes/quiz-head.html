@@ -401,6 +401,7 @@
       position: relative;
       font-size: 0.9em;
       display: block;
+      background: #ddd;
     }
 
     @media only screen and (min-width: 640px) {
@@ -417,16 +418,16 @@
 
     .areasofwork label {
       background: #eee;
-      margin: 0;
-      padding: 12px 42px;
+      margin: 0 42px 0 0;
+      padding: 12px 8px 12px 42px;
       display: block;
       position: relative;
       height: 100%;
     }
 
-    .areasofwork label::before {
+    .areasofwork label::before,
+    .areasofwork label::after {
       content: "";
-      display: inline-block;
       height: 20px;
       width: 20px;
       background-image: url('../css/feather/square.svg');
@@ -437,20 +438,28 @@
       top: 12px;
       opacity: 0.5;
     }
-
+    .areasofwork label::before {
+      display: inline-block;
+    }
+    .areasofwork label::after {
+      display: none;
+      background-image: url('../css/feather/check-square.svg');
+    }
     .areasofwork input[type="checkbox"]:checked+label {
       background: var(--green);
     }
-
     .areasofwork input[type="checkbox"]:checked+label::before {
-      background-image: url('../css/feather/check-square.svg');
-    }
-
-    .areasofwork li a {
       display: none;
     }
-    @media (hover: hover) {
-      .areasofwork li a {
+    .areasofwork input[type="checkbox"]:checked+label::after {
+      display: inline-block;
+    }
+
+    .areasofwork li .info {
+      display: none;
+    }
+    /*@media (hover: hover) {*/
+      .areasofwork li .info {
         display: inline-block;
         height: 16px;
         width: 16px;
@@ -458,10 +467,12 @@
         background-repeat: no-repeat;
         background-size: 100%;
         position: absolute;
-        right: 16px;
-        top: 12px;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
       }
-    }
+    /*}*/
 
     .areasofwork li .more-info {
       display: none;
