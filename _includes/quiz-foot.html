@@ -159,8 +159,17 @@ $( document ).ready(function() {
         currentVerticalFrame = 2;
     });
 
-    //
-    $( document ).tooltip();
+    $('.info').on('click', function(){
+      $('.modal').hide();
+      $('.areasofwork label').removeClass('blue');
+      $(this).parent().find('label').addClass('blue');
+      $(this).parent().find('.modal').show();
+    });
+    $('.modal').on('click', function(){
+      $(this).hide();
+      $(this).parent().find('label').removeClass('blue');
+    });
+
 
     var howmanychecked = 0;
     $('.areasofwork input').on('change', function(){
