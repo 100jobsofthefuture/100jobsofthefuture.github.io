@@ -207,6 +207,9 @@ textarea {
      padding: 0 4em;
      position: relative;
    }
+   blockquote {
+    quotes: "“" "”" "‘" "’";
+  }
    blockquote p {
      font-size: 1.602em;
      font-style: italic;
@@ -218,37 +221,14 @@ textarea {
      border-top: 3px dotted rgb(226, 4, 100);
    }
    blockquote::before {
-     display: inline-block;
-     font-style: normal;
-     font-variant: normal;
-     text-rendering: auto;
-     -webkit-font-smoothing: antialiased;
-     font-family: "Font Awesome 5 Free";
-     font-weight: 400;
-     content: "\f10d";
+     content: open-quote;
      margin-left: 10px;
      position: absolute;
      left: 0;
      top: 0;
      color: rgb(226, 4, 100);
-     font-size: 2em;
-     opacity: 0.5;
-   }
-   blockquote::after {
-     display: inline-block;
-     font-style: normal;
-     font-variant: normal;
-     text-rendering: auto;
-     -webkit-font-smoothing: antialiased;
-     font-family: "Font Awesome 5 Free";
-     content: "\f10e";
-     font-weight: 400;
-     margin-left: 10px;
-     position: absolute;
-     right: 0;
-     bottom: 1em;
-     color: rgb(226, 4, 100);
-     font-size: 2em;
+     font-size: 6em;
+     line-height: 1;
      opacity: 0.5;
    }
    article h1,
@@ -280,15 +260,16 @@ textarea {
      text-decoration: none;
    }
    .download.button::after {
+     content: "";
      display: inline-block;
-     font-style: normal;
-     font-variant: normal;
-     text-rendering: auto;
-     -webkit-font-smoothing: antialiased;
-     content: "\f56d";
-     font-family: "Font Awesome 5 Free";
-     margin-left: 10px;
-     font-weight: 400;
+     vertical-align: middle;
+     background-image: url('feather/download-white.svg');
+     background-repeat: no-repeat;
+     background-size: 100%;
+     width: 16px;
+     height: 16px;
+     margin-left: 0.5em;
+     line-height: 1;
    }
    button.mobile-menu {
      border-radius: 0;
@@ -298,15 +279,16 @@ textarea {
      z-index: 999;
    }
    button.mobile-menu::before {
+     content: "";
      display: inline-block;
-     font-style: normal;
-     font-variant: normal;
-     text-rendering: auto;
-     -webkit-font-smoothing: antialiased;
-     content: "\f0cb";
-     font-family: "Font Awesome 5 Free";
-     margin-right: 10px;
-     font-weight: 400;
+     vertical-align: middle;
+     background-image: url('feather/list-white.svg');
+     background-repeat: no-repeat;
+     background-size: 100%;
+     width: 16px;
+     height: 16px;
+     margin-right: 0.5em;
+     line-height: 1;
    }
 
    .container {
