@@ -169,6 +169,9 @@ textarea {
        text-align: left;
      }
    }
+   article h1 {
+     text-align: left;
+   }
    h2 {
      font-size: 2.566em;
      color: $deakin-green;
@@ -326,9 +329,6 @@ textarea {
      margin-left: auto;
    }
 
-   header {
-
-   }
    .logo {
      margin: 0;
      padding: 0;
@@ -352,6 +352,83 @@ textarea {
    @media only screen and (min-width: 1180px) {
      .logo {
        transform: translateX(-40px);
+     }
+   }
+   .site-menu-toggle-wrapper {
+     text-align: center;
+   }
+   .site-menu-toggle {
+     margin: 32px 0 0 0;
+   }
+   .site-menu-toggle::before {
+     content: "";
+     display: inline-block;
+     vertical-align: bottom;
+     background-image: url('feather/list-white.svg');
+     background-repeat: no-repeat;
+     background-size: 100%;
+     width: 16px;
+     height: 16px;
+     margin-right: 0.5em;
+   }
+   .site-menu ul {
+     display: none;
+     padding: 0;
+     margin: 0 auto;
+     list-style: none;
+     max-width: 320px;
+     text-align: center;
+   }
+   .site-menu li {
+     line-height: 1;
+     margin-top: 1em;
+   }
+   .site-menu a {
+     color: $ford-blue;
+   }
+   @media only screen and (min-width: 900px) {
+     .site-menu-toggle-wrapper {
+       text-align: left;
+     }
+     .site-menu-toggle-wrapper::before {
+       content: "";
+       display: inline-block;
+       vertical-align: bottom;
+       background-image: url('feather/list.svg');
+       background-repeat: no-repeat;
+       background-size: 100%;
+       width: 16px;
+       height: 16px;
+       margin-right: 0.5em;
+     }
+     .site-menu-toggle-wrapper::after {
+       content: "Menu";
+       display: inline-block;
+       vertical-align: bottom;
+       line-height: 1;
+     }
+     .site-menu-toggle {
+       display: none;
+     }
+     .site-menu {
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-end;
+       align-items: flex-start;
+     }
+     .site-menu ul {
+       text-align: left;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-end;
+     }
+
+     .site-header .container {
+       display: flex;
+       justify-content: space-between;
+     }
+     .site-menu {
+       transform: translateY(0);
      }
    }
 
