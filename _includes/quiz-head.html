@@ -229,11 +229,18 @@
 
       }
     }
-
-    @media only screen and (min-width: 1140px) {
+    @media only screen and (min-width: 768px) and (orientation: portrait) {
+      #tool {
+        background-image: url(/css/img/hud-vertical-short.svg);
+        background-size: 768px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
       #tool {
         background-image: url(/css/img/hud.svg);
-        background-size: 1140px;
+        background-size: 1280px;
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -373,21 +380,34 @@
         grid-template-columns: 1fr 1fr;
       }
     }
-    @media only screen and (min-width: 900px) {
+    /*@media only screen and (min-width: 900px) {
       .areasofwork {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
+    }*/
+    @media only screen and (min-width: 768px) and (orientation: portrait) {
+      #areas {
+        background-image: url(/css/img/hud-vertical-short.svg);
+        background-size: 768px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .areas-wrapper {
+        max-width: 600px;
+      }
     }
-
-    @media only screen and (min-width: 1140px) {
+    @media only screen and (min-width: 1024px) {
       #areas {
         background-image: url(/css/img/hud.svg);
-        background-size: 1140px;
+        background-size: 1280px;
         background-repeat: no-repeat;
         background-position: center;
       }
       .areasofwork {
         grid-template-columns: 1fr 1fr 1fr;
+      }
+      .areas-wrapper {
+        max-width: 1000px;
       }
     }
     @media only screen and (min-width: 1280px) {
