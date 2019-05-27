@@ -204,7 +204,7 @@ $( document ).ready(function() {
         aow.push($(this).val());
       });
       var params = "type="+highest+"&aow1="+aow[0]+"&aow2="+aow[1]+"&aow3="+aow[2];
-      window.location.assign("results?"+params);
+      window.top.location.assign("results?"+params);
     });
 
     $('.readmore').on( 'click', function( event ) {
