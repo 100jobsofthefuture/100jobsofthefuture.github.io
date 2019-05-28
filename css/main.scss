@@ -554,8 +554,8 @@ textarea {
      width: 800px;
      max-width: 100%;
      max-height: 100vh;
-     background: rgba($ford-blue, 0.95);
-     color: white;
+     background: rgba(255,255,255,0.95);
+     color: rgba(0,42,120,1);
      padding: 12px 24px;
      position: fixed;
      top: 50%;
@@ -564,6 +564,7 @@ textarea {
      right: 0;
      margin: auto;
      overflow-y: auto;
+     box-shadow: 1px 1px 2px #aaa;
    }
    .job-card-full-descrip h4 {
      margin-top: 0;
