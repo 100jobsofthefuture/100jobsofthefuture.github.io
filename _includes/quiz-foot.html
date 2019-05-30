@@ -104,6 +104,7 @@ $( document ).ready(function() {
 
     // initiate sortable with change
     $( ".sortable" ).sortable({
+      axis: "y",
       stop: function( event, ui ) {}
     });
     $( ".sortable" ).on( "sortstop", function( event, ui ) {
