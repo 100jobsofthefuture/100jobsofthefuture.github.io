@@ -415,7 +415,7 @@ textarea {
      }
      .site-menu ul {
        text-align: left;
-       display: flex;
+       display: flex !important;
        flex-direction: column;
        justify-content: flex-end;
      }
@@ -476,8 +476,7 @@ textarea {
      text-decoration: none;
    }
    .report nav a:hover {
-     color: lighten($ford-blue, 30%);
-     text-decoration: underline;
+     color: $deakin-green;
    }
    @media only screen and (min-width: 768px) {
      .report aside.contents {
