@@ -342,8 +342,6 @@
   }
 
   .question {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     max-width: 500px;
     flex-shrink: 0;
@@ -371,15 +369,22 @@
   }
 
   .pagination {
-    margin: auto 0 0 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
 
   @media only screen and (min-width: 375px) {
+    .question {
+      display: flex;
+      flex-direction: column;
+    }
     .question ul li {
       font-size: 1em;
+    }
+    .pagination {
+      margin: auto 0 0 0;
     }
   }
 
