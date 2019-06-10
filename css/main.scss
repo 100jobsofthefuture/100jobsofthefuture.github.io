@@ -152,8 +152,10 @@ textarea {
    a:visited {
      color: lighten($ford-blue, 30%);
    }
-   h1, h2, h3, h4, h5, h6 {
+   h1, h2 {
      font-family: 'one_dayregular', sans-serif;
+   }
+   h1, h2, h3, h4, h5, h6 {
      font-weight: 400;
      margin-bottom: 0;
      margin-top: 1em;
@@ -178,7 +180,7 @@ textarea {
    }
    h3 {
      font-size: 2.281em;
-     color: $dark-grey;
+     color: $ford-blue;
    }
    h4 {
      font-size: 2.027em;
@@ -561,10 +563,15 @@ textarea {
      margin: 4em auto;
    }
    aside.pullquote p {
-     font-size: 2em;
+     font-size: calc(18px + 18 * ((100vw - 320px) / 680));
      display: inline;
      color: white;
      background: $deakin-green;
+   }
+   @media only screen and (min-width: 1000px) {
+     aside.pullquote p {
+       font-size: 32px;
+     }
    }
 
 
