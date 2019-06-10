@@ -588,16 +588,19 @@ textarea {
    .job-card {
      position: relative;
      list-style: none;
+     line-height: 1.4;
      width: 300px;
      height: 361px;
      /*border: 1px solid #eee;*/
      margin: 0 12px 12px 0;
+     padding: 0;
      background: url('../css/img/hud-vertical-short.svg');
      background-repeat: no-repeat;
      background-size: cover;
      cursor: pointer;
      display: flex;
      flex-direction: column;
+     overflow: hidden;
    }
    .job-card:hover {
      background-image: url('../css/img/hud-vertical-short-hover.svg');
@@ -694,6 +697,41 @@ textarea {
      content: "Click to expand";
      color: rgb(126, 57, 223);
      font-size: 0.8em;
+   }
+
+   .job-card-image {
+     background: none;
+     width: 600px;
+     border: 1px solid #eee;
+   }
+   .job-card-image .job-card-header h3 {
+     background: rgba(255,255,255,0.8);
+     /*background: rgba($ford-blue, 0.8);*/
+   }
+   .job-card-image .job-card-descrip {
+     background: rgba(0,0,0,0.4);
+     color: #fff;
+     position: absolute;
+     bottom: 0;
+     text-align: left;
+   }
+   .job-card-image .job-card-footer {
+     padding: 0 8px;
+   }
+   .job-card-image-tile {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: -1;
+     min-height: 361px;
+     max-width: 600px;
+   }
+   .job-card-image:hover {
+     background: none;
+   }
+   .job-card-image:hover .job-card-descrip {
+     background: rgba(255,255,255,0.8);
    }
 
    .results-section {
