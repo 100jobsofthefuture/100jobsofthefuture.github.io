@@ -259,6 +259,21 @@ textarea {
      background: rgb(126, 57, 223);
      text-decoration: none;
    }
+   .button-ghost,
+   .button-ghost:visited {
+     display: inline-block;
+     color: rgb(162,112,232);
+     border: 1px solid rgb(162,112,232);
+     text-decoration: none;
+     padding: 0.5em 0.8em;
+     border-radius: 6px;
+     cursor: pointer;
+   }
+   .button-ghost:hover,
+   .button-ghost:hover {
+     background: rgba(162,112,232,0.3);
+     text-decoration: none;
+   }
    .download.button::after {
      content: "";
      display: inline-block;

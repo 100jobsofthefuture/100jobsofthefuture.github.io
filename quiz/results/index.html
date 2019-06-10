@@ -5,18 +5,12 @@ layout: results
 title: Quiz results
 ---
 <main>
-  <div class="page-heading" style="background: #eee; padding: 20px 0; margin: 60px 0;">
-    <div class="container">
-      <h1 style="margin: 0; color: #ccc;">Your results</h1>
-    </div>
+  <div class="container">
+    <h1>Your results</h1>
   </div>
   <section class="top results-section">
     <div class="container">
-      <h2>Jobs</h2>
-      <div class="left text-container">
-      <p class="intro"><strong>Keep in mind:</strong><br> While these jobs have been suggested to you based on your quiz answers, it’s important to remember that this is not a complete list of all the things you might like or could do. Use these jobs as inspiration for finding out more!</p>
-      <p>Remember, these are jobs that are different to those that currently exist. There are other jobs today that may continue relatively unchanged into the near future but are not listed in these ‘future jobs’. Perhaps the job you really want is one of those! <strong>Good luck!</strong></p>
-      </div>
+      <p class="intro">Based on your quiz answers here are some of the ‘100 Jobs of the Future’ that you might like to explore.</p>
     </div>
     <div class="wide container">
       <ul class="job-card-listing">
@@ -37,6 +31,12 @@ title: Quiz results
       {% endfor %}
       </ul>
       <p class="centered"><button id="showMoreJobs">Show more</button></p>
+    </div>
+    <div class="container">
+      <div class="left text-container">
+        <p><strong>Keep in mind:</strong><br> While these jobs have been suggested to you based on your quiz answers, it’s important to remember that this is not a complete list of all the things you might like or could do. Use these jobs as inspiration for finding out more!</p>
+        <p>Remember, these are jobs that are different to those that currently exist. There are other jobs today that may continue relatively unchanged into the near future but are not listed in these ‘future jobs’. Perhaps the job you really want is one of those! <strong>Good luck!</strong></p>
+      </div>
     </div>
   </section>
 

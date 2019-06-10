@@ -25,11 +25,6 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
 <link rel="stylesheet" href="/css/normalize.css">
 <style>
-  :root {
-    --green: rgba(75, 182, 161);
-    --blue: rgba(0, 52, 120);
-  }
-
   /* apply a natural box layout model to all elements, but allowing components to change */
   html {
     box-sizing: border-box;
@@ -60,7 +55,7 @@
   h2 {
     font-weight: 300;
     font-size: 1.6rem;
-    color: var(--green);
+    color: rgba(75, 182, 161);
     margin: 0 0 1em 0;
   }
 
@@ -76,24 +71,6 @@
   .centered {
     text-align: center;
   }
-
-  /*.button,
-  .button:visited {
-    color: var(--blue);
-    display: inline-block;
-    padding: 8px 24px;
-    line-height: 1;
-    border: 1px solid var(--blue);
-    border-radius: 6px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-
-  .button:hover {
-    color: #fff;
-    background-color: var(--blue);
-  }*/
 
   button {
     border: none;
@@ -129,6 +106,24 @@
     background-position: center;
     margin-left: 12px;
   }
+  .button.chevron.down::after {
+    background-image: url('../css/feather/white/chevron-down.svg');
+  }
+  .button-ghost,
+  .button-ghost:visited {
+    display: inline-block;
+    color: rgb(101, 32, 198);
+    border: 1px solid rgb(101, 32, 198);
+    text-decoration: none;
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .button-ghost:hover,
+  .button-ghost:hover {
+    background: rgba(101, 32, 198, 0.3);
+    text-decoration: none;
+  }
   #start-button {
     font-size: 1.2em;
   }
@@ -139,6 +134,18 @@
     width: 1em;
     height: 1em;
     background-image: url('../css/feather/play-white.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 12px;
+  }
+  .rotate-ccw::after {
+    display: inline-block;
+    vertical-align: top;
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-image: url('../css/feather/purple/rotate-ccw.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -196,7 +203,7 @@
     margin: 0 auto;
   }
   #intro .readmore {
-    color: var(--green);
+    color: rgba(75, 182, 161);
     text-decoration: none;
     font-style: italic;
   }
@@ -334,10 +341,11 @@
   }
 
   .question {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 500px;
     flex-shrink: 0;
-    height: 100%;
     padding: 10px;
   }
 
@@ -347,7 +355,7 @@
   }
 
   .question p.small {
-    color: var(--green);
+    color: rgba(75, 182, 161);
     font-size: 80%;
     font-weight: 600;
     margin: 0 0 0.25em 0;
@@ -362,68 +370,58 @@
   }
 
   .pagination {
-    margin: auto 0 5px 0;
+    margin: auto 0 0 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
 
   @media only screen and (min-width: 375px) {
-
-    .question p.small {
-      margin-top: 1em;
-    }
-
     .question ul li {
       font-size: 1em;
     }
-
-    .pagination {
-      margin: inherit;
-    }
   }
 
-  .pagination .progress {
+  .progress {
     margin: 0;
-    padding: 0;
+    padding: 12px 0 0 0;
     list-style: none;
-    width: 50%;
     display: flex;
   }
 
-  .pagination .progress li {
+  .progress li {
     display: block;
-    width: 20%;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-color: rgba(101, 32, 198, 0.3);
   }
 
-  /*.pagination a {
-    background-color: var(--blue);
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    width: 50%;
-  }*/
+  .progress li.selected {
+    background-color: rgba(101, 32, 198, 0.9);
+  }
+  .progress li.pitstop {
+    border-radius: 50%;
+  }
 
-  #q4 p.small {
-    margin-top: 1em;
+  @media only screen and (min-width: 1024px) {
+    .scroll-wrapper {
+      max-width: 750px;
+    }
+    .question {
+      max-width: 750px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: 40px;
+    }
+    .pagination {
+      grid-column: span 2;
+    }
   }
   #primary p,
   #secondary p {
     margin-top: 0;
     display: none;
-  }
-
-  #start-again::after {
-    display: inline-block;
-    content: "";
-    width: 1em;
-    height: 1em;
-    background-image: url('../css/feather/rotate-ccw.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-left: 12px;
   }
 
   .start-again,
@@ -457,11 +455,7 @@
       grid-template-columns: 1fr 1fr;
     }
   }
-  /*@media only screen and (min-width: 900px) {
-    .areasofwork {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }*/
+
   @media only screen and (min-width: 768px) and (orientation: portrait) {
     #areas {
       background-image: url(/css/img/hud-vertical-short.svg);
@@ -543,7 +537,7 @@
     background-image: url('../css/feather/check-square.svg');
   }
   .areasofwork input[type="checkbox"]:checked+label {
-    background: var(--green);
+    background: rgba(75, 182, 161);
   }
   .areasofwork input[type="checkbox"]:checked+label::before {
     display: none;
@@ -578,7 +572,10 @@
     opacity: 0.6;
   }
 
-
+  .areasofwork label.blue {
+    color: rgb(0,42,120);
+    font-weight: bold;
+  }
   .modal {
     display: none;
     width: 600px;
@@ -586,17 +583,13 @@
     max-height: 100vh;
     background: rgba(0,42,120,0.9);
     color: white;
-    padding: 24px 48px;
-    position: fixed;
+    padding: 24px 48px 24px 24px;
+    position: absolute;
     left: 0;
     right: 0;
     margin: auto;
     overflow-y: auto;
     z-index: 9999;
-  }
-  .areasofwork label.blue {
-    color: rgb(0,42,120);
-    font-weight: bold;
   }
   .modal::before {
     content: "";
@@ -605,10 +598,11 @@
     width: 40px;
     background-image: url('../css/feather/x-circle-white.svg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 16px;
+    background-position: center;
     position: absolute;
-    right: 8px;
-    top: 12px;
+    right: 0px;
+    top: 0px;
     opacity: 0.5;
     cursor: pointer;
   }
