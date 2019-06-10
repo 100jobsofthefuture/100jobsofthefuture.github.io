@@ -331,7 +331,26 @@ textarea {
      margin-right: 0.5em;
      line-height: 1;
    }
-
+   .browse-filters {
+     list-style-type: none;
+     margin-left: 0;
+     padding: 0;
+   }
+    .browse-filters li {
+      padding: 0;
+      display: inline-block;
+    }
+    .filter {
+      color: #495057;
+      background-color: #eee;
+    }
+    .filter:hover {
+      background-color: #ddd;
+    }
+    .filter.selected {
+      color: #fff;
+      background: rgb(162,112,232);
+    }
    .container {
      max-width: 1140px;
      margin: 0 auto;
@@ -559,7 +578,7 @@ textarea {
      margin-top: 2em;
    }
    .job-card {
-     display: none;
+     position: relative;
      list-style: none;
      width: 300px;
      height: 361px;
@@ -568,13 +587,21 @@ textarea {
      background: url('../css/img/hud-vertical-short.svg');
      background-repeat: no-repeat;
      background-size: cover;
+     cursor: pointer;
+     display: flex;
+     flex-direction: column;
+   }
+   .job-card:hover {
+     background-image: url('../css/img/hud-vertical-short-hover.svg');
+   }
+   .results.job-card-listing .job-card {
+     display: none;
    }
    .job-card-header {
      padding: 16px 32px;
      /*background: $ford-blue;*/
      height: 70px;
      display: flex;
-     cursor: pointer;
    }
    .job-card-header h3 {
      font-family: 'Montserrat', sans-serif;
@@ -593,6 +620,7 @@ textarea {
      font-size: 0.9em;
    }
    .job-card-full-descrip {
+     z-index: 999;
      display: none;
      width: 800px;
      max-width: 100%;
@@ -628,6 +656,36 @@ textarea {
      cursor: pointer;
    }
 
+   .job-card-footer {
+     position: absolute;
+     width: 100%;
+     left: 0;
+     bottom: 0;
+     padding: 0 32px;
+     text-align: right;
+   }
+   .expand::after {
+     content: "";
+     display: inline-block;
+     vertical-align: middle;
+     background-image: url('feather/maximize-2.svg');
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-position: center;
+     width: 1em;
+     height: 1em;
+     line-height: 1.6;
+     margin-left: 0.5em;
+   }
+   .job-card:hover .expand::after {
+     background-image: url('feather/purple/maximize-2.svg');
+   }
+   .job-card:hover .expand::before {
+     content: "Click to expand";
+     color: rgb(126, 57, 223);
+     font-size: 0.8em;
+   }
+
    .results-section {
      padding: 3vh 0;
    }
@@ -651,6 +709,8 @@ textarea {
    .strengths-list li:nth-child(even) b {
      color: $ford-blue;
    }
+
+
 
 /* ==========================================================================
    Helper classes

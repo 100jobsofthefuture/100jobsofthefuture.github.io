@@ -1,3 +1,4 @@
+<div class="overlay"></div>
 <!-- javascript -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
@@ -47,13 +48,6 @@
     $('#showMoreJobs').on('click', function(){
       showJobs(Infinity);
       $(this).fadeOut();
-    });
-
-    $('.job-card-header').on('click', function(){
-      $(this).parent().find('.job-card-full-descrip').show();
-    });
-    $('.job-card-full-descrip').on('click', function(){
-      $(this).hide();
     });
   });
 </script>

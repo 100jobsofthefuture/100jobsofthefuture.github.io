@@ -7,5 +7,39 @@ description:
 <main>
   <div class="container">
     <h1>Browse the 100 jobs of the future</h1>
+    <ul class="browse-filters">
+      <li><button id="all" class="filter selected">All</button></li>
+      <li><button id="tech" class="filter">Technology jobs</button></li>
+      <li><button id="people" class="filter">People jobs</button></li>
+      <li><button id="buslaw" class="filter">Business and Law jobs</button></li>
+      <li><button id="env" class="filter">Environment jobs</button></li>
+      <li><button id="urban" class="filter">Urban jobs</button></li>
+      <li><button id="ag" class="filter">Agriculture jobs</button></li>
+      <li><button id="space" class="filter">Space jobs</button></li>
+      <li><button id="health" class="filter">Health jobs</button></li>
+      <li><button id="data" class="filter">Data jobs</button></li>
+      <li><button id="ex" class="filter">Experience jobs</button></li>
+  </div>
+  <div class="">
+    <ul class="job-card-listing">
+    {% for jobs in site.data.jobs2 %}
+      <li class="job-card {{ jobs.aow | remove: "," }} {{ jobs.riasec  | remove: "," }} {{ jobs.category }}">
+        <header class="job-card-header">
+          <h3>{{ jobs.title }}</h3>
+        </header class="job-card-header">
+        <div class="job-card-descrip">
+          <p>{{ jobs.description }}</p>
+        </div>
+        <div class="job-card-full-descrip">
+          <h4>{{ jobs.title }}</h4>
+          {% assign paragraphs = jobs.full-description | newline_to_br | split: '<br />' %}
+          {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+        </div>
+        <footer class="job-card-footer">
+          <p class="expand"></p>
+        </footer>
+      </li>
+    {% endfor %}
+    </ul>
   </div>
 </main>

@@ -13,8 +13,8 @@ title: Quiz results
       <p class="intro">Based on your quiz answers here are some of the ‘100 Jobs of the Future’ that you might like to explore.</p>
     </div>
     <div class="wide container">
-      <ul class="job-card-listing">
-      {% for jobs in site.data.jobs %}
+      <ul class="results job-card-listing">
+      {% for jobs in site.data.jobs2 %}
         <li class="job-card {{ jobs.aow | remove: "," }} {{ jobs.riasec  | remove: "," }}">
           <header class="job-card-header">
             <h3>{{ jobs.title }}</h3>
@@ -27,6 +27,9 @@ title: Quiz results
             {% assign paragraphs = jobs.full-description | newline_to_br | split: '<br />' %}
             {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
           </div>
+          <footer class="job-card-footer">
+            <p class="expand"></p>
+          </footer>
         </li>
       {% endfor %}
       </ul>
