@@ -22,11 +22,11 @@ description:
   </div>
   <div class="">
     <ul class="job-card-listing">
-    {% for jobs in site.data.jobs2 %}
+    {% for jobs in site.data.jobs3 %}
       <li class="job-card {{ jobs.aow | remove: "," }} {{ jobs.riasec  | remove: "," }} {{ jobs.category }}">
         <header class="job-card-header">
           <h3>{{ jobs.title }}</h3>
-        </header class="job-card-header">
+        </header>
         <div class="job-card-descrip">
           <p>{{ jobs.description }}</p>
         </div>
@@ -34,6 +34,7 @@ description:
           <h4>{{ jobs.title }}</h4>
           {% assign paragraphs = jobs.full-description | newline_to_br | split: '<br />' %}
           {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+          {% unless jobs.image == nil %}<img src="/img/jobs/{{ jobs.image }}">{% endunless %}
         </div>
         <footer class="job-card-footer">
           <p class="expand"></p>
