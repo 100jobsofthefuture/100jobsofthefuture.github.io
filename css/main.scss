@@ -145,7 +145,6 @@ textarea {
    a {
      color: lighten($ford-blue, 30%);
      text-decoration: none;
-     word-break: break-all;
    }
    a:hover {
      text-decoration: underline;
@@ -153,6 +152,9 @@ textarea {
    a:visited {
      color: lighten($ford-blue, 30%);
    }
+   .references a {
+     word-break: break-all;
+  }
    h1, h2 {
      font-family: 'one_dayregular', sans-serif;
    }
@@ -182,6 +184,14 @@ textarea {
    h3 {
      font-size: 2.281em;
      color: $ford-blue;
+   }
+   .report-job-heading {
+     font-size: 1.602rem;
+   }
+   .report-job-heading span {
+     font-size: 1.266rem;
+     margin-right: 8px;
+     color: $dark-grey;
    }
    h4 {
      font-size: 2.027em;
@@ -889,6 +899,18 @@ textarea {
      width: 200px;
      padding: 0;
      margin-bottom: 40px;
+   }
+
+   .new::after {
+     content: "Future job";
+     display: inline-block;
+     padding: 4px 8px;
+     border-radius: 3px;
+     border: 1px solid #fc3f91;
+     margin-left: 8px;
+     font-size: 12px;
+     color: #fc3f91;
+     vertical-align: middle;
    }
 
 /* ==========================================================================

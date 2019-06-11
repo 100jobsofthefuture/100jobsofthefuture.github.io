@@ -22,7 +22,7 @@ description:
   </div>
   <div class="">
     <ul class="job-card-listing">
-    {% for jobs in site.data.jobs3 %}
+    {% for jobs in site.data.jobs %}
       <li class="job-card {% unless jobs.image == nil %}job-card-image{% endunless %} {{ jobs.aow | remove: "," }} {{ jobs.riasec  | remove: "," }} {{ jobs.category }}">
         <header class="job-card-header">
           <h3><span>{{ jobs.title }}</span></h3>

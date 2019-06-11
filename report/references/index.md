@@ -4,6 +4,7 @@
 layout: report
 title: "Report: 100 Jobs of the Future"
 description: Experts have come together to predict 100 jobs of the future.
+articleClass: references
 ---
 <h1>References</h1>
 AlphaBeta (2017), *The Automation Advantage*. Retrieved from <http://www.alphabeta.com/wp-content/uploads/2017/08/The-Automation-Advantage.pdf>
