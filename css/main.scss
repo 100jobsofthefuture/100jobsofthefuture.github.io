@@ -123,6 +123,9 @@ textarea {
      max-width: 100%;
    }
    /* end */
+   html {
+     scroll-behavior: smooth;
+   }
    body {
      font-family: 'Montserrat', sans-serif;
    }
@@ -232,10 +235,16 @@ textarea {
     quotes: "“" "”" "‘" "’";
   }
    blockquote p {
-     font-size: 1.602em;
+     font-size: 16px;
+     font-size: calc(16px + 9 * ((100vw - 320px) / 680));
      font-style: italic;
-     color: rgb(226, 4, 100);
+     color: $dark-grey;
      margin: 0.5em 0;
+   }
+   @media only screen and (min-width: 900px) {
+     blockquote p {
+       font-size: 1.602em;
+     }
    }
    blockquote footer {
      padding-top: 0.5em;

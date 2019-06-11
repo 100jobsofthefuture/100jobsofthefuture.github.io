@@ -11,6 +11,11 @@ workplaces, the skills that are growing in demand (and those that are not) and h
 work is likely to change in the future.</p>
 ## Change drivers for the world of work
 
+<blockquote>
+  <p>The three key forces that will shape the future of work are: automation: ever-smarter machines performing ever-more human tasks; globalisation: our workforce going global and the global workforce coming to us; and collaboration: many jobs, with many employers, often at the same time.</p>
+  <footer><cite>The New Work Order (Foundation for Young Australians, 2017b, p.11)</cite></footer>
+</blockquote>
+
 How we work is being impacted by mega-trends including “globalisation, technological progress and demographic change” (OECD, 2017, p.2). The key sites for technological progress are in “Big Data, artificial intelligence (AI), the Internet of Things and ever-increasing computing power” (p.4). For the International Monetary Fund (2018), the major factors driving labour market trends are “automation and cheaper capital goods” and “global integration” (p.12) making a global marketplace. Research by Pearson and Nesta (Bakhski et al., 2017) adds environmental sustainability, urbanisation, increasing inequality, and political uncertainty (p.12) to this list. Australian research has come to similar conclusions.
 
 The Commonwealth Scientific and Industrial Research Organisation (CSIRO) point to the “growth in computing power, device connectivity, data volumes and artificial intelligence” ((Hajkowicz et al., 2016, p.7) as trends to watch in coming years. While stressing these are yet to be fully felt in the Australian economy, each of them have been growing exponentially, so that their impacts are likely to be both sudden and significant. Each of these individual drivers of change are linked to all the others impacting Australia — so that we are seeing the growth of the peer-to-peer marketplace, significant demographic change, the end of the mining boom, and regional economic changes impacting our Asian trading partners coming together at the same time. We will consider these change drivers in more detail throughout this report.
