@@ -1,11 +1,9 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+/* TEAM */
 
-# TEAM
+    Web designer: Albert John Penticoss
+    Twitter: @iPaisthin
+    Site: https://needawebguy.com
 
-    Albert John Penticoss -- Web design and build -- @iPaisthin
-
-# TECHNOLOGY COLOPHON
-
-    CSS3, HTML5
-    jQuery, Modernizr, Normalize.css
+/* SITE */
+    Standards: CSS3, HTML5
+    Components: jQuery, Normalize.css, Jekyll

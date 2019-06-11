@@ -14,19 +14,19 @@ title: Quiz results
     </div>
     <div class="wide container">
       <ul class="results job-card-listing">
-      {% for jobs in site.data.jobs %}
-        <li class="job-card {{ jobs.aow | remove: "," }} {{ jobs.riasec  | remove: "," }}">
+      {% for job in site.data.jobs %}
+        <li class="job-card {{ job.aow | remove: "," }} {{ job.riasec  | remove: "," }}">
           <header class="job-card-header">
-            <h3>{{ jobs.title }}</h3>
+            <h3>{{ job.title }}</h3>
           </header class="job-card-header">
           <div class="job-card-descrip">
-            <p>{{ jobs.description }}</p>
+            <p>{{ job.description }}</p>
           </div>
           <div class="job-card-full-descrip">
-            <h4>{{ jobs.title }}</h4>
-            {% assign paragraphs = jobs.full-description | newline_to_br | split: '<br />' %}
+            <h4>{{ job.title }}</h4>
+            {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
             {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-            {% unless jobs.image == nil %}<img src="/img/jobs/{{ jobs.image }}">{% endunless %}
+            {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
           </div>
           <footer class="job-card-footer">
             <p class="expand"></p>
