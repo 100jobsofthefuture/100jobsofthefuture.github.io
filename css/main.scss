@@ -797,6 +797,83 @@ textarea {
      margin: 24px 48px;
    }
 
+   .expert {
+     margin-top: 40px;
+     margin-bottom: 80px;
+   }
+   @media only screen and (min-width: 640px) {
+     .expert {
+       display: grid;
+       grid-template-columns: 200px 1fr;
+     }
+     .expert-article {
+       grid-column: span 2;
+     }
+     .expert.even {
+       grid-template-columns: 1fr 200px;
+     }
+     .expert.even .expert-profile {
+       order: 1;
+     }
+     .expert.even .expert-details {
+       order: 2;
+     }
+     .expert.even .expert-article {
+       order: 3;
+     }
+   }
+   @media only screen and (min-width: 768px) {
+     .expert-article {
+       columns: 2;
+       margin: 20px 0;
+     }
+     .expert-article p {
+       margin: 0;
+     }
+   }
+   .expert-image {
+     position: relative;
+   }
+   .expert-image img {
+     width: 150px;
+     max-width: 100%;
+   }
+   .expert-name {
+     margin: 0;
+     padding: 0;
+     font-family: 'Montserrat', sans-serif;
+     color: $ford-blue;
+     font-size: 1.266em;
+   }
+   .expert-org {
+     margin: 0;
+     padding: 0;
+   }
+   .expert-profile {
+     background: $deakin-green;
+     color: #fff;
+     padding: 20px;
+   }
+   .expert-image::before {
+     content: "";
+     display: block;
+     width: 150px;
+     height: 150px;
+     background: #fc3f91;
+     position: absolute;
+     top: -20px;
+     z-index: -1;
+   }
+   .expert.odd .expert-image::before {
+     left: -20px;
+   }
+   .expert.even .expert-details {
+     text-align: right;
+   }
+   .expert.even .expert-image::before {
+     right: -20px;
+   }
+
 
 /* ==========================================================================
    Helper classes
