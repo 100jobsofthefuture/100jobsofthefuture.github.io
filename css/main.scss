@@ -544,6 +544,10 @@ textarea {
    .report nav a:hover {
      color: $deakin-green;
    }
+   .report nav a.selected,
+   .report nav a.selected:visited {
+     color: rgb(252,63,145);
+   }
    @media only screen and (min-width: 900px) {
      .report aside.contents {
        width: 200px;

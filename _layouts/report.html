@@ -11,14 +11,14 @@
       <nav>
         <h2>Contents</h2>
         <ul>
-          <li><a href="/report/">Executive summary</a></li>
-          <li><a href="/report/introduction/">A Journey into the Future of Work</a></li>
-          <li><a href="/report/literature-review/">What the Literature says about the Future of Work</a></li>
-          <li><a href="/report/research-design/">Research Design</a></li>
-          <li><a href="/report/the-experts/">The Experts</a></li>
-          <li><a href="/report/work-futures/">Work Futures: Looking Forward</a></li>
-          <li><a href="/report/jobs/">100 Jobs of the Future</a></li>
-          <li><a href="/report/references/">References</a></li>
+          <li><a {% if page.url == "/report/" %}class="selected"{% endif %} href="/report/">Executive summary</a></li>
+          <li><a {% if page.url == "/report/introduction/" %}class="selected"{% endif %} href="/report/introduction/">A Journey into the Future of Work</a></li>
+          <li><a {% if page.url == "/report/literature-review/" %}class="selected"{% endif %} href="/report/literature-review/">What the Literature says about the Future of Work</a></li>
+          <li><a {% if page.url == "/report/research-design/" %}class="selected"{% endif %} href="/report/research-design/">Research Design</a></li>
+          <li><a {% if page.url == "/report/the-experts/" %}class="selected"{% endif %} href="/report/the-experts/">The Experts</a></li>
+          <li><a {% if page.url == "/report/work-futures/" %}class="selected"{% endif %} href="/report/work-futures/">Work Futures: Looking Forward</a></li>
+          <li><a {% if page.url == "/report/jobs/" %}class="selected"{% endif %} href="/report/jobs/">100 Jobs of the Future</a></li>
+          <li><a {% if page.url == "/report/references/" %}class="selected"{% endif %} href="/report/references/">References</a></li>
         </ul>
       </nav>
       <p><a class="download button" href="">Download PDF version</a></p>

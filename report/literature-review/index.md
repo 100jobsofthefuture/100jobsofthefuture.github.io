@@ -166,3 +166,5 @@ Reskilling and retraining will become increasingly necessary if people are to re
 ## In summary
 
 There have been few times in history when the future of work has been less like the past. In the past people spent most of their time making things, however, in the future relationships are likely to be as important as what is produced. In the past people worked in one job for most of their working lives, in the future a large section of the workforce will likely work for themselves. In the past people were defined by their job title, in the future they will be defined and redefined by the skills they have and how they go about marketing those skills. In the past, when you became something you were known as that type of worker, in the future people are likely to go on becoming new versions of themselves as they continuously learn new skills. The jobs of the future look to be much more dynamic, interesting and rewarding. And today, for those who engage with this project of lifelong learning, that future is within reach.
+
+<p class="report-pagination"><a class="button chevron" href="/report/research-design/">Next section</a></p>

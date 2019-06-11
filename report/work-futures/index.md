@@ -55,3 +55,5 @@ Of course, these jobs, while many and varied, do not represent a complete future
 ## Next steps
 
 These expert interviews, and the jobs emerging from them, invite further analysis. We intend to transform them from an item of insight and interest, to a useful tool to help youth in thinking about preparing for the future, and its possibilities for them. We intend to sort the jobs into broad career interest categories, and also more specific future role and task themes. For the career interest categories, we intend to use the well established RIASEC dimensions (Holland, 1996, 1997) that categorise jobs into Realistic, Investigative, Artistic, Social, Enterprising, and Conventional types, and for the specific future role and task themes, we will draw upon the literature review and data generated from the interviews with experts as part of this project. We will create an interactive resource that young people can use to explore their own career interests, and from this to imaginatively project into possible interesting and rewarding work futures.
+
+<p class="report-pagination"><a class="button chevron" href="/report/jobs/">Next section</a></p>
