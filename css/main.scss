@@ -874,6 +874,20 @@ textarea {
      right: -20px;
    }
 
+   .experts-list.container {
+     max-width: 1240px;
+   }
+   .experts {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 0;
+     margin-left: 0;
+   }
+   .experts li {
+     display: inline-block;
+     width: 200px;
+     padding: 0;
+   }
 
 /* ==========================================================================
    Helper classes

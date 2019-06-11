@@ -34,10 +34,23 @@ description:
       <p style="text-align: right;"><a class="button chevron" href="/report/research-design/">Read more in the report</a></p>
     </div>
     <div class="left text-container">
-    <h2>Meet the experts</h2>
-      <p>List of names and affiliations. (<em>I think for this part we don&rsquo;t need photos or CVs</em>? &ndash; <em>some experts have changed jobs &ndash; check and update</em>)</p>
-      <p><a class="button chevron" href="/report/the-experts/">Read more in the report</a></p>
+      <h2>Meet the experts</h2>
     </div>
+  </div>
+  <div class="experts-list container">
+    <ul class="experts">
+    {% for expert in site.data.experts %}
+      <li class="expert odd">
+        <div class="expert-details">
+          <div class="expert-image"><img src="/img/experts/{{ expert.image }}" alt=""></div>
+          <h2 class="expert-name"><a href="/report/the-experts/#{{ expert.name | replace: ' ', '-' | downcase }}">{{ expert.name }}</a></h2>
+          <p class="expert-org">{{ expert.organisation }}</p>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <div class="container">
     <div class="right text-container">
       <h2>Key findings</h2>
       <p>The world of work will change dramatically in the next few decades. Even now, jobs are changing at a fast rate as machines and big data change the way we work and interact with each other.</p>
