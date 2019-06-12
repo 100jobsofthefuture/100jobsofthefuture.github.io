@@ -23,31 +23,50 @@
   var aow3 = getQueryVariable("aow3").toUpperCase();
 
   $( document ).ready(function() {
-
-    var counter = 1;
+    var numJobsToShow = 4;
     function showJobs(max) {
+      var counter = 1;
       $('.job-card').each(function(index, value){
-        if(counter < max) {
           if($(this).hasClass(type)) {
             if($(this).hasClass(aow1)) {
-              $(this).fadeIn();
-              counter++;
+              if(counter <= max) {
+                $(this).fadeIn();
+                counter++;
+              }
             } else if($(this).hasClass(aow2)) {
-              $(this).fadeIn();
-              counter++;
+              if(counter <= max) {
+                $(this).fadeIn();
+                counter++;
+              }
             } else if($(this).hasClass(aow3)) {
-              $(this).fadeIn();
-              counter++;
+              if(counter <= max) {
+                $(this).fadeIn();
+                counter++;
+              }
+            } else {
+              $(this).remove();
             }
+          } else {
+            $(this).remove();
           }
-        }
+      }).promise().done(function(){
+        fadeOutShoMoreButton();
       });
     }
-    showJobs(5);
+
+    function fadeOutShoMoreButton() {
+      console.log($('.job-card:hidden').length);
+      if($('.job-card:hidden').length == 0) {
+        $('#showMoreJobs').fadeOut();
+      }
+    }
 
     $('#showMoreJobs').on('click', function(){
-      showJobs(Infinity);
-      $(this).fadeOut();
+      numJobsToShow = numJobsToShow + 4;
+      showJobs(numJobsToShow);
     });
+
+    // show first 4 jobs
+    showJobs(numJobsToShow);
   });
 </script>
