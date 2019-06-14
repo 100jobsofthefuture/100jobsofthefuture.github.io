@@ -161,18 +161,23 @@ $( document ).ready(function() {
         currentVerticalFrame = 2;
     });
 
+    /* aow info click handler to open modal */
     $('.info').on('click', function(){
-      $('.modal').hide();
-      $('.areasofwork label').removeClass('blue');
-      $(this).parent().find('label').addClass('blue');
-      $(this).parent().find('.modal').show();
+      // only want this to happen if hover is not supported - ie on mobile
+      if($this.css('background-color') != 'transparent') {
+        $('.modal').hide();
+        $('.areasofwork label').removeClass('blue');
+        $(this).parent().find('label').addClass('blue');
+        $(this).parent().find('.modal').show();
+      }
     });
+    /* modal click handler to close modal */
     $('.modal').on('click', function(){
       $(this).hide();
       $(this).parent().find('label').removeClass('blue');
     });
 
-    /* */
+    /* shows See results button after 2 aows selected and disables remaining aows once 2 selected */
     var howmanychecked = 0;
     $('.areasofwork input').on('change', function(){
       if($(this).prop('checked')){
@@ -206,10 +211,11 @@ $( document ).ready(function() {
           aow.push($(this).val());
         });
         var params = "type="+highest+"&aow1="+aow[0]+"&aow2="+aow[1]+"&aow3="+aow[2];
-        window.top.location.assign("results?"+params);
+        window.top.location.assign("results?"+params); // window.top allows linking from iframe to main window
       }
     });
 
+    /* clicj handler for readmore */
     $('.readmore').on( 'click', function( event ) {
       event.preventDefault();
       $(this).hide();

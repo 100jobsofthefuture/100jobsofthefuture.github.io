@@ -134,7 +134,7 @@
     content: "";
     width: 1em;
     height: 1em;
-    background-image: url('../css/feather/play-white.svg');
+    background-image: url('../css/feather/white/play.svg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -522,7 +522,6 @@
     position: relative;
     height: 100%;
   }
-
   .areasofwork label::before,
   .areasofwork label::after {
     content: "";
@@ -552,6 +551,13 @@
   .areasofwork input[type="checkbox"]:checked+label::after {
     display: inline-block;
   }
+  .areasofwork input[disabled="disabled"]+label {
+    opacity: 0.6;
+  }
+  .areasofwork label.blue {
+    color: rgb(0,42,120);
+    font-weight: bold;
+  }
 
   .areasofwork li .info {
     display: inline-block;
@@ -574,15 +580,6 @@
     width: 100%;
     padding: 12px;
   }
-
-  .areasofwork input[disabled="disabled"]+label {
-    opacity: 0.6;
-  }
-
-  .areasofwork label.blue {
-    color: rgb(0,42,120);
-    font-weight: bold;
-  }
   .modal {
     display: none;
     width: 600px;
@@ -598,20 +595,32 @@
     overflow-y: auto;
     z-index: 9999;
   }
-  .modal::before {
-    content: "";
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-image: url('../css/feather/x-circle-white.svg');
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position: center;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    opacity: 0.5;
-    cursor: pointer;
+  @media (hover: none) {
+    /* styles for mobile - when hover not supported */
+    .modal::before {
+      content: "";
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-image: url('../css/feather/white/x-circle.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: center;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+  @media (hover: hover) {
+    .areasofwork li .info {
+      /* using this to stop click handler when browser supports hover */
+      background-color: transparent;
+    }
+    .areasofwork li .info:hover + .modal {
+      display: inline;
+    }
   }
 </style>
 </head>
