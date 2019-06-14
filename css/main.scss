@@ -748,6 +748,14 @@ textarea {
      color: rgb(126, 57, 223);
      font-size: 0.8em;
    }
+   .job-card-image .expand::after,
+   .job-card-image:hover .expand::after {
+     background-image: url('feather/white/maximize-2.svg');
+   }
+   .job-card-image:hover .expand::before {
+     color: #fff;
+     background: rgba(0,0,0,0.8);
+   }
 
    .job-card-image {
      background: none;
@@ -762,6 +770,7 @@ textarea {
      background: rgba(0,0,0,0.4);
      color: #fff;
      position: absolute;
+     width: 100%;
      bottom: 0;
      text-align: left;
    }
@@ -780,9 +789,7 @@ textarea {
    .job-card-image:hover {
      background: none;
    }
-   .job-card-image:hover .job-card-descrip {
-     background: rgba(255,255,255,0.8);
-   }
+
 
    .results-section {
      padding: 3vh 0;
