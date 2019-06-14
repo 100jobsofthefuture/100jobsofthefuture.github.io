@@ -10,6 +10,10 @@ description: Experts have come together to predict 100 jobs of the future.
 
 Over the next decade, almost every job will be affected. Some jobs will disappear entirely. New jobs, not even thought of today, will come into being. We can see this happening already, with fields such as retail, entertainment, health care, manufacturing and education being profoundly affected as technology advances. Some of the drivers fuelling this revolution are: automation, robotics, the internet of things, climate change, globalisation and an ageing and increasing population.
 
+<figure class="green right">
+  <img src="/img/luke-porter-537117-unsplash.jpg" alt="Man operating drone">
+</figure>
+
 These changes in the world of work have been documented by many futurists, they have been the subject of many conferences and symposia, and their implications have been articulated in an array of commissioned reports.
 
 While the pundits largely agree on the broad drivers and changing landscape of industries and work futures, they are divided on the larger scale effects for societal futures. Some pessimistically predict widespread loss of jobs, an economic disruption, and increasing inequality leading to social unrest. Others see opportunities and changes in work patterns that will make our lives more interesting and fulfilling. All predict changes in the way we work, in the shape of our working lives, and in the skills that we will find increasingly useful.

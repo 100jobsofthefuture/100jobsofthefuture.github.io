@@ -24,6 +24,11 @@ These trends and themes have also been identified in the work futures literature
 
 A number of the experts talked explicitly about the relationship of machines to humans and to human needs. In the health sector, and in material science and engineering, it is clear that we will have in the future much more intimate contact with machines. This will be true whether it be intelligent implants (well beyond pacemakers or knee replacements), personal communication devices, or intelligent clothing that monitors and provides advice. David Ramadge talked of the ‘singularity’ where the dividing line between what is human and machine becomes blurred.
 
+<figure class="image">
+  <img src="/img/jobs/CyborgPsychologist.jpg" alt="Artists impression of a Cyborg Psychologist consulting with patient">
+  <figcaption>Cyborg Psychologist (Artist’s impression)</figcaption>
+</figure>
+
 A number of the experts saw this humanmachine interface as being a major focus of many future jobs. These jobs will involve translation of computing advances to human applications, and the interpretation of innovative software and hardware for people. In the other direction, jobs are likely to open up for those able to communicate human needs and possibilities to programmers, who may be expert in technical matters but need insight into the possibilities these can provide for individuals and communities.
 
 A number of the experts talked explicitly about the advantage humans will always have over machines, in our ethical judgments and in our understandings of human needs and responses. A number argued that machines will take away the drudgery from many jobs while opening spaces for more human interactions producing more rewarding and varied work. In the future, it is likely machines will perform much more complex tasks, to the point of designing other machines. The key, for individuals, is to find ways of working with machines, and so avoid being replaced by them. This, of course, will not only be a matter left to individuals and their strategies, but also for companies and government to help us manage for our betterment.
@@ -38,6 +43,11 @@ The experts had much to say about the types of skills that will be needed to pro
 
 Another theme was the likely growing importance of human skills; the capacity to understand and communicate with people, so as to be able to work at the technology-human interface. The ability to work effectively in teams will be vital, particularly when working freelance across a range of projects, often concurrently. Having community and citizenship skills will also be important while working with technology applications.
 
+<figure class="image">
+  <img src="/img/jobs/AutoVehicleDesigner.jpg" alt="Artists impression of a Autonomous vehicle profile designer">
+  <figcaption>Autonomous vehicle profile designer (Artist’s impression)</figcaption>
+</figure>
+
 The third strong theme that emerged was the need for flexibility and adaptability in the face of change. Future workers will have many jobs over a lifetime, and people who can adapt, and stay ahead of the needs of the workplace, rather than waiting to be shown, will prosper in this environment. The capacity to learn, and to be strategic about learning, will increasingly become the key to success. In the future, qualifications are predicted to be shorter term, more varied, but also something people will need to continually update through all phases of life. Life-long learning will be universally acknowledged as the only way to retain skills needed in society.
 
 ## The 100 jobs
@@ -45,6 +55,11 @@ The third strong theme that emerged was the need for flexibility and adaptabilit
 The jobs that were created from these interviews are described, and grouped in the next section. They form a varied and fascinating set. Many were explicitly described by the experts, but many also were projections based on what was said about future work trends and the capabilities that people will require to navigate them, in some cases amalgamating the views of a number of interviewees. The jobs cannot therefore be ascribed to individual experts.
 
 Some of the jobs are surprising, providing fresh perspectives on our likely future lives. The job of Nostalgist, in charge of preserving and highlighting productive memories for older people, is one of these. We will have Aestheticians helping us with our appearance, and Cyborg Psychologists helping us come to terms with our synthetic organs. Many jobs have to do with innovative design, such as 3D Printed Building Design, or Fusionists working at the interface of professions. There are jobs that are the result of environmental concerns, such as the Cricket Farmer, or Weather Control Engineer. Many of the jobs exist in some form today but the future job involves its inclusion of technology, or different dynamics caused by social movement. We have tried to make these changes explicit in our descriptions. With each job, we have described the key skills implied.
+
+<figure class="image">
+  <img src="/img/jobs/Nostalgist.jpg" alt="Artists impression of a Nostalgist consulting with client">
+  <figcaption>Nostalgist (Artist’s impression)</figcaption>
+</figure>
 
 Together, the jobs give a complex and surprising set of insights into possible futures. They offer a grounded experience of what future work might look like for individuals, and by implication what our future lives might entail, in ways that most work future literature does not provide.
 
