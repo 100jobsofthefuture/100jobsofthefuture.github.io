@@ -521,6 +521,7 @@
     display: block;
     position: relative;
     height: 100%;
+    cursor: pointer;
   }
   .areasofwork label::before,
   .areasofwork label::after {
@@ -572,9 +573,6 @@
     top: 0;
     cursor: pointer;
   }
-  .areasofwork li .info:hover {
-    background-color: rgba(0,0,0,0.2);
-  }
   .areasofwork li .more-info {
     display: none;
     width: 100%;
@@ -614,20 +612,11 @@
     }
   }
   @media (hover: hover) {
-    .areasofwork li .info {
-      /* using this to stop click handler when browser supports hover */
-      background-color: transparent;
+    .areasofwork li .info:hover {
+      background-color: rgba(0,0,0,0.2);
     }
     .areasofwork li .info:hover + .modal {
       display: inline;
-    }
-    .areasofwork li:hover label {
-      color: rgb(0,42,120);
-      font-weight: bold;
-    }
-    .areasofwork label:hover {
-      background: rgba(75, 182, 161, 0.5);
-      cursor: pointer;
     }
   }
 </style>

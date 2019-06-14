@@ -163,8 +163,9 @@ $( document ).ready(function() {
 
     /* aow info click handler to open modal */
     $('.info').on('click', function(){
+      console.log($(this).css('background-color'));
       // only want this to happen if hover is not supported - ie on mobile
-      if($this.css('background-color') != 'transparent') {
+      if($(this).css('background-color') != 'rgba(0, 0, 0, 0.2)') {
         $('.modal').hide();
         $('.areasofwork label').removeClass('blue');
         $(this).parent().find('label').addClass('blue');
