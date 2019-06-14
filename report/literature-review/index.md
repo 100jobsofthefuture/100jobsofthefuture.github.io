@@ -53,7 +53,7 @@ A further complication here is that those caught in low-paid and low-skilled job
 A trend towards the ‘hollowing’ of workplaces is likely to accelerate as jobs replaced by technology increasingly come from the middle of the employment hierarchy. And as those in the middle see their jobs being replaced, they in turn take the jobs of less skilled employees (Bakhshi et al., 2017; FYA, 2017a; IMF, 2018). Increasingly, gaining employment depends on first having various credentials and qualifications (FYA, 2017b) with educational qualifications being used as a way to sort and eliminate applicants (Brown et al., 2004).
 
 <figure class="chart">
-  <img src="/img/figure1.svg" alt="Machinery operators and drivers: 4%, Labourers: 5%, Sales Workers: 8%, Technicians and Trade Workers: 11%, Managers: 12%, Community and Personal Service Workers: 23%, Professionals: 37%">
+  <img src="/img/figure1.svg" alt="Share of total new jobs in Australia, five years to November 2017: Machinery operators and drivers: 4%, Labourers: 5%, Sales Workers: 8%, Technicians and Trade Workers: 11%, Managers: 12%, Community and Personal Service Workers: 23%, Professionals: 37%">
   <figcaption><b>Figure 1:</b> “Share of total new jobs in Australia, five years to November 2017” from Australian Jobs 2018, p.22 - © Commonwealth of Australia (CC BY 4.0)</figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ Until recently, technological progress has involved the automation of highly rou
 Moore’s Law states that ‘the number of transistors on computer processors will double’ every two years (Hajkowicz et al., 2016, p.31). This leads to exponential growth in computing power over time and this in turn means that computers and robots become increasingly more effective and efficient. This opens up more jobs to being taken over by machines. However, rather than necessarily destroying jobs, new technologies are likely to replace the dull aspects of jobs and thereby make the job as a whole more rewarding, interesting and enjoyable (Hajkowicz, 2016). As Hajkowicz says, “Spreadsheets didn’t kill accountancy jobs, it just changed them”.
 
 <figure class="pink right">
-  <img src="/img/samuel-zeller-158996-unsplash.jpg" alt="Woman using VR googles">
+  <img src="/img/samuel-zeller-158996-unsplash.jpg" alt="Woman using VR googles" title="Photo by Samuel Zeller on Unsplash.com">
 </figure>
 
 A frequent piece of advice given to young people regarding automation and the future job skills they will need, is for them to augment their abilities to work with technology (Davenport & Kirby, 2016; Quigley & Chalmers, 2017). That is, they are more likely to be successful if they ‘race on the machine rather than with it’ (Hughes, 2017, p.132).
@@ -109,12 +109,12 @@ Some economists have shown that while this structural change has been occurring 
 
 <div class="chart-side-by-side">
 <figure class="chart">
-  <img src="/img/figure2.svg" alt="">
+  <img src="/img/figure2.svg" alt="Change in employment by skill type from 1986 to 2016: Routine manual trends down from approximately 40% to 30%; Routine cognitive trends down from approximately 27% to 23%; Non-routine manual trends up from approximately 5% to 10%; Non-routine cognitive trends up from approximately 28% to 36%;">
   <figcaption><b>Figure 2:</b> “Change in employment by skill type” from Australian Jobs 2018, p.29 - © Commonwealth of Australia (CC BY 4.0) Colour change from original.</figcaption>
 </figure>
 
 <figure class="chart">
-  <img src="/img/figure3.svg" style="max-width: 400px;" alt="">
+  <img src="/img/figure3.svg" style="max-width: 400px;" alt="Top four occupations: Males - Sales Assistants (General) 170,168; Truck Drivers 142,710; Electricians 113,458; Carpenters and Joiners 101,134: Females - Sales Assistants (General) 355,843; Registered Nurses 197,124; General Clerks 186,529; Receptionists 146,698">
   <figcaption><b>Figure 3:</b> “Top four occupations” from 2071.0 - Census of Population and Housing: Reflecting Australia - Stories from the Census, 2016, Australian Bureau of Statistics - © Commonwealth of Australia (CC BY 4.0)</figcaption>
 </figure>
 </div>
@@ -150,7 +150,7 @@ This raises a question concerning how well we are able to predict the skills tha
 A common thread to the predicted jobs of the future is that they will require entrepreneurial skills. Although entrepreneur can mean very different things to different people, it is often taken to mean that “the future workforce will need to be more autonomous and self-directed, working on tasks independently with less supervision and support from managers or supervisors. Many more people will work externally, from home or a remote office. Young people of today will need to manage their own time more, make more decisions about priority and importance of tasks and be more personally motivated and driven” (FYA, 2017b, p.18).
 
 <figure class="green right">
-  <img src="/img/daylight-facial-expression-girl-1181651.jpg" alt="Woman in front of laptop gazing into distance">
+  <img src="/img/daylight-facial-expression-girl-1181651.jpg" alt="Woman in front of laptop gazing into distance" title="Photo by Christina Morillo on Pexels.com">
 </figure>
 
 Entrepreneurs are also seen as risk-takers, those who start their own businesses. The barriers to starting a business are decreasing due to the easy availability of computing power and connectivity, the low-cost of these, the availability of financing (including crowdfunding), the fact many businesses are now much less capital intensive, and because marketing and gaining customer feedback are easier today in an interconnected world. The reduction in these entry costs are reflected in the results of a global survey of over 12,000 Millennials that “found 68% of respondents (believed) they have the opportunity to become an entrepreneur” (FYA, 2017a, p.18).
@@ -192,7 +192,7 @@ While most commentators believe that STEM skills will be the most secure pathway
 This emphasis on creativity and design thinking is taken up in increasing interest in combining STEM education with arts and design, to provide the A in ‘STEAM’ education. Further, STEM is also linked to digital literacy: “The jobs of the future require problem solving and digital skills, and innovative and creative thinking, all taught through STEM” (Commonwealth Bank, 2017, p.11). Another report argues that “over 50% of jobs will require significant digital skills and yet our young people are not learning them in schools” (FYA, 2017a, p.2). Figure 4 provides estimates of the proportions of future jobs that will need various levels of digital literacy, with more than half of future occupations needing much more than the skills learnt in merely operating computers.
 
 <figure class="chart">
-  <img src="/img/figure4.svg" alt="">
+  <img src="/img/figure4.svg" alt="Australia’s labour force digital literacy needs in the next 2-5 years: Digital Muggle (Non skill required) 8.2%; Digital Cutizen (Use tech to communicate and find info) 37.7%; Digital Worker (Configure and use systems) 45.6%; Digital maker (Build digital tech) 8.4%">
   <figcaption><b>Figure 4:</b> “Australia’s labour force has high digital literacy needs in the next 2-5 years”, Foundation for Young Australian, 2017a, p.30. The right to reproduce and communicate the material has been granted by Foundation for Young Australians</figcaption>
 </figure>
 
@@ -207,7 +207,7 @@ By looking at the skills required in job advertisements, research has shown that
 The issue with many of the skills needed for future jobs is that they often require extensive experience in the workplace to acquire and this can put young workers at a disadvantage where jobs are only available to those with experience, and acquired on the job. Some have warned that the jobs used by youth to enter the workforce are also the jobs technology is displacing (Brynjolfsson & McAfee, 2012; Ross, 2016).
 
 <figure class="chart">
-  <img src="/img/figure5.svg" alt="">
+  <img src="/img/figure5.svg" alt="Growth rate for demand in select enterprise skills: Financial literacy 7%; Communication skills 12%; Building effective relationships 15%; Team work: 19%; Presentation skills: 25%; Problem solving skills: 25%; Creativity: 65%; Critical thinking 158%; Digital literacy 212%">
   <figcaption><b>Figure 5:</b> “Recent growth in demand for select enterprise skills”, Foundation for Young Australians, 2017, p.10. The right to reproduce and communicate the material has been granted by Foundation for Young Australians.</figcaption>
 </figure>
 
@@ -253,7 +253,7 @@ Other jobs that are unlikely to be replaced by robots include many trades such a
 Davenport and Kirby (2016) turn the standard argument about automation and computerisation on its head and ask, “if you were a machine, what shortcomings would you readily admit to, and want to have a human making up for?” (np). They suggest that your best career path is to become what the machine would need.
 
 <figure class="chart">
-  <img src="/img/figure6.svg" alt="Change ">
+  <img src="/img/figure6.svg" alt="Changes in high and low skill occupations 1991-2015: Labourers -37%; Admin -35%; Technicians and Trades -19%; Machinery Operators -19%; Sales 0%; Managers 6%; Professionals 54%; Community and Personal Services 87%">
   <figcaption><b>Figure 6:</b> “Changes in high and low skill occupations 1991-2015”, Foundation for Young Australians, 2017a, p.12. The right to reproduce and communicate the material has been granted by Foundation for Young Australians.</figcaption>
 </figure>
 
