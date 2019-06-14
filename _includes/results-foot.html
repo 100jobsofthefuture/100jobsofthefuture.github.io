@@ -5,6 +5,11 @@
 <script src="/js/plugins.js"></script>
 <script src="/js/main.js"></script>
 <script>
+  /*
+   * returns query string parameter for providekey
+   * https://css-tricks.com/snippets/javascript/get-url-variables/
+   * usage: getQueryVariable("key")
+   */
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split("&");
@@ -17,43 +22,36 @@
     return (false);
   }
 
+  // store query string parameters as variables - uppercase needed as classnames are uppercase
   var type = getQueryVariable("type").toUpperCase();
   var aow1 = getQueryVariable("aow1").toUpperCase();
   var aow2 = getQueryVariable("aow2").toUpperCase();
   var aow3 = getQueryVariable("aow3").toUpperCase();
 
   $( document ).ready(function() {
-    var numJobsToShow = 4;
+
+    // cycles through list of jbs and shows appropriate ones based on query string
     function showJobs(max) {
       var counter = 1;
       $('.job-card').each(function(index, value){
           if($(this).hasClass(type)) {
-            if($(this).hasClass(aow1)) {
-              if(counter <= max) {
-                $(this).fadeIn();
-                counter++;
-              }
-            } else if($(this).hasClass(aow2)) {
-              if(counter <= max) {
-                $(this).fadeIn();
-                counter++;
-              }
-            } else if($(this).hasClass(aow3)) {
+            if($(this).hasClass(aow1) || $(this).hasClass(aow2) || $(this).hasClass(aow3)) {
               if(counter <= max) {
                 $(this).fadeIn();
                 counter++;
               }
             } else {
-              $(this).remove();
+              $(this).remove(); // first pass remove not matching AOW's
             }
           } else {
-            $(this).remove();
+            $(this).remove(); // first pass remove not matching P Type
           }
       }).promise().done(function(){
-        fadeOutShoMoreButton();
+        fadeOutShoMoreButton(); // fadeout show more button if no more to show
       });
     }
 
+    // fadeout show more button if no more to show
     function fadeOutShoMoreButton() {
       console.log($('.job-card:hidden').length);
       if($('.job-card:hidden').length == 0) {
@@ -61,11 +59,14 @@
       }
     }
 
+    // handler for Show more jobs button
     $('#showMoreJobs').on('click', function(){
       numJobsToShow = numJobsToShow + 4;
       showJobs(numJobsToShow);
     });
 
+    // set how many jobs to show at start
+    var numJobsToShow = 4;
     // show first 4 jobs
     showJobs(numJobsToShow);
   });
