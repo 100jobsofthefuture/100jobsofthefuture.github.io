@@ -356,6 +356,18 @@ textarea {
      margin-left: 0.5em;
      line-height: 1;
    }
+   .rotate-ccw::after {
+     display: inline-block;
+     vertical-align: middle;
+     content: "";
+     width: 1em;
+     height: 1em;
+     background-image: url('../css/feather/purple/rotate-ccw.svg');
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-position: center;
+     margin-left: 12px;
+   }
    button.mobile-menu {
      border-radius: 0;
      position: fixed;
