@@ -188,14 +188,6 @@ textarea {
      font-size: 2.281em;
      color: $ford-blue;
    }
-   .report-job-heading {
-     font-size: 1.602rem;
-   }
-   .report-job-heading span {
-     font-size: 1.266rem;
-     margin-right: 8px;
-     color: $dark-grey;
-   }
    h4 {
      font-size: 2.027em;
      color: $dark-grey;
@@ -999,8 +991,29 @@ textarea {
      }
    }
 
-   .chart-side-by-side {
-
+   /* report jobs list accordion */
+   .report-job-heading {
+     font-size: 1.602rem;
+     background-color: #f1f1f1;
+     padding: 8px 12px;
+     background-image: url(feather/plus.svg);
+     background-repeat: no-repeat;
+     background-position: center right 12px;
+     cursor: pointer;
+   }
+   .report-job-heading:hover {
+     background-color: #ddd;
+   }
+   .report-job-heading.open {
+     background-image: url(feather/minus.svg);
+   }
+   .report-job-heading span {
+     font-size: 1.266rem;
+     margin-right: 8px;
+     color: $dark-grey;
+   }
+   .report-job-details {
+     display: none;
    }
 /* ==========================================================================
    Helper classes

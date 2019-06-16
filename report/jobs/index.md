@@ -31,9 +31,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -44,9 +46,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -57,9 +61,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -70,9 +76,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -83,9 +91,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -96,9 +106,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -109,9 +121,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -122,9 +136,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -135,9 +151,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
@@ -148,9 +166,11 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     {% assign jobno = jobno | plus: 1 %}
   <div>
     <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
-    {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
-    {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-    {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    <div class="report-job-details">
+      {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
+      {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}

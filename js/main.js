@@ -28,4 +28,10 @@ $(document).ready(function() {
         }
       }
     });
+
+    // report jobs accordion
+    $('.report-job-heading').on('click', function(){
+      $(this).toggleClass('open');
+      $(this).next().slideToggle();
+    });
 });
