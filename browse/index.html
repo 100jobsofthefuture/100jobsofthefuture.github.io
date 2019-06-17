@@ -36,7 +36,7 @@ description:
           <h4>{{ job.title }}</h4>
           {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
           {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-          {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+          {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
         </div>
         <footer class="job-card-footer">
           <p class="expand"></p>
