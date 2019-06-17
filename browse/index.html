@@ -31,7 +31,7 @@ description:
         <div class="job-card-descrip">
           <p>{{ job.description }}</p>
         </div>
-        {% unless job.image == nil %}<img class="job-card-image-tile" src="/img/jobs/{{ job.image }}">{% endunless %}
+        {% unless job.image == nil %}<img class="job-card-image-tile" src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
         <div class="job-card-full-descrip">
           <h4>{{ job.title }}</h4>
           {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
