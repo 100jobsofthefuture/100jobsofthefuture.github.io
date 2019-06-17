@@ -1,38 +1,76 @@
 - id: aow1
   text: Strengthening local communities and neighbourhoods
+  class: R I A S E C
+  info: Localisation is a trend that is about reconnecting people with their local places, cultures and communities. It is a counter movement to globalisation and the development of big cities.
 - id: aow2
   text:  Personalising information and communication
+  class: R I A S E C
+  info: As more and more data can be collected about people’s specific interests and needs, it becomes possible to create personalised products, services and experiences for them.
 - id: aow3
   text:  Advanced farming and food production
+  class: R I S E C
+  info: Advances in digital technologies and food science mean that highly nutritious food can be produced efficiently and with minimum environmental impact.
 - id: aow4
   text:  Leisure and entertainment
+  class: R I A S E
+  info: The future of leisure and entertainment is immersive, digital, and personalised.
 - id: aow5
   text:  Extended lifespans
+  class: I A S E
+  info: With advances in healthcare and nutrition, we will live longer, and have more opportunities to enjoy life.
 - id: aow6
   text:  Education and lifelong learning
+  class: I S E C
+  info: Constant change means that people will also constantly be watching the future, retraining and upskilling.
 - id: aow7
   text:  Law and ethics
+  class: I A S E C
+  info: With advances in artificial intelligence and other digital technologies, we need to have new regulations and laws to make sure everyone is safe.
 - id: aow8
   text:  Health and wellbeing
+  class: R I A S E C
+  info: New digital technologies and advances in science mean that there will be many new ways to enhance our health and wellbeing.
 - id: aow9
   text:  Scientific discovery
+  class: R I A S C
+  info: Key areas of predicted future scientific discovery include the microbiome (microbes living inside us), and human and food genetics.
 - id: aow10
   text:  Environmental restoration and renewal
+  class: R I A S E C
+  info: Technological advancements will help us ensure environmental sustainability and restore the natural environment.
 - id: aow11
   text:  Advanced city design
+  class: R I A S E C
+  info: Advanced city design will improve liveability and environmental sustainability of our urban areas.
 - id: aow12
   text:  Business innovation
+  class: R I A S E C
+  info: Advances in digital technology and use of big data mean constant new ideas and innovations. People will drive many of these innovations and new business ideas, and other people will regulate and make sure that the ideas are lawful and ethical.
 - id: aow13
   text:  Space exploration
+  class: R I A S E C
+  info: Our activities in space will expand, from space tourism to advanced satellite technologies and offworld living.
 - id: aow14
   text:  Micro- and nano-technology
+  class: R I A S E C
+  info: Much of the future of science and technology is very small indeed. Nanotechnology happens at the level of atoms and molecules and has applications across health, the environment, the design of cities, and what we eat.
 - id: aow15
   text:  Virtual and augmented reality
+  class: R I A S E C
+  info: Our lives will be enhanced by the digital world superimposed onto the ‘real world’ such as through visual overlays and immersive digital experiences.
 - id: aow16
   text:  Robotics and drones
+  class: R I A S E C
+  info: Advanced robots will help us in every aspect of our lives, from childcare to self-driving vehicles to drone-based shopping delivery.
 - id: aow17
   text:  Artificial intelligence
+  class: R I A S E C
+  info: Artificial intelligence technologies learn, react and behave like humans. AI will be useful to help us make sense of our data and make complex decisions.
 - id: aow18
   text:  Digital networks
+  class: R I A S E C
+  info: Thanks to the Internet of Things, in the future sensors will collect data about every aspect of our lives, from our health and eating habits to levels of pollution in the environment. The Sensors are networked, and the data is used to provide advice and make decisions.
 - id: aow19
   text:  3D printing and new materials
+  class: R I A E C
+  info: In the future, enormous printers will be able to print entire buildings or vehicles, while advances in materials science mean items can be made of new materials with different properties such as greater strength and flexibility.
