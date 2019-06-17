@@ -133,6 +133,14 @@ description: Take the Ford and Deakin University future job aptitude test to fin
       <p>Here is a list of areas of future work.</p>
       <p><b>Select 2 to 3</b> to explore examples of future jobs in those areas</p>
       <ul class="areasofwork">
+        {% for aow in site.data.aow %}
+        <li class="{{ aow.class }}">
+          <input id="{{ aow.id }}" type="checkbox" value="{{ aow.id }}">
+          <label for="{{ aow.id }}">{{ aow.text }}</label>
+          <span class="info" title="Click for more info"></span><span class="modal">{{ aow.info }}</span>
+        </li>
+        {% endfor %}
+        <!--
         <li class="R I A S E C">
           <input id="aow1" type="checkbox" value="aow1">
           <label for="aow1">Strengthening local communities and neighbourhoods</label>
@@ -231,6 +239,7 @@ description: Take the Ford and Deakin University future job aptitude test to fin
           <label for="aow19">3D printing and new materials</label>
           <span class="info" title="Click for more info"></span><span class="modal">In the future, enormous printers will be able to print entire buildings or vehicles, while advances in materials science mean items can be made of new materials with different properties such as greater strength and flexibility.</span>
         </li>
+        -->
       </ul>
       <div class="pagination">
         <ul class="progress">
