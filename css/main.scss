@@ -1016,11 +1016,6 @@ textarea {
      background-position: center right 12px;
      cursor: pointer;
    }
-   @media only screen and (min-width: 768px) {
-      .report-job-heading {
-        font-size: 1.602rem;
-      }
-   }
    .report-job-heading:hover {
      background-color: #ddd;
    }
@@ -1028,12 +1023,20 @@ textarea {
      background-image: url(feather/minus.svg);
    }
    .report-job-heading span {
-     font-size: 1.266rem;
+     font-size: 1rem;
      margin-right: 8px;
      color: $dark-grey;
    }
    .report-job-details {
      display: none;
+   }
+   @media only screen and (min-width: 768px) {
+      .report-job-heading {
+        font-size: 1.602rem;
+      }
+      .report-job-heading span {
+        font-size: 1.266rem;
+      }
    }
 /* ==========================================================================
    Helper classes
