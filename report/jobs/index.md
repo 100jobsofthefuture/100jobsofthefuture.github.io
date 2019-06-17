@@ -49,7 +49,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -64,7 +64,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -79,7 +79,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -94,7 +94,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -109,7 +109,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -124,7 +124,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -139,7 +139,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -154,7 +154,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -169,7 +169,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
