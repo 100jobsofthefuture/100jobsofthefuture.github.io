@@ -171,34 +171,49 @@ textarea {
      color: rgb(252,63,145);
      text-align: center;
    }
+   article h1 {
+     text-align: left;
+   }
+   h2 {
+     font-size: 2.281em;
+     color: $deakin-green;
+   }
+   h3 {
+     font-size: 2.027em;
+     color: $ford-blue;
+   }
+   h4 {
+     font-size: 1.802em;
+     color: $dark-grey;
+   }
+   h5 {
+     font-size: 1.602em;
+     color: $dark-grey;
+   }
+   h6 {
+     font-size: 1.266em;
+     color: $dark-grey;
+   }
    @media only screen and (min-width: 769px) {
      h1 {
        font-size: 3.247em;
        text-align: left;
      }
-   }
-   article h1 {
-     text-align: left;
-   }
-   h2 {
-     font-size: 2.566em;
-     color: $deakin-green;
-   }
-   h3 {
+     h2 {
+        font-size: 2.566em;
+    }
+    h3 {
      font-size: 2.281em;
-     color: $ford-blue;
-   }
-   h4 {
+    }
+    h4 {
      font-size: 2.027em;
-     color: $dark-grey;
-   }
-   h5 {
+    }
+    h5 {
      font-size: 1.802em;
-     color: $dark-grey;
-   }
-   h6 {
+    }
+    h6 {
      font-size: 1.602em;
-     color: $dark-grey;
+    }
    }
    p {
      line-height: 1.6;
@@ -220,7 +235,7 @@ textarea {
    }
    blockquote {
      margin: 3.247em 0;
-     padding: 0 4em;
+     padding: 0 10px 0 4em;
      position: relative;
    }
    blockquote p {
@@ -964,7 +979,7 @@ textarea {
      margin: 20px 0 40px 40px;
    }
 
-   figure.chart {
+   figure.chart, figure.image {
      margin: 30px 0px 40px 0px;
      text-align: center;
    }
@@ -993,9 +1008,9 @@ textarea {
 
    /* report jobs list accordion */
    .report-job-heading {
-     font-size: 1.602rem;
+     font-size: 1rem;
      background-color: #f1f1f1;
-     padding: 8px 12px;
+     padding: 8px 32px 8px 12px;
      background-image: url(feather/plus.svg);
      background-repeat: no-repeat;
      background-position: center right 12px;
@@ -1008,12 +1023,20 @@ textarea {
      background-image: url(feather/minus.svg);
    }
    .report-job-heading span {
-     font-size: 1.266rem;
+     font-size: 1rem;
      margin-right: 8px;
      color: $dark-grey;
    }
    .report-job-details {
      display: none;
+   }
+   @media only screen and (min-width: 768px) {
+      .report-job-heading {
+        font-size: 1.602rem;
+      }
+      .report-job-heading span {
+        font-size: 1.266rem;
+      }
    }
 /* ==========================================================================
    Helper classes

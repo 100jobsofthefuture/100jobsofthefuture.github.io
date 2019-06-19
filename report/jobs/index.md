@@ -9,7 +9,7 @@ description: Experts have come together to predict 100 jobs of the future.
 
 In this report, the 100 jobs of the future are organised by broad category of application, such as ‘people jobs’, ‘hands on jobs’, and ‘data jobs’. This is to provide a simple scaffold to help people to browse among roles that may be of interest to them. Some jobs may fall into multiple broad categories, particularly those that involve use of digital technologies, but they are only represented once here to eliminate redundancy. The jobs are also coded by whether they exist now (albeit perhaps with a different name, different work context, or using different tools), or are predicted to emerge in the future.
 
-The 100 jobs are listed here alphabetically, you can also <a href="/browse/">browse them</a> in a more compact form.
+The 100 jobs are listed here alphabetically under each broad category, you can also <a href="/browse/">browse them</a> in a more compact form.
 
 <p>On this page:<br>
   <a href="#technology-jobs">Technology jobs</a> |
@@ -34,7 +34,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -49,7 +49,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -64,7 +64,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -79,7 +79,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -94,7 +94,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -109,7 +109,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -124,7 +124,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -139,7 +139,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -154,7 +154,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}
@@ -169,7 +169,7 @@ The 100 jobs are listed here alphabetically, you can also <a href="/browse/">bro
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+      {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
     </div>
   </div>
   {% endif %}

@@ -19,6 +19,7 @@ description:
       <li><button id="health" class="filter">Health jobs</button></li>
       <li><button id="data" class="filter">Data jobs</button></li>
       <li><button id="ex" class="filter">Experience jobs</button></li>
+    </ul>
   </div>
   <div class="">
     <ul class="job-card-listing">
@@ -30,12 +31,12 @@ description:
         <div class="job-card-descrip">
           <p>{{ job.description }}</p>
         </div>
-        {% unless job.image == nil %}<img class="job-card-image-tile" src="/img/jobs/{{ job.image }}">{% endunless %}
+        {% unless job.image == nil %}<img class="job-card-image-tile" src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
         <div class="job-card-full-descrip">
           <h4>{{ job.title }}</h4>
           {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
           {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-          {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+          {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="{{ job.title }} (Artists impression)">{% endunless %}
         </div>
         <footer class="job-card-footer">
           <p class="expand"></p>
