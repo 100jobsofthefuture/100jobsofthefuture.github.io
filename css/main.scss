@@ -971,6 +971,14 @@ figure.right {
  float: right;
  margin: 20px 0 40px 40px;
 }
+figure.left {
+  float: left;
+  margin: 0px 40px 40px 0;
+  transform: translateX(-20px);
+}
+figure.left.pink img {
+  right: -20px;
+}
 
 figure.chart, figure.image {
  margin: 30px 0px 40px 0px;
