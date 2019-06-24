@@ -2,75 +2,94 @@
   text: Strengthening local communities and neighbourhoods
   class: R I A S E C
   info: Localisation is a trend that is about reconnecting people with their local places, cultures and communities. It is a counter movement to globalisation and the development of big cities.
+  moreinfo: Read up on the latest news in this area – have there been any new discoveries or techniques? What are the biggest challenges and innovations likely to occur in the next ten years? Are there any community organisations or companies that are already working in this area, and is there an opportunity for you to talk with them or perhaps volunteer?  Explore the different skills that you might need in the jobs you were shown. Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills?
 - id: aow2
   text:  Personalising information and communication
   class: R I A S E C
   info: As more and more data can be collected about people’s specific interests and needs, it becomes possible to create personalised products, services and experiences for them.
+  moreinfo: Explore the different areas for the jobs you have seen. Are there any jobs similar to the ones you have seen that might exist today? Are there any jobs that seem completely new? Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills? Look for opportunities to build your existing and new skills and knowledge (for example, you could build communication skills through practice, but you might need to learn new skills in a tech related area)
 - id: aow3
   text:  Advanced farming and food production
   class: R I S E C
   info: Advances in digital technologies and food science mean that highly nutritious food can be produced efficiently and with minimum environmental impact.
+  moreinfo: Read up on the latest news in this area – have there been any new discoveries or techniques? What are the biggest challenges and innovations likely to occur in the next ten years? How are we currently addressing these challenges, and what are the key skills and knowledge needed do to so? Are there any skills or knowledge sets that are common to all the jobs you have seen (for example, any job working in agriculture is likely to need at least a little knowledge about how it works), or any skills that are less common? How could you go about building these skills?
 - id: aow4
   text:  Leisure and entertainment
   class: R I A S E
   info: The future of leisure and entertainment is immersive, digital, and personalised.
+  moreinfo: Explore the different areas for the jobs you have seen. Are there any jobs similar to the ones you have seen that might exist today? Are there any jobs that seem completely new? How might the skills you will need in this area in the future be different from the skills you might need in this area now? Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common or which may be new to you? Look for opportunities to build these skills as a way to see if you’re interested in the jobs you’ve explored. Could you get practical experience through volunteering or paid work? Could you learn something new? Are there any organisations, clubs or societies that would be relevant for you?
 - id: aow5
   text:  Extended lifespans
   class: I A S E
   info: With advances in healthcare and nutrition, we will live longer, and have more opportunities to enjoy life.
+  moreinfo: Read up on the latest news in this area – what are the biggest challenges and innovations likely to occur in the next ten years? Have there been any new discoveries? What are the skills you’re likely to need to address future challenges and innovations? Explore the different skills that you might need in the jobs you were shown. Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills? For example, could you volunteer in an aged care home or with your local community organisation, or talk to older people (such as family members, or friends of your family) about their experiences?
 - id: aow6
   text:  Education and lifelong learning
   class: I S E C
   info: Constant change means that people will also constantly be watching the future, retraining and upskilling.
+  moreinfo: Read up on the latest news in this area – what are the biggest challenges and innovations likely to occur in the next ten years? Have there been any new discoveries? What are the skills you’re likely to need to address future challenges and innovations? Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills? Could you volunteer to teach someone something new (whether that be tutoring other students or teaching a friend how to bake)? Consider talking to your teachers or to anyone who has done training or education outside school (such as university study, teaching themselves something new, or on the job training) about their experiences.
 - id: aow7
   text:  Law and ethics
   class: I A S E C
   info: With advances in artificial intelligence and other digital technologies, we need to have new regulations and laws to make sure everyone is safe.
+  moreinfo: communication skills, such as debate teams or work involving talking to people. Read up on the latest news and challenges – as our technologies have grown, what have been the biggest ethical conundrums? What are likely to be the new challenges that will arise? If you’re interested in the legal side of things, can you study it as part of your school curriculum, read relevant textbooks, or talk to people working in this area (such as teachers, family members, or friends of your family)?
 - id: aow8
   text:  Health and wellbeing
   class: R I A S E C
   info: New digital technologies and advances in science mean that there will be many new ways to enhance our health and wellbeing.
+  moreinfo: Read up on the latest news in this area – have there been any new discoveries or techniques? What are the biggest challenges and innovations likely to occur in the next ten years? What are the skills you’re likely to need to address these challenges? Explore the different skills that you might need in the jobs you were shown. Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills? For example, could you volunteer in an aged care home or with your local community organisation, review biology or nursing books from your local library or online, or talk to people in healthcare (such as teachers, family members, or friends of your family)?
 - id: aow9
   text:  Scientific discovery
   class: R I A S C
   info: Key areas of predicted future scientific discovery include the microbiome (microbes living inside us), and human and food genetics.
+  moreinfo: Read up on the latest news in this area – have there been any new discoveries or techniques? What are the biggest challenges and innovations likely to occur in the next ten years? What are the skills you’re likely to need to address these challenges? Explore the different skills that you might need in the jobs you were shown. Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills?
 - id: aow10
   text:  Environmental restoration and renewal
   class: R I A S E C
   info: Technological advancements will help us ensure environmental sustainability and restore the natural environment.
+  moreinfo: Read up on the latest news in this area – have there been any new discoveries or techniques? What are the biggest challenges and innovations likely to occur in the next ten years? How are we currently addressing these challenges, and what skills are important for doing so?  Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills?Look for opportunities to build up your experience through things like volunteering, joining clubs or societies, or reading relevant textbooks or online resources.
 - id: aow11
   text:  Advanced city design
   class: R I A S E C
   info: Advanced city design will improve liveability and environmental sustainability of our urban areas.
+  moreinfo: Read up on the latest news in this area – have there been any new discoveries or techniques? What are the biggest challenges and innovations likely to occur in the next ten years? What are the main challenges in this area at the moment? What are the biggest areas of growth? Are there any skills or knowledge you could build that might be useful in this area? Look for opportunities to build your skills and experience such as trying out relevant software or technologies (for example, coding or digital modelling), and identifying organisations that specialise in this area and following their work.
 - id: aow12
   text:  Business innovation
   class: R I A S E C
   info: Advances in digital technology and use of big data mean constant new ideas and innovations. People will drive many of these innovations and new business ideas, and other people will regulate and make sure that the ideas are lawful and ethical.
+  moreinfo: Read up on this area – what are the main challenges in this area at the moment? What are the main challenges likely to occur in the next ten years, and how are people planning for these challenges? What are the biggest areas of growth?  Explore the different skills that you might need in the jobs you were shown. Are there any skills that are common to all the jobs you have seen (for example, any job working with people is likely to need good communication skills), or any skills that are less common? How could you go about building these skills? For example, could you learn a new technology, read up on the top companies working in your areas of interest, or strengthen an existing skill?
 - id: aow13
   text:  Space exploration
   class: R I A S E C
   info: Our activities in space will expand, from space tourism to advanced satellite technologies and offworld living.
+  moreinfo: Read up on the technology currently used – what is it being used for? What isn’t it being used for and why? What are the main challenges in this area at the moment, and what will the main challenges be in the next ten years? What are the biggest areas of growth? Are there any skills or knowledge you could build that might be useful in this area?  Look for opportunities to build up your tech skills such as coding clubs or robotics societies, or even through YouTube videos. Is there a particular type of technology that would be useful to learn? What companies are doing work in this area, and what information do they have available?
 - id: aow14
   text:  Micro- and nano-technology
   class: R I A S E C
   info: Much of the future of science and technology is very small indeed. Nanotechnology happens at the level of atoms and molecules and has applications across health, the environment, the design of cities, and what we eat.
+  moreinfo: Look for opportunities to build up your tech skills such as coding clubs or robotics societies, or even through YouTube videos. Read up on this technology – what is it being used for? What isn’t it being used for and why? What are the main challenges in this area at the moment? What are the biggest areas of growth? Are there any skills or knowledge you could build that might be useful in this area (for example, coding might be a useful skill, but if you’re interested in the health applications of this technology, it might be worth exploring biology as well)?
 - id: aow15
   text:  Virtual and augmented reality
   class: R I A S E C
   info: Our lives will be enhanced by the digital world superimposed onto the ‘real world’ such as through visual overlays and immersive digital experiences.
+  moreinfo: Look for opportunities to build up your tech skills such as coding clubs or robotics societies, or even through YouTube videos. You could watch or read reviews of VR games or maybe even try them yourself. Read up on VR and AR technology – what is it being used for? What isn’t it being used for and why? What are the main challenges in this area at the moment? What are the biggest areas of growth? If you’re lucky enough to be near a VR arcade or a university or company researching VR or AR, are there any opportunities for you try it out (for example, universities often have open days)? What technology is involved in VR and AR, and could you learn it?
 - id: aow16
   text:  Robotics and drones
   class: R I A S E C
   info: Advanced robots will help us in every aspect of our lives, from childcare to self-driving vehicles to drone-based shopping delivery.
+  moreinfo: Read up on this technology – what is it being used for? What isn’t it being used for and why? What are the main challenges in this area at the moment? What are the biggest areas of growth? Are there any skills or knowledge you could build that might be useful in this area? Look for opportunities to build up your tech skills such as coding clubs or robotics societies, or even through YouTube videos. Explore what opportunities exist in your area – are there any groups near you that build robots or drones? Your school may even have a robotics or coding club.
 - id: aow17
   text:  Artificial intelligence
   class: R I A S E C
   info: Artificial intelligence technologies learn, react and behave like humans. AI will be useful to help us make sense of our data and make complex decisions.
+  moreinfo: Look for opportunities to build up your tech skills such as coding clubs or robotics societies, or even through YouTube videos. Read up on the latest innovations in AI, and see what are the biggest challenges in this space. Explore all the different types of skillsets that could go into AI work (it’s not just coding!) and see if you can try them out. Explore what research institutes are working in this area and what they think the challenges are. Are there any universities near you that research in this area? Consider coming along to their next open day to learn more.
 - id: aow18
   text:  Digital networks
   class: R I A S E C
   info: Thanks to the Internet of Things, in the future sensors will collect data about every aspect of our lives, from our health and eating habits to levels of pollution in the environment. The Sensors are networked, and the data is used to provide advice and make decisions.
+  moreinfo: Look for opportunities to build up your tech skills such as coding clubs or robotics societies, or even through YouTube videos. Read up on the latest innovations in this area – what are the challenges, and who are the main companies leading in this space? Is there an opportunity to get some experience, either through your school or as part of work experience or a club or society? Are there any coding languages or other skills that would be useful in this area?
 - id: aow19
   text:  3D printing and new materials
   class: R I A E C
   info: In the future, enormous printers will be able to print entire buildings or vehicles, while advances in materials science mean items can be made of new materials with different properties such as greater strength and flexibility.
+  moreinfo: Read up on this technology – what is it being used for? What isn’t it being used for and why? What are the main challenges in this area at the moment? What are the biggest areas of growth? Are there any skills or knowledge you could build that might be useful in this area? Look for opportunities to build up your tech skills such as coding clubs or robotics societies, or even through YouTube videos. Read up on the latest in 3D printing technology, try out some free 3D printing software or look at other people’s designs. Explore the different ways that new materials can be used – for fashion, technology, or even food! Your school might even have its own 3D printer you could use.

@@ -34,4 +34,9 @@ $(document).ready(function() {
       $(this).toggleClass('open');
       $(this).next().slideToggle();
     });
+
+    $('#results-aow-toggle').on('click', function(){
+      $(this).toggleClass('open');
+      $('#aow').slideToggle();
+    });
 });

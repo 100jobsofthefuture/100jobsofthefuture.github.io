@@ -825,6 +825,38 @@ aside.pullquote p {
  color: $ford-blue;
 }
 
+#results-aow-toggle.open::after {
+  background-image: url(feather/white/chevron-up.svg);
+}
+#aow {
+  display: none;
+}
+.areasofwork {
+  display: grid;
+  margin: 0;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.areasofwork li {
+  padding: 0 0 0 0;
+}
+.areasofwork h3 {
+  font-size: 1.266em;
+}
+@media only screen and (min-width: 640px) {
+  .areasofwork {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .areasofwork {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .site-footer {
  background-color: $ford-blue;
  padding: 48px 0;

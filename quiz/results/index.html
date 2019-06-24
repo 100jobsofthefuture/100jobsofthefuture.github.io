@@ -59,8 +59,18 @@ title: Quiz results
           need? Do these jobs involve working with a particular group of people, doing a particular task, or using a particular technology? </p>
         <p>You can also search online for jobs that are in similar fields or doing similar things. For example, by looking at job ads, and just general googling you can build up a good picture of the skills, knowledge and experience that will be useful in
           these roles. Then, you can explore ways to learn these skills and build up some experience, as a taster.</p>
-        <p><a href="button">Explore the areas of work further</a></p>
+        <p><button id="results-aow-toggle" class="button chevron down">Explore the areas of work further</button></p>
       </div>
+    </div>
+    <div id="aow" class="wide container">
+      <ul class="areasofwork">
+        {% for aow in site.data.aow %}
+        <li>
+          <h3>{{ aow.text }}</h3>
+          <p>{{ aow.moreinfo }}</p>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </section>
 
