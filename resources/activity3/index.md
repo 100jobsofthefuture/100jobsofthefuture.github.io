@@ -34,6 +34,8 @@ Students are introduced to the Job Explorer as a way to explore the possible ski
 
 Information (knowledge) may be able to be applied in a particular context (skill). For example, knowledge may be knowing the rules of basketball, skill is being able to play a game of basketball.
 
+---
+
 **Part A: The Job Explorer and Interest Groups**
 
 **Student activity:** Students to complete Job Explorer in class. Students to review the jobs suggested to them and note what category these jobs fall into (Technology, People, Business and Law, Environment, Urban, Agriculture, Space, Health, Data, Experience).

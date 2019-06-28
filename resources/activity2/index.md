@@ -29,6 +29,8 @@ In this lesson, we will be talking a lot about skills and experience.
 
 Both skills and experience are something that we can acquire.
 
+---
+
 **Part A: The Job Explorer and 100 Jobs of the Future - Finding Out More**
 
 **Student activity:** Students complete [Job Explorer](/quiz/) noting their working styles **strengths and preferences**. Students review the jobs suggested and select 1 – 2 jobs they are interested in.

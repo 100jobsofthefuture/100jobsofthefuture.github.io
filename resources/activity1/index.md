@@ -26,6 +26,8 @@ Students are likely to hold multiple jobs and careers over the course of their l
 
 By thinking about the careers that have interested us so far, we can gain an understanding of the careers that might interest us in the future.
 
+---
+
 **Part A: What do you want to be when you grow up?** (Individual Activity)
 
 **Teacher explanation:** Draw the image below (Figure 1: Career mapping template) on the board and list a couple of jobs and the reasons for and against these jobs. You can use your own career interests as an example if you wish, or use the example below.
