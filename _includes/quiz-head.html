@@ -47,6 +47,7 @@ height: 100vh;
 height: calc(var(--vh, 1vh) * 100);
 width: 100%;
 overflow-y: hidden;
+/*background-image: linear-gradient(to top, #09203f 0%, #537895 100%);*/
 }
 h2 {
 font-weight: 300;
@@ -215,7 +216,7 @@ display: none;
 }
 @media only screen and (min-width: 1024px) {
 #intro .bodycopy {
-max-width: 1000%;
+max-width: 100%;
 display: grid;
 grid-template-columns: 2fr 1fr;
 grid-gap: 20px;
@@ -251,16 +252,22 @@ margin-bottom: 1em;
 }
 }
 @media only screen and (min-width: 1140px) {
-.logo::after {
-float: left;
-padding-bottom: 100%;
-}
-#intro .bodycopy {
-display: block;
-max-width: 600px;
-margin-top: 15vh;
-margin-left: 500px;
-}
+  .logo::after {
+  float: left;
+  padding-bottom: 100%;
+  }
+  #intro .bodycopy {
+  display: block;
+  max-width: 700px;
+  margin-top: 15vh;
+  margin-left: 500px;
+  }
+  #intro .bodycopy  h2 {
+    font-size: 2rem;
+  }
+  #intro .bodycopy  p {
+    font-size: 1.2rem;
+  }
 }
 @media only screen and (min-width: 1600px) {
 #intro .bodycopy {
