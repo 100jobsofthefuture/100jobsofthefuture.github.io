@@ -425,25 +425,37 @@ button.mobile-menu::before {
 }
 
 .logo {
- display: block;
- text-indent: -9999px;
- margin: 0;
- padding: 0;
- line-height: 0;
- width: 100%;
- max-width: 480px;
- background: #fff;
+  position: relative;
+  display: block;
+  text-indent: -9999px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
 }
 .logo::after {
- content: "";
- display: block;
- height: 0;
- width: 100%;
- padding-bottom: 60%;
- background-image: url('/img/logo-640by810.png');
- background-position: bottom;
- background-size: cover;
- background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 0;
+  width: 100%;
+  padding-bottom: 60%;
+  background-image: url('/img/logo-640by810.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo span {
+  position: absolute;
+  bottom: -1.6em;
+  line-height: 1;
+  width: 100%;
+  left: 0;
+  text-align: right;
+  color: #495057;
+  font-size: 0.75em;
+  font-weight: bold;
 }
 @media only screen and (min-width: 1180px) {
  .logo {
