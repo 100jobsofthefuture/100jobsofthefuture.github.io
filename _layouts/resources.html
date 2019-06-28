@@ -1,0 +1,28 @@
+{% include report-head.html %}
+{% include site-header.html %}
+<main>
+  <div class="section-heading">
+    <div class="container">
+      <p>Support Activities for Teachers</p>
+    </div>
+  </div>
+  <div class="container report">
+    <aside class="contents">
+      <nav>
+        <h2>Activities</h2>
+        <ul>
+          <li><a {% if page.url == "/resources/" %}class="selected"{% endif %} href="/resources/">Overview</a></li>
+          <li><a {% if page.url == "/resources/activity1/" %}class="selected"{% endif %} href="/resources/activity1/">Activity 1: Understanding Our Self and Our Interests for Future Jobs</a></li>
+          <li><a {% if page.url == "/resources/activity2/" %}class="selected"{% endif %} href="/resources/activity2/">Actvity 2: Exploring and Investigating Career Paths of Interest</a></li>
+          <li><a {% if page.url == "/resources/activity3/" %}class="selected"{% endif %} href="/resources/activity3/">Activity 3: Exploring Jobs of the future</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <article class="{{ page.articleClass }}">
+{{ content }}
+    </article>
+  </div>
+</main>
+{% include site-footer.html %}
+<button class="mobile-menu">Contents</button>
+{% include foot.html %}

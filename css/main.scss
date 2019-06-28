@@ -264,6 +264,21 @@ blockquote::before {
    left: 0%;
  }
 }
+table.lined {
+  width: 100%;
+  border-collapse: collapse;
+  td, th {
+    padding: 8px 16px;
+    border: 1px solid $dark-grey;
+  }
+}
+table.career-mapping {
+  width: 100%;
+  border: 1px solid $dark-grey;
+  td, th {
+    padding: 24px;
+  }
+}
 .section-heading {
   background: #eee;
   padding: 20px 0;
@@ -1046,6 +1061,10 @@ figure.image figcaption {
    position: relative;
    left: 15%;
  }
+}
+
+figure.resources {
+  margin: 40px;
 }
 
 /* report jobs list accordion */
