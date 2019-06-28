@@ -871,9 +871,6 @@ aside.pullquote p {
  max-width: 240px;
  margin: 24px 48px;
 }
-.home .site-footer {
-  margin-top: 0;
-}
 
 .expert {
  margin-top: 40px;
@@ -1072,6 +1069,9 @@ figure.image figcaption {
   }
 }
 
+.home h2 {
+  text-align: center;
+}
 .home .logo::after {
  padding-bottom: 100%;
 }
@@ -1079,38 +1079,34 @@ figure.image figcaption {
  margin: 0 auto;
  max-width: 560px;
 }
-.home-intro h2 {
- text-align: center;
-}
 @media only screen and (min-width: 900px) {
-.home .site-menu {
+  .home h2 {
+    margin-top: 100px;
+  }
+  .home .site-menu {
     justify-content: flex-start;
     margin-top: 138px;
-}
-.home-intro {
-  margin: 0 0 0 auto;
-}
-.home-intro h2 {
-  text-align: left;
-}
-}
-@media only screen and (min-width: 1140px) {
-.home-intro p:nth-child(2){
-  transform: translateX(-20%);
-}
-.home-intro p:nth-child(3){
-  transform: translateX(-40%);
-}
-.home-intro p:nth-child(4){
-  transform: translateX(-60%);
-}
+  }
+  .home-intro {
+    margin: 0 0 0 auto;
+    position: relative;
+  }
+  .home-intro p:nth-child(1){
+    transform: translateX(0%);
+  }
+  .home-intro p:nth-child(2){
+    transform: translateX(-20%);
+  }
+  .home-intro p:nth-child(3){
+    transform: translateX(-40%);
+  }
 }
 .home-intro p {
 font-size: 1.266em;
 }
 .home-qs {
 list-style-type: none;
-margin: 60px 0;
+margin: 20px 0 40px 0;
 padding: 0;
 display: flex;
 flex-direction: column;
@@ -1159,15 +1155,15 @@ font-size: 1.266em;
   text-align: center;
 }
 .quiz-entry-text .button {
-margin-right: 20px;
-margin-bottom: 0.5em;
-padding: 1em 1.6em;
-border-radius: 20px;
+  margin-right: 20px;
+  margin-bottom: 0.5em;
+  padding: 1em 1.6em;
+  border-radius: 20px;
 }
 .quiz-entry-image {
-max-width: 400px;
-margin: 0;
-position: relative;
+  max-width: 400px;
+  margin: 0;
+  position: relative;
 }
 .quiz-entry-image figcaption {
   position: absolute;
@@ -1180,6 +1176,13 @@ position: relative;
   padding: 0 4px;
   color: #fff;
 }
+.quiz-entry.right .quiz-entry-text {
+  margin-right: auto;
+}
+.quiz-entry.right .quiz-entry-text {
+  margin-right: auto;
+}
+
 .report-entry {
   background: $deakin-green;
 }
