@@ -9,7 +9,7 @@ description: Experts have come together to predict 100 jobs of the future.
 ### Understanding Our Self and Our Interests for Future Jobs
 <p class="intro">These three activities will explore student’s reasoning for jobs and preferences for themes in their employment as they developed over time.  Students will use these reflections to engage with the Job Explorer and the 100 Jobs of the Future.</p>
 
-<table>
+<table class="resource-summary">
 <tr><th>Key Knowledge</th> <td><ul><li>If we understand what we like and what we are interested in, we can use this information when making decisions about our career options.</li></ul></td></tr>
 <tr><th>Learning Outcomes</th> <td><ul><li>Become familiar with the concept that career goals and interests evolve over time</li>	<li>Become familiar with the concept of common career themes</li> <li>Identify factors that may influence their own career decisions</li></ul></td></tr>
 <tr><th>Resources</th> <td><ul><li>Pens and paper</li>	<li>Online access to 100 jobs of the Future – Job Explorer</li>	<li>Whiteboard or other method for showing a diagram to the class</li></ul></td></tr>
@@ -105,6 +105,6 @@ We can also see that the things we want to do change over time. You might find t
 
 [100 Jobs of the Future](/report/)
 
-<http://www.bdo.com.au/getattachment/Insights/Publications/Future-Leaders-Index/Future-Leaders-Index-Part-3/FLI_PAPER-3_Infographics_Final.pdf.aspx>
+[2015 Future Leaders Index - Infograhic](http://www.bdo.com.au/getattachment/Insights/Publications/Future-Leaders-Index/Future-Leaders-Index-Part-3/FLI_PAPER-3_Infographics_Final.pdf.aspx)
 
-<https://www.fya.org.au/wp-content/uploads/2017/07/FYA_TheNewWorkSmarts_July2017.pdf>
+[The Foundation for Young Australians The New Work Smarts - Report](https://www.fya.org.au/wp-content/uploads/2017/07/FYA_TheNewWorkSmarts_July2017.pdf)

@@ -10,7 +10,7 @@ description: Experts have come together to predict 100 jobs of the future.
 
 <p class="intro">Students explore their interests using the Job Explorer</p>
 
-<table>
+<table class="resource-summary">
   <tr>
     <th>Key Knowledge</th>
       <td>

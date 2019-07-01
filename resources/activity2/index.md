@@ -10,7 +10,7 @@ description: Experts have come together to predict 100 jobs of the future.
 
 <p class="intro">Students explore their working styles strengths and preferences using the Job Explorer</p>
 
-<table>
+<table class="resource-summary">
   <tr><th>Key Knowledge</th> <td><ul><li>How to research job interests</li></ul></td></tr>
   <tr><th>Learning Outcomes</th> <td><ul><li>Become familiar with the concept of preferred working styles</li> <li>Identify one’s own preferred working styles</li> <li>Identify strategies for acquiring new information, skills and experiences about jobs and careers</li></ul></td></tr>
   <tr><th>Resources</th> <td><ul><li>Online access to the 100 Job Explorer</li>	<li>Pens/paper or digital device for taking notes</li>	<li>Whiteboard or other method for showing a diagram to the class</li></ul></td></tr>

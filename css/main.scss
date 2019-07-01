@@ -1138,7 +1138,18 @@ figure.image figcaption {
 }
 
 figure.resources {
-  margin: 40px;
+  margin: 40px 0;
+}
+@media only screen and (min-width: 768px) {
+  figure.resources {
+    margin: 40px;
+  }
+}
+.resource-summary {
+  th {
+    vertical-align: top;
+    padding-top: 1em;
+  }
 }
 
 /* report jobs list accordion */
