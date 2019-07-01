@@ -921,7 +921,32 @@ aside.pullquote p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
+.site-header .container {
+  position: relative;
+}
+.site-header .logos {
+  display: none;
+  /*background-color: $ford-blue;*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 12px 12px 12px;
+}
+.site-header .logos img {
+  height: 60px;
+  margin: 0 8px;
+}
+.site-header .logos img.deakin {
+  height: 80px;
+}
+.site-header .logos img.griffith {
+  height: 40px;
+}
+@media only screen and (min-width: 900px) {
+  .site-header .logos {
+    display: block;
+  }
+}
 .site-footer {
   clear: both;
  background-color: $ford-blue;
