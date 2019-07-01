@@ -67,3 +67,5 @@ Student groups share their findings with the class.
 *	Did anyone find that a skill, knowledge or experience in the job area you looked at was also mentioned in a different job area? Particular skillset or knowledge have many ways to use it and apply it, and many different jobs it might be relevant for.
 
 While we have looked at jobs of the future, we can also see that there are some aspects of the jobs of the future that are used in existing jobs. So if we have found a job that really looks amazing from the Job Explorer, we can explore the different skillsets and knowledge used in that job and use that to help us find things to try out now.
+
+<p class="report-pagination"><a href="/resources/">Overview</a> | <a href="/resources/activity1/">Activity 1</a> | <a href="/resources/activity2/">Activity 2</a> | <span>Activity 3</span></p>

@@ -80,3 +80,5 @@ Did anyone find that a strategy that one of the other groups came up with is one
 Students to identify one strategy from their own group, and one strategy from the other groups that they think will be useful and write it down.
 
 **Possible extension:** students attempt one of the strategies discussed in class and then share what they found with the class.
+
+<p class="report-pagination"><a href="/resources/">Overview</a> | <a href="/resources/activity1/">Activity 1</a> | <span>Activity 2</span> | <a href="/resources/activity3/">Activity 3</a></p>

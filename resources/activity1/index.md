@@ -108,3 +108,5 @@ We can also see that the things we want to do change over time. You might find t
 [2015 Future Leaders Index - Infograhic](http://www.bdo.com.au/getattachment/Insights/Publications/Future-Leaders-Index/Future-Leaders-Index-Part-3/FLI_PAPER-3_Infographics_Final.pdf.aspx)
 
 [The Foundation for Young Australians The New Work Smarts - Report](https://www.fya.org.au/wp-content/uploads/2017/07/FYA_TheNewWorkSmarts_July2017.pdf)
+
+<p class="report-pagination"><a href="/resources/">Overview</a> | <span>Activity 1</span> | <a href="/resources/activity2/">Activity 2</a> | <a href="/resources/activity3/">Activity 3</a> </p>
