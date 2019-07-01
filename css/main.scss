@@ -946,6 +946,15 @@ aside.pullquote p {
   .site-header .logos {
     display: block;
   }
+  .home .site-header .logos img {
+    height: 100px;
+  }
+  .home .site-header .logos img.deakin {
+    height: 120px;
+  }
+  .home .site-header .logos img.griffith {
+    height: 60px;
+  }
 }
 .site-footer {
   clear: both;
