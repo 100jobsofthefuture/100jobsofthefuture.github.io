@@ -15,3 +15,5 @@ An aging population, medical technologies, and disrupted workplaces will change 
 This will all lead to major work disruptions, but open up possibilities for those with the skills and interests to match. Increasingly, jobs will involve humans working with machines, which means that future work will require people with technical/digital skills and those who can work at the interface between machines and people. We will have new jobs, and the jobs that exist now will change to include new technological and communication processes.
 
 This is from the Key Findings – [see the report](/report).
+
+<p class="report-pagination"><a href="/resources/lactivity1/">Activity 1</a> | <a href="/resources/lactivity2/">Activity 2</a> | <a href="/resources/lactivity3/">Activity 3</a></p>
