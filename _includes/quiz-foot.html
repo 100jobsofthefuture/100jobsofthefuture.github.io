@@ -212,6 +212,14 @@ $('.areasofwork input').on('change', function(){
     $('.areasofwork input[disabled="disabled"]').removeAttr('disabled');
   }
   console.log('how many checked:' + howmanychecked);
+
+  /* update see results href */
+  var aow = [];
+  $.each($(".areasofwork input:checked"), function(){
+    aow.push($(this).val());
+  });
+  var href = "results?type="+highest+"&aow1="+aow[0]+"&aow2="+aow[1]+"&aow3="+aow[2];
+  $('#results-button').attr('href', href);
 });
 
 /* click handler for results button
