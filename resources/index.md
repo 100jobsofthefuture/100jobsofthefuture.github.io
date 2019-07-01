@@ -16,4 +16,4 @@ This will all lead to major work disruptions, but open up possibilities for thos
 
 This is from the Key Findings – [see the report](/report).
 
-<p class="report-pagination"><a href="/resources/lactivity1/">Activity 1</a> | <a href="/resources/lactivity2/">Activity 2</a> | <a href="/resources/lactivity3/">Activity 3</a></p>
+<p class="report-pagination"><a href="/resources/activity1/">Activity 1</a> | <a href="/resources/activity2/">Activity 2</a> | <a href="/resources/activity3/">Activity 3</a></p>
