@@ -464,13 +464,17 @@ button.mobile-menu::before {
  margin-left: auto;
 }
 @media only screen and (min-width: 640px) {
-.fig-left {
-  display: flex;
-  align-items: flex-start;
-}
+  .fig-left {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 .fig-left > div {
   max-width: 780px;
+}
+.fig-left > figure {
+  min-width: 150px;
+  max-width: 300px;
 }
 
 .logo {
@@ -919,6 +923,7 @@ aside.pullquote p {
 }
 
 .site-footer {
+  clear: both;
  background-color: $ford-blue;
  padding: 48px 0;
  margin-top: 64px;
@@ -1039,32 +1044,33 @@ aside.pullquote p {
 }
 
 /* report figures */
-figure.green {
- background: $deakin-green;
+figure.right {
+ width: 40%;
+ float: right;
+ margin: 20px 0 40px 40px;
+ transform: translateX(20px);
 }
-figure.green img {
+figure.right img {
+ position: relative;
+ top: 20px;
+ right: 20px;
+}
+figure.left {
+  width: 40%;
+  float: left;
+  margin: 0px 40px 40px 0;
+  transform: translateX(-20px);
+}
+figure.left img {
  position: relative;
  top: 20px;
  left: 20px;
 }
 figure.pink {
  background: $pink;
- transform: translateX(20px);
 }
-figure.pink img {
- position: relative;
- top: 20px;
- right: 20px;
-}
-figure.right {
- width: 40%;
- float: right;
- margin: 20px 0 40px 40px;
-}
-figure.left {
-  float: left;
-  margin: 0px 40px 40px 0;
-  transform: translateX(-20px);
+figure.green {
+ background: $deakin-green;
 }
 figure.left.pink img {
   right: -20px;
