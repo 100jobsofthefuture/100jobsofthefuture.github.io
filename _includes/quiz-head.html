@@ -25,6 +25,38 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
 <link rel="stylesheet" href="/css/normalize.css">
 <style>
+body {
+ overflow: hidden;
+}
+.overlay {
+ display: block;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(0,0,0,0.8);
+ color: #fff;
+ text-align: center;
+}
+.overlay > div {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.overlay img {
+  width: 50px;
+  height: 50px;
+}
+.overlay a {
+  text-decoration: none;
+}
+@supports (display: grid) {
+  .overlay {
+    display: none;
+  }
+}
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
 box-sizing: border-box;

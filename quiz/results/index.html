@@ -5,8 +5,18 @@ layout: results
 title: Quiz results
 ---
 <main>
-  <div class="container">
+  <div class="container" style="position: relative;">
+    <div class="centered">
     <h1>Your results</h1>
+      <!-- AddToAny BEGIN -->
+      <a class="a2a_dd button-ghost share" href="https://www.addtoany.com/share">Share</a>
+      <script>
+      var a2a_config = a2a_config || {};
+      a2a_config.onclick = 1;
+      </script>
+      <script async src="https://static.addtoany.com/menu/page.js"></script>
+      <!-- AddToAny END -->
+    </div>
   </div>
   <section class="top results-section">
     <div class="container">
@@ -34,7 +44,7 @@ title: Quiz results
         </li>
       {% endfor %}
       </ul>
-      <p class="centered"><button id="showMoreJobs">Show more</button></p>
+      <p class="centered"><button class="button chevron down" id="showMoreJobs">Show more</button></p>
     </div>
     <div class="container">
       <div class="left text-container">
@@ -47,13 +57,13 @@ title: Quiz results
   <p class="centered" style="background: #f1f1f1; padding: 8px 0; color: rgb(75,182,161); font-weight: bold;">This doesn't sound like me <a class="button-ghost rotate-ccw" href="/quiz/">Start again</a></p>
 
   <section class="results-section">
-    <div class="container">
+    <div class="container fig-left">
       <figure class="left pink" style="max-width: 300px;">
         <img src="/img/samuel-zeller-158996-unsplash.jpg" alt="Woman using VR googles" title="Photo by Samuel Zeller on Unsplash.com">
       </figure>
-      <div class="right text-container">
+      <div>
         <h2>How can I find out more?</h2>
-        <p>Now that you have a sense of the type of work that might suit your career interests, it’s a good idea to explore further. By learning more about different future jobs, you have a chance to try things out, decide if they are for you, and get a head
+        <p class="intro">Now that you have a sense of the type of work that might suit your career interests, it’s a good idea to explore further. By learning more about different future jobs, you have a chance to try things out, decide if they are for you, and get a head
           start in building skills and experiences that will be useful later on.</p>
         <p>You can find out more about the skills and experience that might be useful by reviewing the jobs you’re interested in and thinking about what sort of things you’d be likely to do in those jobs. What skills or experiences would you be likely to
           need? Do these jobs involve working with a particular group of people, doing a particular task, or using a particular technology? </p>

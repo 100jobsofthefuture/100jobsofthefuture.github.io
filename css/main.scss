@@ -346,6 +346,7 @@ button:hover,
 .button-ghost,
 .button-ghost:visited {
  display: inline-block;
+ line-height: 1;
  color: rgb(162,112,232);
  border: 1px solid rgb(162,112,232);
  text-decoration: none;
@@ -369,6 +370,28 @@ button:hover,
  height: 16px;
  margin-left: 0.5em;
  line-height: 1;
+}
+.button-ghost.share {
+  margin: 0 auto;
+}
+.button-ghost.share::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('feather/purple/share-2.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5em;
+  line-height: 1;
+}
+@media only screen and (min-width: 769px) {
+  .button-ghost.share {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+  }
 }
 .rotate-ccw::after {
  display: inline-block;
@@ -439,6 +462,15 @@ button.mobile-menu::before {
 }
 .text-container.right {
  margin-left: auto;
+}
+@media only screen and (min-width: 640px) {
+.fig-left {
+  display: flex;
+  align-items: flex-start;
+}
+}
+.fig-left > div {
+  max-width: 780px;
 }
 
 .logo {

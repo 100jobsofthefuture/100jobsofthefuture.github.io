@@ -20,7 +20,7 @@ Students are introduced to the concept of career development across their lifesp
 
 #### Introduction to Future Jobs
 
-See: Key findings (link to report)
+See: Key Findings – [the report](/report)
 
 Students are likely to hold multiple jobs and careers over the course of their lifetime. These jobs and careers may overlap and build upon each other or may be completely different. However, while our jobs and careers might change, there can sometimes be a common theme in the types of jobs and careers we enjoy.
 
@@ -79,7 +79,7 @@ Students in each pair/group to look for commonalities/reoccurring themes in thei
 
 **Teacher explanation:** If we know what our common themes are, what we are interested and not interested in, and what motivates us, then we’re looking at the jobs we might want to do in the future, we can use this information to help us decide what will be a good option for us.
 
-**Student task:** Students draw two columns on a page and write their common themes on the left. A theme is an aspect of jobs that they appreciate.  Students to browse through the 100 jobs job list include link to website and when they see a job that they think might align with one of their themes,  to write it in the right hand column.
+**Student task:** Students draw two columns on a page and write their common themes on the left. A theme is an aspect of jobs that they appreciate.  Students to browse through the [100 jobs list](/browse/) and when they see a job that they think might align with one of their themes,  to write it in the right hand column.
 
 <figure class="resources">
   <table class="lined">
