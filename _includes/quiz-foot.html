@@ -117,6 +117,9 @@ $( ".sortable" ).on( "sortstop", function( event, ui ) {
     updateScore();
 });
 
+$('.scroll-wrapper').on('touchstart touchmove touchcancel touchend', function(e) {
+  e.stopPropagation()
+});
 // reset scroll left on page refresh
 $( '.scroll-wrapper' ).scrollLeft(0);
 // reset scroll left on page resize
