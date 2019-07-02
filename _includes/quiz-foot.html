@@ -110,6 +110,7 @@ updateScore();
 // initiate sortable with change
 $( ".sortable" ).sortable({
   axis: "y",
+  containment: "parent",
   stop: function( event, ui ) {}
 });
 $( ".sortable" ).on( "sortstop", function( event, ui ) {
