@@ -282,11 +282,47 @@ table.career-mapping {
     padding: 24px;
   }
 }
+label {
+  margin-top: 0.5em;
+  display: block;
+  font-size: 1.602em;
+}
+input, textarea {
+  display: block;
+  padding: 12px;
+  font-size: 1.266em;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 700px;
+}
+button[type="submit"] {
+  margin: 24px 0;
+}
 .section-heading {
   background: $ford-blue;
   padding: 20px 0;
   margin: 60px 0 20px 0;
   text-align: center;
+
+  position: relative;
+  background-image: url(img/circuit-left.svg);
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+@media only screen and (min-width: 900px) {
+  .section-heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(img/circuit-right.svg);
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
 }
 .section-heading p {
  font-family: 'one_dayregular', sans-serif;
@@ -576,7 +612,7 @@ button.mobile-menu::before {
    flex-direction: column;
    justify-content: flex-end;
    align-items: flex-start;
-   margin-bottom: 2em;
+   margin-bottom: 1em;
  }
  .site-menu ul {
    text-align: left;
