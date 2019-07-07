@@ -105,7 +105,7 @@ We can also see that the things we want to do change over time. You might find t
 
 [100 Jobs of the Future](/report/)
 
-[2015 Future Leaders Index - Infograhic](http://www.bdo.com.au/getattachment/Insights/Publications/Future-Leaders-Index/Future-Leaders-Index-Part-3/FLI_PAPER-3_Infographics_Final.pdf.aspx)
+[2015 Future Leaders Index - Infographic](http://www.bdo.com.au/getattachment/Insights/Publications/Future-Leaders-Index/Future-Leaders-Index-Part-3/FLI_PAPER-3_Infographics_Final.pdf.aspx)
 
 [The Foundation for Young Australians The New Work Smarts - Report](https://www.fya.org.au/wp-content/uploads/2017/07/FYA_TheNewWorkSmarts_July2017.pdf)
 

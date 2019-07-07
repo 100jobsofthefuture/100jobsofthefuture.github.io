@@ -172,6 +172,7 @@ h1 {
  font-size: 2.566em;
  color: $pink;
  text-align: center;
+ margin-top: 0;
 }
 article h1 {
  text-align: left;
@@ -282,16 +283,17 @@ table.career-mapping {
   }
 }
 .section-heading {
-  background: #eee;
+  background: $ford-blue;
   padding: 20px 0;
-  margin: 60px 0;
+  margin: 60px 0 20px 0;
   text-align: center;
 }
 .section-heading p {
  font-family: 'one_dayregular', sans-serif;
  font-weight: 400;
  margin: 0;
- color: #ccc;
+ color: #fff;
+ text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de;
  font-size: 2.566em;
 }
 @media only screen and (min-width: 900px) {
@@ -481,7 +483,7 @@ button.mobile-menu::before {
   position: relative;
   display: block;
   text-indent: -9999px;
-  margin: 0;
+  margin: 0 0 2em 0;
   padding: 0;
   line-height: 0;
   width: 100%;
@@ -501,19 +503,16 @@ button.mobile-menu::before {
 }
 .logo span {
   position: absolute;
-  bottom: -1.6em;
-  line-height: 1;
+  bottom: 0;
+  transform: translateY(100%);
+  text-indent: 0;
+  line-height: 1.6;
   width: 100%;
   left: 0;
   text-align: right;
   color: #495057;
   font-size: 0.75em;
   font-weight: bold;
-}
-@media only screen and (min-width: 1180px) {
- .logo {
-   transform: translateX(-40px);
- }
 }
 .site-menu-toggle-wrapper {
  text-align: center;
@@ -577,6 +576,7 @@ button.mobile-menu::before {
    flex-direction: column;
    justify-content: flex-end;
    align-items: flex-start;
+   margin-bottom: 2em;
  }
  .site-menu ul {
    text-align: left;
@@ -946,6 +946,7 @@ aside.pullquote p {
   .site-header .logos {
     display: block;
   }
+  /*
   .home .site-header .logos img {
     height: 100px;
   }
@@ -955,6 +956,7 @@ aside.pullquote p {
   .home .site-header .logos img.griffith {
     height: 60px;
   }
+  */
 }
 .site-footer {
   clear: both;
@@ -1188,9 +1190,11 @@ figure.resources {
 .home h2 {
   text-align: center;
 }
+/*
 .home .logo::after {
- padding-bottom: 100%;
+ padding-bottom: 80%;
 }
+*/
 .home-intro {
  margin: 0 auto;
  max-width: 560px;
@@ -1203,15 +1207,6 @@ figure.resources {
     margin: 0 0 0 auto;
     position: relative;
   }
-  .home-intro p:nth-child(1){
-    transform: translateX(0%);
-  }
-  .home-intro p:nth-child(2){
-    transform: translateX(-20%);
-  }
-  .home-intro p:nth-child(3){
-    transform: translateX(-40%);
-  }
 }
 .home-intro p {
 font-size: 1.266em;
@@ -1222,6 +1217,7 @@ margin: 20px 0 40px 0;
 padding: 0;
 display: flex;
 flex-direction: column;
+justify-content: center;
 }
 .home-qs li {
 color: #fff;
@@ -1281,12 +1277,13 @@ font-size: 1.266em;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 15%;
+  top: 0%;
   width: 80%;
   background: rgba($pink, 0.6);
   text-align: center;
   padding: 0 4px;
   color: #fff;
+  margin-top: 85%;
 }
 .quiz-entry.right .quiz-entry-text {
   margin-right: auto;
@@ -1294,15 +1291,28 @@ font-size: 1.266em;
 .quiz-entry.right .quiz-entry-text {
   margin-right: auto;
 }
-
 .report-entry {
-  background: $deakin-green;
+  background-color: $ford-blue;
+  padding: 40px 20px;
+  margin: 40px 0;
+  position: relative;
+  background-image: url(img/circuit-left.svg);
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 .report-entry-text {
+  position: relative;
+  z-index: 10;
   max-width: 700px;
   margin: 0 auto;
-  padding: 40px 0;
+
   color: #fff;
+}
+.report-entry h2 {
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de;
 }
 .report-entry-text p {
   color: rgba(#fff, 0.9);
@@ -1324,11 +1334,25 @@ font-size: 1.266em;
   .quiz-entry-text .button {
     font-size: 1.2em;
   }
+}
+@media only screen and (min-width: 900px) {
   .report-entry {
-    margin: 80px auto 0 auto;
+    margin: 80px auto;
+    padding: 80px 20px;
   }
-  .report-entry-text {
-    padding: 80px 0;
+}
+@media only screen and (min-width: 1024px) {
+  .report-entry::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(img/circuit-right.svg);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: right center;
   }
 }
 
