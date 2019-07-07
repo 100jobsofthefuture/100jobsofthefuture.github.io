@@ -110,13 +110,13 @@ updateScore();
 // initiate sortable with change
 $( ".sortable" ).sortable({
   axis: "y",
+  containment: "parent",
   stop: function( event, ui ) {}
 });
 $( ".sortable" ).on( "sortstop", function( event, ui ) {
     // update RIASEC scores on sort change
     updateScore();
 });
-
 // reset scroll left on page refresh
 $( '.scroll-wrapper' ).scrollLeft(0);
 // reset scroll left on page resize
