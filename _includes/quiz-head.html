@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i" rel="stylesheet">
 <link rel="stylesheet" href="/css/normalize.css">
 <style>
-body {
+body, html {
  overflow: hidden;
 }
 .overlay {
@@ -192,6 +192,33 @@ background-repeat: no-repeat;
 background-size: 100%;
 background-position: center;
 margin-left: 12px;
+}
+.home {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(126, 57, 223);
+  text-indent: 9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background-image: url('/css/feather/white/home.svg');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+}
+.home:hover {
+  background-color: rgb(101, 32, 198);
+}
+.exit {
+  width: 100%;
+  max-width: 1356px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: right;
 }
 .logo {
   position: relative;
@@ -382,6 +409,14 @@ max-width: 500px;
 flex-shrink: 0;
 padding: 10px;
 overscroll-behavior: none;
+}
+.question p:first-of-type {
+  padding-right: 40px;
+}
+@media only screen and (min-width: 500px) {
+  .question p:first-of-type {
+    padding-right: 0;
+  }
 }
 .question p {
 line-height: 1.4;
