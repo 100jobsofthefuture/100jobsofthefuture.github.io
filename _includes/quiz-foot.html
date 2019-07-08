@@ -218,7 +218,7 @@ $('.areasofwork input').on('change', function(){
   $.each($(".areasofwork input:checked"), function(){
     aow.push($(this).val());
   });
-  var href = "results?t="+highest+"&a="+aow[0]+"&b="+aow[1]+"&c="+aow[2];
+  var href = "{{ site.url }}/quiz/results?t="+highest+"&a="+aow[0]+"&b="+aow[1]+"&c="+aow[2];
   $('#results-button').attr('href', href);
 });
 
