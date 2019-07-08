@@ -39,4 +39,12 @@ $(document).ready(function() {
       $(this).toggleClass('open');
       $('#aow').slideToggle();
     });
+
+    $(window).scroll( function(){
+      if($(window).scrollTop() > 1000){
+        $('.button.top').fadeIn();
+      } else {
+        $('.button.top').fadeOut();
+      }
+    });
 });
