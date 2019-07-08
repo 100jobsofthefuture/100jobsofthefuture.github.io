@@ -218,7 +218,7 @@ $('.areasofwork input').on('change', function(){
   $.each($(".areasofwork input:checked"), function(){
     aow.push($(this).val());
   });
-  var href = "results?type="+highest+"&aow1="+aow[0]+"&aow2="+aow[1]+"&aow3="+aow[2];
+  var href = "results?t="+highest+"&a="+aow[0]+"&b="+aow[1]+"&c="+aow[2];
   $('#results-button').attr('href', href);
 });
 
