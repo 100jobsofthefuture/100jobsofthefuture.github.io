@@ -305,7 +305,7 @@ button[type="submit"] {
   text-align: center;
 
   position: relative;
-  background-image: url(img/circuit-left.svg);
+  background-image: url('img/circuit-left.svg');
   background-size: 450px;
   background-repeat: no-repeat;
   background-position: left center;
@@ -318,7 +318,7 @@ button[type="submit"] {
     right: 0;
     left: 0;
     bottom: 0;
-    background-image: url(img/circuit-right.svg);
+    background-image: url('img/circuit-right.svg');
     background-size: 450px;
     background-repeat: no-repeat;
     background-position: right center;
@@ -372,14 +372,14 @@ button:hover,
  content: "";
  width: 1em;
  height: 1em;
- background-image: url('../css/feather/white/chevron-right.svg');
+ background-image: url('feather/white/chevron-right.svg');
  background-repeat: no-repeat;
  background-size: 100%;
  background-position: center;
  margin-left: 12px;
 }
 .button.chevron.down::after {
- background-image: url('../css/feather/white/chevron-down.svg');
+ background-image: url('feather/white/chevron-down.svg');
 }
 .button.chevron.up::after {
  background-image: url('feather/white/chevron-up.svg');
@@ -440,7 +440,7 @@ button:hover,
  content: "";
  width: 1em;
  height: 1em;
- background-image: url('../css/feather/purple/rotate-ccw.svg');
+ background-image: url('feather/purple/rotate-ccw.svg');
  background-repeat: no-repeat;
  background-size: 100%;
  background-position: center;
@@ -761,7 +761,7 @@ aside.pullquote p {
  /*border: 1px solid #eee;*/
  margin: 0 12px 12px 0;
  padding: 0;
- background: url('../css/img/hud-vertical-short.svg');
+ background: url('img/hud-vertical-short.svg');
  background-repeat: no-repeat;
  background-size: cover;
  cursor: pointer;
@@ -770,7 +770,7 @@ aside.pullquote p {
  overflow: hidden;
 }
 .job-card:hover {
- background-image: url('../css/img/hud-vertical-short-hover.svg');
+ background-image: url('img/hud-vertical-short-hover.svg');
 }
 .results.job-card-listing .job-card {
  display: none;
@@ -825,7 +825,7 @@ aside.pullquote p {
  display: inline-block;
  height: 32px;
  width: 32px;
- background-image: url('../css/feather/x-circle.svg');
+ background-image: url('feather/x-circle.svg');
  background-repeat: no-repeat;
  background-size: 100%;
  position: sticky;
@@ -934,7 +934,7 @@ aside.pullquote p {
 }
 
 #results-aow-toggle.open::after {
-  background-image: url(feather/white/chevron-up.svg);
+  background-image: url('feather/white/chevron-up.svg');
 }
 #aow {
   display: none;
@@ -1202,7 +1202,7 @@ figure.resources {
  font-size: 1rem;
  background-color: #f1f1f1;
  padding: 8px 32px 8px 12px;
- background-image: url(feather/plus.svg);
+ background-image: url('feather/plus.svg');
  background-repeat: no-repeat;
  background-position: center right 12px;
  cursor: pointer;
@@ -1211,7 +1211,7 @@ figure.resources {
  background-color: #ddd;
 }
 .report-job-heading.open {
- background-image: url(feather/minus.svg);
+ background-image: url('feather/minus.svg');
 }
 .report-job-heading span {
  font-size: 1rem;
@@ -1348,7 +1348,7 @@ font-size: 1.266em;
   right: 0;
   left: 0;
   bottom: 0;
-  background-image: url(img/circuit-left.svg);
+  background-image: url('img/circuit-left.svg');
   background-size: 700px;
   background-repeat: no-repeat;
   background-position: left center;
@@ -1401,7 +1401,7 @@ font-size: 1.266em;
     right: 0;
     left: 0;
     bottom: 0;
-    background-image: url(img/circuit-right.svg);
+    background-image: url('img/circuit-right.svg');
     background-size: 700px;
     background-repeat: no-repeat;
     background-position: right center;

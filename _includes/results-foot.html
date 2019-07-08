@@ -69,5 +69,28 @@
     var numJobsToShow = 4;
     // show first 4 jobs
     showJobs(numJobsToShow);
+
+    /* show appropriate areas of work in drop down */
+    $('.areasofwork li').hide();
+    switch (type) {
+      case 'R':
+          $('.areasofwork li.R').show();
+          break;
+      case 'I':
+          $('.areasofwork li.I').show();
+          break;
+      case 'A':
+          $('.areasofwork li.A').show();
+          break;
+      case 'S':
+          $('.areasofwork li.S').show();
+          break;
+      case 'E':
+          $('.areasofwork li.E').show();
+          break;
+      case 'C':
+          $('.areasofwork li.C').show();
+          break;
+    }
   });
 </script>

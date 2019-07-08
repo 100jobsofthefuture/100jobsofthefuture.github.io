@@ -80,7 +80,7 @@ title: Quiz results
     <div id="aow" class="wide container">
       <ul class="areasofwork">
         {% for aow in site.data.aow %}
-        <li>
+        <li class="{{ aow.class }}">
           <h3>{{ aow.text }}</h3>
           <p>{{ aow.moreinfo }}</p>
         </li>
