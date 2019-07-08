@@ -1328,10 +1328,19 @@ font-size: 1.266em;
   margin-right: auto;
 }
 .report-entry {
-  background-color: $ford-blue;
+  background: $ford-blue;
+  /*background: linear-gradient(90deg, rgba(0,42,120,1) 30%, rgba(75,182,161,1) 100%);*/
   padding: 40px 20px;
   margin: 40px 0;
   position: relative;
+}
+.report-entry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-image: url(img/circuit-left.svg);
   background-size: 700px;
   background-repeat: no-repeat;
@@ -1378,7 +1387,7 @@ font-size: 1.266em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .report-entry::before {
+  .report-entry::after {
     content: "";
     position: absolute;
     top: 0;
