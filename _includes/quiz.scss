@@ -563,22 +563,20 @@ position: absolute;
 left: 4px;
 top: 12px;
 opacity: 0.5;
-}
-.areasofwork label::before {
 display: inline-block;
 }
 .areasofwork label::after {
-display: none;
+left: -9999px;
 background-image: url('/css/feather/check-square.svg');
 }
 .areasofwork input[type="checkbox"]:checked+label {
 background: rgb(75, 182, 161);
 }
 .areasofwork input[type="checkbox"]:checked+label::before {
-display: none;
+left: -9999px;
 }
 .areasofwork input[type="checkbox"]:checked+label::after {
-display: inline-block;
+left: 4px;
 }
 .areasofwork input[disabled="disabled"]+label {
 opacity: 0.6;

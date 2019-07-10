@@ -112,6 +112,12 @@ $deakin-green: rgb(75,182,161);
 $dark-grey: #495057;
 $pink: rgb(252,63,145);
 $purple: rgb(162,112,232);
+/* preload hover images */
+.site-footer {
+  background: url('img/hud-vertical-short-hover.svg') no-repeat -9999px -9999px,
+                    url('feather/purple/maximize-2.svg') no-repeat -9999px -9999px,
+                    url('feather/white/maximize-2.svg') no-repeat -9999px -9999px;
+}
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
 box-sizing: border-box;
