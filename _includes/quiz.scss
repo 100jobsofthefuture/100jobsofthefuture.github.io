@@ -293,9 +293,14 @@ margin-bottom: 1em;
 }
 }
 @media only screen and (min-width: 1140px) {
+  #intro {
+    display: flex;
+    flex-direction: column;
+  }
   .logo {
     float: left;
     width: 480px;
+    position: absolute;
   }
   .logo::after {
   padding-bottom: 100%;
@@ -303,8 +308,7 @@ margin-bottom: 1em;
   #intro .bodycopy {
   display: block;
   max-width: 700px;
-  margin-top: 15vh;
-  margin-left: 500px;
+  margin: auto 0 auto 500px;
   }
   #intro .bodycopy  h2 {
     font-size: 2rem;
@@ -660,4 +664,21 @@ display: inline;
     text-align: center;
     margin: 0 8px 8px 8px;
   }
+}
+main {
+  background-image: url("/css/img/circuit-right.svg");
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position: right calc((100vw - 2560px) / 2) center;
+}
+main::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("/css/img/circuit-left.svg");
+  background-size: 700px;
+  background-repeat: no-repeat;
+  background-position: left calc((100vw - 2560px) / 2) center;
 }
