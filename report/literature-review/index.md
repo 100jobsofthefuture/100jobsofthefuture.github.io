@@ -11,7 +11,7 @@ workplaces, the skills that are growing in demand (and those that are not) and h
 work is likely to change in the future.</p>
 ## Change drivers for the world of&nbsp;work
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>The three key forces that will shape the future of work are: automation: ever-smarter machines performing ever-more human tasks; globalisation: our workforce going global and the global workforce coming to us; and collaboration: many jobs, with many employers, often at the same time.</p>
   <footer><cite>The New Work Order (Foundation for Young Australians, 2017b, p.11)</cite></footer>
 </blockquote>
@@ -35,7 +35,7 @@ It is also argued that if we want to avoid the significant social dislocation ca
 ## Uneven Impacts of Change
 Whether experts predict the mass elimination of jobs (Frey & Osborne, 2013), or more new jobs being created than lost (AlphaBeta, 2017), overwhelmingly everyone agrees the changes occurring in the labour market will be significant, substantial and likely to require a large proportion of the workforce to engage in retraining, reskilling and lifelong learning (Riad, 2017). This will require businesses, governments and education facilities finding new ways to reach a growing number of people needing access to the skills essential for the new economy (CEDA, 2015). In such a fast-changing world, even those leaving school today may not have the skills they needed for jobs they will be applying for.
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>For the foreseeable future, the challenge of ‘cybernation’ is not mass unemployment, but the need to educate many more young people for the jobs computers cannot do.</p>
   <footer><cite>Changing Jobs: The fair go in the machine age (Quigley & Chalmers, 2017)</cite></footer>
 </blockquote>
@@ -52,7 +52,7 @@ A further complication here is that those caught in low-paid and low-skilled job
 
 A trend towards the ‘hollowing’ of workplaces is likely to accelerate as jobs replaced by technology increasingly come from the middle of the employment hierarchy. And as those in the middle see their jobs being replaced, they in turn take the jobs of less skilled employees (Bakhshi et al., 2017; FYA, 2017a; IMF, 2018). Increasingly, gaining employment depends on first having various credentials and qualifications (FYA, 2017b) with educational qualifications being used as a way to sort and eliminate applicants (Brown et al., 2004).
 
-<figure class="chart">
+<figure class="chart wow zoomIn">
   <img src="/img/figure1.svg" alt="Share of total new jobs in Australia, five years to November 2017: Machinery operators and drivers: 4%, Labourers: 5%, Sales Workers: 8%, Technicians and Trade Workers: 11%, Managers: 12%, Community and Personal Service Workers: 23%, Professionals: 37%">
   <figcaption><b>Figure 1:</b> “Share of total new jobs in Australia, five years to November 2017” from Australian Jobs 2018, p.22 - © Commonwealth of Australia (CC BY 4.0)</figcaption>
 </figure>
@@ -63,7 +63,7 @@ Unskilled people tend to have left school early. Given that future employment is
 
 Policy solutions mostly stress education and retraining as needing to become even more central to government policy concerns (IMF, 2018; OECD, 2013). Such solutions, however, stress that governments require the cooperation of education providers and businesses, especially since the training needed to acquire the skills for particular businesses are often very specific to those businesses and are often only fully understood by those businesses too. Further, ongoing and lifelong learning is often presented as being the responsibility of the individual worker. However, workers have difficulty in meeting the expense of retraining (both in terms of time without a wage, as well as the cost of the training itself) and difficulty knowing what training will best prepare them for future jobs (Sundararajan, 2017).
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>There are a number of clear messages in this plot. First, potential job losses are polarised: Jobs in administration and sales (and many service areas) will disappear, while jobs in the technical professions and personal services will remain. Second, many of those jobs remaining are characterised by nonroutine thinking and especially high levels of originality and creativity.</p>
   <footer><cite>Australia’s Future Workforce? Durrant-Whyte et al., CEDA, 2015</cite></footer>
 </blockquote>
@@ -74,7 +74,7 @@ Many believe that STEM (Science, Technology, Engineering and Mathematics) qualif
 
 Until recently, technological progress has involved the automation of highly routine physical tasks (Hajkowicz et al., 2016). This has meant that the burden of technological progress has been felt mostly in manufacturing, mining and related industries. Today, many believe that automation will occur in any task able to be specified by an algorithm and performed by a robot or computer system (Frey & Osborne, 2013). Often the jobs facing this new wave of automation are associated with those in the middle of the job market, that is, jobs such as bookkeepers or paralegals, jobs which until recently seemed both safe and relatively well-paid. Robots have much more difficulty replacing work that involves fine motor skills — such as making beds or folding towels – or in locating items in unstructured space — such as tidying magazines on a coffee table (Brynjolfsson & McAfee, 2012) at the lower end of the labour market. This is the cause of the hollowing out of workplaces referred to above, where jobs remain at the top and bottom, but those in the middle increasingly disappear.
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>We will see training for the jobs of the past, and for service jobs. The jobs of the future will not need large numbers of workers with a fixed set of skills – most things that we can train large numbers of workers for, we will also be able to train computers to do better.</p>
   <footer><cite>The Future of Jobs and Jobs Training. Rainie & Anderson, 2017, p.15)</cite></footer>
 </blockquote>
@@ -98,7 +98,7 @@ And while the work of bookkeepers and some lawyers can be automated in theory, t
 
 ## The Skills of the Future
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>58% of students aged under 25 years in Australia (are) enrolled in fields of study that will be radically affected by automation in the next 10-15 years. If we focus just on VET students, the proportion of students being trained in the at-risk occupations rises to a significant 71%. … Such jobs include woods trades, horticulture, and printing.</p>
   <footer><cite>The New Work Order. Foundation for Young Australians, 2017b, p.25</cite></footer>
 </blockquote>
@@ -108,12 +108,12 @@ Predicting the skills necessary for future jobs begins with the obvious problem 
 Some economists have shown that while this structural change has been occurring in the types of skills needed in the workplace, this has not reduced levels of employment, so that ‘the new labour saving technologies did not reduce the demand for labour’ (Arntz et al., 2016, p.23). The nature of labour is, however, changing.
 
 <div class="chart-side-by-side">
-<figure class="chart">
+<figure class="chart wow zoomIn">
   <img src="/img/figure2.svg" alt="Change in employment by skill type from 1986 to 2016: Routine manual trends down from approximately 40% to 30%; Routine cognitive trends down from approximately 27% to 23%; Non-routine manual trends up from approximately 5% to 10%; Non-routine cognitive trends up from approximately 28% to 36%;">
   <figcaption><b>Figure 2:</b> “Change in employment by skill type” from Australian Jobs 2018, p.29 - © Commonwealth of Australia (CC BY 4.0) Colour change from original.</figcaption>
 </figure>
 
-<figure class="chart">
+<figure class="chart wow zoomIn">
   <img src="/img/figure3.svg" style="max-width: 400px;" alt="Top four occupations: Males - Sales Assistants (General) 170,168; Truck Drivers 142,710; Electricians 113,458; Carpenters and Joiners 101,134: Females - Sales Assistants (General) 355,843; Registered Nurses 197,124; General Clerks 186,529; Receptionists 146,698">
   <figcaption><b>Figure 3:</b> “Top four occupations” from 2071.0 - Census of Population and Housing: Reflecting Australia - Stories from the Census, 2016, Australian Bureau of Statistics - © Commonwealth of Australia (CC BY 4.0)</figcaption>
 </figure>
@@ -132,7 +132,7 @@ Not all jobs that can be automated will be automated, and jobs that cannot be au
 
 Whether in manual or cognitive work (see Figure 3) the major growth in jobs has been in the non-routine sectors. The skills that have had increasing demand include “creative intelligence, social intelligence and problem solving” and these are what are sometimes referred to as “21st Century skills, enterprise skills and employability skills” (FYA, 2017a, p.32). These skill sets include ‘”confidence, communication, creativity, project management, enthusiasm for learning, critical thinking, teamwork, digital literacy, financial literacy and global citizenship”. In fact, “the categories of interpersonal, creative and information synthesis are projected to increase from just under half of all work activity to almost 70 per cent over the thirty years from 2000 to 2030” (Charmers & Quigley, 2017, p.65).
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>The industries that came into existence in the US after 2000 were only employing half of one per cent of all US jobs (Quigley & Chalmers, 2017, p.21). When Facebook purchased Instagram for a billion dollars, it employed only 13 people (Quigley & Chalmers, 2017, p.83).</p>
 </blockquote>
 
@@ -142,7 +142,7 @@ This raises a question concerning how well we are able to predict the skills tha
 
 ## The Entrepreneur
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>In tomorrow’s job market adaptability, resilience, buoyancy and entrepreneurial capabilities are of growing importance. This is because of the increased pace of change fuelled by technological innovation and globalisation increases the need for workers to handle minor and major transitions. Workers will need the capability to handle a career dead-end (or job loss) and create their own job in another space.</p>
   <footer><cite>Tomorrow’s Digitally enabled Workforce: Megatrends and scenarios for jobs and employment in Australia over the coming twenty years. Hajkowicz et al., 2016, p.14</cite></footer>
 </blockquote>
@@ -169,7 +169,7 @@ These new jobs allow for much more flexibility and as such “provide greater op
 
 ## STEM, STEAM and digital skills
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>So ubiquitous will ICT be in the future that it will be added to reading, writing and arithmetic as basic competencies expected of all Australians.</p>
   <footer><cite>Australia’s Future Workforce? CEDA, 2015, p.26</cite></footer>
 </blockquote>
@@ -182,7 +182,7 @@ The Commonwealth Bank (2017) refers to a forecast “that 45 per cent of employe
 
 STEM skills are often aligned with calls for digital competence.
 
-<blockquote class="no-push">
+<blockquote class="wow fadeInRight">
   <p>Digital competency will be a basic competency for all workers in the future. It needs to be included as a core component of school education, both in terms of content and delivery, as distinct from the teaching of specialised ICT, technology and computer science subjects.</p>
   <footer><cite>Australia’s Future Workforce? CEDA, 2015, p.15</cite></footer>
 </blockquote>
@@ -191,7 +191,7 @@ While most commentators believe that STEM skills will be the most secure pathway
 
 This emphasis on creativity and design thinking is taken up in increasing interest in combining STEM education with arts and design, to provide the A in ‘STEAM’ education. Further, STEM is also linked to digital literacy: “The jobs of the future require problem solving and digital skills, and innovative and creative thinking, all taught through STEM” (Commonwealth Bank, 2017, p.11). Another report argues that “over 50% of jobs will require significant digital skills and yet our young people are not learning them in schools” (FYA, 2017a, p.2). Figure 4 provides estimates of the proportions of future jobs that will need various levels of digital literacy, with more than half of future occupations needing much more than the skills learnt in merely operating computers.
 
-<figure class="chart">
+<figure class="chart wow zoomIn">
   <img src="/img/figure4.svg" alt="Australia’s labour force digital literacy needs in the next 2-5 years: Digital Muggle (Non skill required) 8.2%; Digital Cutizen (Use tech to communicate and find info) 37.7%; Digital Worker (Configure and use systems) 45.6%; Digital maker (Build digital tech) 8.4%">
   <figcaption><b>Figure 4:</b> “Australia’s labour force has high digital literacy needs in the next 2-5 years”, Foundation for Young Australian, 2017a, p.30. The right to reproduce and communicate the material has been granted by Foundation for Young Australians</figcaption>
 </figure>
@@ -206,7 +206,7 @@ By looking at the skills required in job advertisements, research has shown that
 
 The issue with many of the skills needed for future jobs is that they often require extensive experience in the workplace to acquire and this can put young workers at a disadvantage where jobs are only available to those with experience, and acquired on the job. Some have warned that the jobs used by youth to enter the workforce are also the jobs technology is displacing (Brynjolfsson & McAfee, 2012; Ross, 2016).
 
-<figure class="chart">
+<figure class="chart wow zoomIn">
   <img src="/img/figure5.svg" alt="Growth rate for demand in select enterprise skills: Financial literacy 7%; Communication skills 12%; Building effective relationships 15%; Team work: 19%; Presentation skills: 25%; Problem solving skills: 25%; Creativity: 65%; Critical thinking 158%; Digital literacy 212%">
   <figcaption><b>Figure 5:</b> “Recent growth in demand for select enterprise skills”, Foundation for Young Australians, 2017, p.10. The right to reproduce and communicate the material has been granted by Foundation for Young Australians.</figcaption>
 </figure>
@@ -235,7 +235,7 @@ In the future, human skills such as creativity, imagination, emotional intellige
 
 Creativity is also particularly difficult to program a computer to achieve. This is because creativity, by definition, produces something that is new, novel and therefore something that cannot be fully predetermined in code beforehand. In that sense, a truly creative outcome is one that can only be recognised at the end of the process when looking back — computers are rules based and creativity could be virtually defined as the very opposite of that.
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>Creativity: Value will not come from the old ways, only the new, making imagination and creativity central to tomorrow’s capabilities.</p>
   <footer><cite>Commonwealth Bank jobs and skills of the future report 2017, p.17</cite></footer>
 </blockquote>
@@ -252,7 +252,7 @@ Other jobs that are unlikely to be replaced by robots include many trades such a
 
 Davenport and Kirby (2016) turn the standard argument about automation and computerisation on its head and ask, “if you were a machine, what shortcomings would you readily admit to, and want to have a human making up for?” (np). They suggest that your best career path is to become what the machine would need.
 
-<figure class="chart">
+<figure class="chart wow zoomIn">
   <img src="/img/figure6.svg" alt="Changes in high and low skill occupations 1991-2015: Labourers -37%; Admin -35%; Technicians and Trades -19%; Machinery Operators -19%; Sales 0%; Managers 6%; Professionals 54%; Community and Personal Services 87%">
   <figcaption><b>Figure 6:</b> “Changes in high and low skill occupations 1991-2015”, Foundation for Young Australians, 2017a, p.12. The right to reproduce and communicate the material has been granted by Foundation for Young Australians.</figcaption>
 </figure>
@@ -263,7 +263,7 @@ The monumental changes underway make it nearly impossible to predict with certai
 
 Reskilling and retraining will become increasingly necessary if people are to remain employed. In fact, individuals will be expected to ‘take greater personal responsibility for acquiring and continuously updating skills for progression and success in the face of limited investment from employers and government and increasing division between low and high-skill jobs’ (UKCES, 2014b p.26). Research suggests that businesses that invest in “workforce reskilling and human capital development” find that it is a “noregret action” (WEF, 2018, p.17), in that the benefits are positive to the business regardless of patterns in skill availability.
 
-<blockquote>
+<blockquote class="wow fadeInRight">
   <p>Today’s young people will need to spend more hours learning on the job than ever before … In fact, Australian workers will spend one-third of their hours at work learning, a 30 per cent increase from today.</p>
   <footer><cite>The New Work Smarts: Thriving in the New Work Order. FYA, 2017b, p.14</cite></footer>
 </blockquote>

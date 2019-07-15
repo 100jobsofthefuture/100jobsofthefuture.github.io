@@ -12,7 +12,7 @@ In this research we review the literature on work futures, noting a long history
 
 Trends away from routine jobs towards non-routine manual and especially cognitive skill work are already apparent, and will continue. There are a number of threads in the literature concerning the skills that will be increasingly valued in the new workplace. These include entrepreneurial skills, involving adaptability, autonomy and self-direction, in a situation where workers will need to sell their skills across many jobs, and incorporate freelance work among these. Increasingly, people in all jobs will need digital skills, and STEM / STEAM skills are advocated by many as the basis of much of the changing economy. Interpersonal skills will become more important as many routine jobs, or routine aspects of jobs, are taken over by machines, and there will be a need for people to work creatively at the human-computer interface. Many argue that this will make jobs more interesting and rewarding, creating more room for personal and community values, creativity and imagination. The general view is that people, in future jobs need to be working with machines, rather than competing with them.
 
-<figure class="image">
+<figure class="image wow fadeInRight">
   <img src="/img/jobs/NanoMedicalEng.jpg" alt="Artists impression of a Nanomedical engineer">
   <figcaption>Nanomedical engineer (Artist’s impression)</figcaption>
 </figure>
@@ -23,13 +23,13 @@ After a comprehensive review of the literature (summarised above) we identified 
 
 The experts’ perspectives were broadly consistent with the literature, but they provided fresh insights and varied perspectives on a range of aspects of future work. A number talked about the increasingly intimate relationship of machines to humans, and human needs, and the possibilities this opened up. A number saw the human-machine interface as being a major focus for future jobs, for translators of technology for users, or as interpreters and communicators of people’s needs to programmers and designers. The interviews affirmed the unique advantages we as humans have over machines, and productive ways we can work with machines rather than compete with them.
 
-<aside class="pullquote"><p>…the world of work has always been evolving and technology has already disrupted many domains.</p></aside>
+<aside class="pullquote wow bounceIn"><p>…the world of work has always been evolving and technology has already disrupted many domains.</p></aside>
 
 Regarding skills, the experts had much to say. Transdisciplinarity was a major theme, referring to the need for a strong disciplinary base but combined with breadth of knowledge of other areas, with technology skills, and with creativity. Another theme was the importance of human skills, increasingly relevant in a world where machines do the routine work, and relevant also for cross-disciplinary team work. A third theme was the need for flexibility and adaptability in the face of change, and the importance of the capacity to continue to learn, and be strategic about learning, over a lifetime.
 
 The sample of 100 jobs of the future portrays a world of work that continues to offer a breadth of career opportunities across all sectors. Whilst we set out to identify new jobs and explore the impact of the major drivers of change on the future workplace, our research kept reminding us that the world of work has always been evolving and technology has already disrupted many domains. At the same time, some jobs will change very little, for example those that involve skilled manual work that machines cannot duplicate or jobs that make economic sense to continue as they are.
 
-<figure class="image">
+<figure class="image wow fadeInRight">
   <img src="/img/jobs/Nostalgist.jpg" alt="Artists impression of a Nostalgist consulting with client">
   <figcaption>Nostalgist (Artist’s impression)</figcaption>
 </figure>
@@ -38,7 +38,7 @@ Some of the 100 jobs of the future are variations of those that already exist, p
 
 We also clustered the 100 job roles into eleven broad categories based on the type of work undertaken: Technology, People, Law, Business, Environment, Urban, Agriculture, Health, Data, Experience and Space. Unsurprisingly, we found that jobs across all these categories are influenced by the major drivers of change: technological advances, climate change, data democratisation, globalization, population pressures and changed demographic profiles, and most also require a multidisciplinary skill set. A wellness consultant or nutritionist having a health job, for example a *health shaper*, will require a high level of digital and data literacy to provide bespoke services informed by health data and predictive modelling; a design engineer of the future, for example an *autonomous vehicle profile designer* with a tech job, will also need to have a background in interior design, and possess excellent creative and visual artistic skills required in experience jobs. This fusion of skills and perspectives from different domains will create new multi-disciplinary fields that advance what is possible, trigger new drivers of change and redefine the jobs of the future.
 
-<figure class="image">
+<figure class="image wow fadeInRight">
   <img src="/img/jobs/AutoVehicleDesigner.jpg" alt="Artists impression of a Autonomous vehicle profile designer">
   <figcaption>Autonomous vehicle profile designer (Artist’s impression)</figcaption>
 </figure>
