@@ -644,3 +644,20 @@ background-color: rgba(0,0,0,0.2);
 display: inline;
 }
 }
+.browser-upgrade,
+.browser-upgrade:visited {
+  color: #fff;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  li {
+    list-style: none;
+    text-align: center;
+    margin: 0 8px 8px 8px;
+  }
+}
