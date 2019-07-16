@@ -38,9 +38,9 @@ Information (knowledge) may be able to be applied in a particular context (skill
 
 **Part A: The Job Explorer and Interest Groups**
 
-**Student activity:** Students to complete Job Explorer in class. Students to review the jobs suggested to them and note what category these jobs fall into (Technology, People, Business and Law, Environment, Urban, Agriculture, Space, Health, Data, Experience).
-
-Students to get into groups based on their interest area. Students to share within their group one of the jobs that interested them and describe why they are interested in this job. The jobs they share can be similar or completely different.
+**Student activity:**
+1. Students to complete [Job Explorer](/quiz/) in class. Students to review the jobs suggested to them and note what category these jobs fall into (Technology, People, Business and Law, Environment, Urban, Agriculture, Space, Health, Data, Experience).
+2. Students to get into groups based on their interest area. Students to share within their group one of the jobs that interested them and describe why they are interested in this job. The jobs they share can be similar or completely different.
 
 ---
 

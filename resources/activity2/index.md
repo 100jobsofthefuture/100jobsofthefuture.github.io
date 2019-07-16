@@ -33,22 +33,20 @@ Both skills and experience are something that we can acquire.
 
 **Part A: The Job Explorer and 100 Jobs of the Future - Finding Out More**
 
-**Student activity:** Students complete [Job Explorer](/quiz/) noting their working styles **strengths and preferences**. Students review the jobs suggested and select 1 – 2 jobs they are interested in.
-
-Students arrange in small groups based on their preferred working styles (Practical, Investigative, Creative, Social, Enterprising and Organised - based on their responses to the first 3 questions of the Job Explorer).
-
-Students or teacher to nominate one note taker per group.
-
-Students share within their group one of the jobs and describe why they are interested in this job. The jobs they share can be similar or completely different.
-
-Students to read the ‘what next’ section of the Job Explorer together, and identify the ‘working to your strengths’ strategy that is aligned with their personality area (see Figure 3: Working to your strengths).
-
+**Student activity:**
+<ol>
+<li>Students complete [Job Explorer](/quiz/) noting their working styles **strengths and preferences**. Students review the jobs suggested and select 1 – 2 jobs they are interested in.</li>
+<li>Students arrange in small groups based on their preferred working styles (Practical, Investigative, Creative, Social, Enterprising and Organised - based on their responses to the first 3 questions of the Job Explorer).</li>
+<li>Students or teacher to nominate one note taker per group.</li>
+<li>Students share within their group one of the jobs and describe why they are interested in this job. The jobs they share can be similar or completely different.</li>
+<li>Students to read the ‘what next’ section of the Job Explorer together, and identify the ‘working to your strengths’ strategy that is aligned with their personality area (see Figure 3: Working to your strengths).
 <figure class="resources">
   <table class="lined">
     <tr>
-      <th style="border: none;">
+      <th style="border: none;" class="centered">
       <h6>Working to your strengths</h6>
-      When you’re exploring what’s out there, it helps to work with your strengths and preferences. The Job Explorer previously identified the styles that you’re likely to prefer working in, and it makes sense to work with those styles. Don’t feel that you’re limited to only working within your style though!</th>
+      When you’re exploring what’s out there, it helps to work with your strengths and preferences. The Job Explorer previously identified the styles that you’re likely to prefer working in, and it makes sense to work with those styles. Don’t feel that you’re limited to only working within your style though!
+      </th>
     </tr>
     <tr><td>If you scored highest in the <strong>Practical</strong> category, you might prefer to dive in and try new things. Practical experiences might be the most useful way for you to learn new skills and see if you like the areas you’re exploring. Try volunteering, teaching yourself some new skills or techniques – just have a go!</td></tr>
     <tr><td>If you scored highest in the <strong>Investigative</strong> category, you might prefer to do a lot of private research before you try anything practical. For Investigative people, online research is your friend! You might find that you can learn the most from researching trends, and you might find that online training is more your style than learning in a classroom setting.</td></tr>
@@ -59,12 +57,14 @@ Students to read the ‘what next’ section of the Job Explorer together, and i
   </table>
   <figcaption class="centered">Figure 3: Working to your strengths.</figcaption>
 </figure>
-
-Students to brainstorm ways that they could find out more about:
-
-*	the skills and experience needed for the jobs they are interested in; and
-*	the ways that students could gain these skills and experiences.
-
+</li>
+<li>Students to brainstorm ways that they could find out more about:
+  <ul>
+    <li>the skills and experience needed for the jobs they are interested in; and</li>
+    <li>the ways that students could gain these skills and experiences.</li>
+  </ul>
+</li>
+</ol>
 ---
 
 **Part B: Sharing Ideas and Picking a Strategy**

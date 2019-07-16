@@ -32,7 +32,9 @@ By thinking about the careers that have interested us so far, we can gain an und
 
 **Teacher explanation:** Draw the image below (Figure 1: Career mapping template) on the board and list a couple of jobs and the reasons for and against these jobs. You can use your own career interests as an example if you wish, or use the example below.
 
-Eg: Teacher: Reason for = hours work for young family, supporting young people’s lives and Reason against = extra curricula commitments, marking at home
+Eg: Teacher:
+* Reason for = hours work for young family, supporting young people’s lives and
+* Reason against = extra curricula commitments, marking at home
 
 Instruct students to create their own map, and let students know that they will be sharing their timeline with a pair/small group, but not with the entire class.
 
@@ -54,7 +56,7 @@ Students also list the reasons that they wanted to do those jobs and the reasons
 
 **Teacher explanation:** Now, we want to develop a sense of the reasons that drew us to particular careers and reasons we might decide against others, we can look for the reasons that are coming up more than once. We can then use this information to help us make decisions about future careers.
 
-Present examples on the board, ask students to identify common themes
+Present examples on the board, ask students to identify common themes.
 
 Examples of common themes:
 *	Interest or lack of interest in a subject area (e.g. love of music, dislike of physics).
@@ -67,11 +69,10 @@ If we look at the themes in this example, we can see that the things that most o
 
 Sometimes we will have some very clear things in common across all of the jobs and careers we’ve wanted to do, and sometimes we won’t. Everyone’s reasons are different and no option is wrong.
 
-**Student task:** Students to compare their lists of jobs and the reasons they wanted to do the various jobs on their lists and why they decided not to pursue those jobs later.
-
-Each student to explain to their pair/group their reasons for and against the jobs they listed.
-
-Students in each pair/group to look for commonalities/reoccurring themes in their lists and the lists of their partners/groups. Students to write down their own common themes on their career mapping template.
+**Student task:**
+1. Students to compare their lists of jobs and the reasons they wanted to do the various jobs on their lists and why they decided not to pursue those jobs later.
+2. Each student to explain to their pair/group their reasons for and against the jobs they listed.
+3. Students in each pair/group to look for commonalities/reoccurring themes in their lists and the lists of their partners/groups. Students to write down their own common themes on their career mapping template.
 
 ---
 
@@ -79,20 +80,21 @@ Students in each pair/group to look for commonalities/reoccurring themes in thei
 
 **Teacher explanation:** If we know what our common themes are, what we are interested and not interested in, and what motivates us, then we’re looking at the jobs we might want to do in the future, we can use this information to help us decide what will be a good option for us.
 
-**Student task:** Students draw two columns on a page and write their common themes on the left. A theme is an aspect of jobs that they appreciate.  Students to browse through the [100 jobs list](/browse/) and when they see a job that they think might align with one of their themes,  to write it in the right hand column.
-
-<figure class="resources">
-  <table class="lined">
-    <tr><td>Job Theme</td>	<td>Job of the future</td></tr>
-    <tr><td>Working with animals</td>	<td></td></tr>
-    <tr><td>Helping others</td>	<td></td></tr>
-    <tr><td>Being able to travel</td>	<td></td></tr>
-  </table>
-  <figcaption class="centered">Figure 2: Example themes and job column.</figcaption>
-</figure>
-
-Students share the jobs they found in their pairs or groups and to discuss why they think the jobs they have chosen align with their themes.
-Note: in instances where students did not generate many themes, they can use this exercise to explore what kinds of jobs interest them and then see if there are any themes in common in the jobs they expressed interest in.
+**Student task:**
+<ol>
+  <li>Students draw two columns on a page and write their common themes on the left. A theme is an aspect of jobs that they appreciate.  Students to browse through the [100 jobs list](/browse/) and when they see a job that they think might align with one of their themes,  to write it in the right hand column.
+    <figure class="resources">
+      <table class="lined">
+        <tr><td>Job Theme</td>	<td>Job of the future</td></tr>
+        <tr><td>Working with animals</td>	<td></td></tr>
+        <tr><td>Helping others</td>	<td></td></tr>
+        <tr><td>Being able to travel</td>	<td></td></tr>
+      </table>
+      <figcaption class="centered">Figure 2: Example themes and job column.</figcaption>
+    </figure>
+  </li>
+  <li>Students share the jobs they found in their pairs or groups and to discuss why they think the jobs they have chosen align with their themes. Note: in instances where students did not generate many themes, they can use this exercise to explore what kinds of jobs interest them and then see if there are any themes in common in the jobs they expressed interest in.</li>
+</ol>
 
 Teachers can lead a whole class discussion that interrogates jobs and themes:
 *	How happy do you think the person in the example will be working in a job that is (aligned with one of the common themes)?
