@@ -384,17 +384,12 @@ touch-action: none;
 width: 100%;
 max-width: 500px;
 flex-shrink: 0;
-padding: 10px;
+padding: 10px 40px 10px 10px;
 overscroll-behavior: none;
 }
-.question p:first-of-type,
-.areas-wrapper > p {
-  padding-right: 30px;
-}
 @media only screen and (min-width: 500px) {
-  .question p:first-of-type,
-  .areas-wrapper > p {
-    padding-right: 0;
+  .question {
+    padding-right: 10px;
   }
 }
 .question p {
