@@ -156,6 +156,11 @@ $( '.next, .back' ).on( 'click', function( event ) {
         scrollLeft: scrollLeftValue
     }, 600, function() {
         // Animation complete.
+        $( '#tool' ).animate({
+            scrollTop: 0
+        }, 300, function() {
+          // Animation complete.
+        });
     });
 });
 
