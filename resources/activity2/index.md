@@ -44,7 +44,7 @@ Both skills and experience are something that we can acquire.
   <table class="lined">
     <tr>
       <th style="border: none;" class="centered">
-      <h6>Working to your strengths</h6>
+      <span style="font-weight: 400; font-size: 1.266em; color: #495057;">Working to your strengths</span>
       When you’re exploring what’s out there, it helps to work with your strengths and preferences. The Job Explorer previously identified the styles that you’re likely to prefer working in, and it makes sense to work with those styles. Don’t feel that you’re limited to only working within your style though!
       </th>
     </tr>
