@@ -33,7 +33,7 @@ title: Quiz results
         <li class="job-card {{ job.aow | remove: "," }} {{ job.riasec  | remove: "," }}">
           <header class="job-card-header">
             <h3>{{ job.title }}</h3>
-          </header class="job-card-header">
+          </header>
           <div class="job-card-descrip">
             <p>{{ job.description }}</p>
           </div>
@@ -41,7 +41,7 @@ title: Quiz results
             <h4>{{ job.title }}</h4>
             {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
             {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-            {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}">{% endunless %}
+            {% unless job.image == nil %}<img src="/img/jobs/{{ job.image }}" alt="">{% endunless %}
           </div>
           <footer class="job-card-footer">
             <p class="expand"></p>
