@@ -517,26 +517,33 @@ button.mobile-menu::before {
 .fig-left > div {
   max-width: 780px;
   margin-left: auto;
+  clear: both;
 }
 .fig-left > figure {
   float: left;
   width: 40%;
   min-width: 150px;
   max-width: 300px;
-  margin-left: 0;
+  margin: 0 20px 20px 0;
 }
 .fig-right > div {
   max-width: 780px;
   margin-right: auto;
+  clear: both;
 }
 .fig-right > figure {
   float: right;
   width: 40%;
   min-width: 150px;
   max-width: 300px;
-  margin-right: 0;
+  margin: 0 0 20px 20px;
 }
-
+@media only screen and (min-width: 600px) {
+  .fig-left > div,
+  .fig-right > div {
+    clear: none;
+  }
+}
 .logo {
   position: relative;
   display: block;
