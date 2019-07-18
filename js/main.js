@@ -3,8 +3,13 @@ $(document).ready(function() {
       $('.site-menu ul').slideToggle();
     });
 
+    // contents menu
     $('.mobile-menu').on('click', function() {
-      $('.report aside').toggleClass('open');
+      $('.report .contents').toggleClass('open');
+      $('body').toggleClass('noScroll');
+    });
+    $('.overlay').on('click', function() {
+      $('.report .contents').toggleClass('open');
       $('body').toggleClass('noScroll');
     });
 
@@ -45,6 +50,13 @@ $(document).ready(function() {
         $('.button.top').fadeIn();
       } else {
         $('.button.top').fadeOut();
+      }
+    });
+
+    $( window ).resize(function() {
+      if(window.innerWidth > 900){
+        $('.report .contents').removeClass('open');
+        $('body').removeClass('noScroll');
       }
     });
 });
