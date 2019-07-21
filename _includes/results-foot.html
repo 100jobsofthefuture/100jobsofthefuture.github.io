@@ -94,26 +94,6 @@
     }
   });
 </script>
-<!-- Google Analytics -->
-<script>
-  // respect browser do not track setting
-  _doNotTrack = (
-    window.doNotTrack == "1" ||
-    navigator.doNotTrack == "yes" ||
-    navigator.doNotTrack == "1" ||
-    navigator.msDoNotTrack == "1" ||
-    ('msTrackingProtectionEnabled' in window.external &&
-    window.external.msTrackingProtectionEnabled())
-  );
-  if (_doNotTrack) {
-    // disable tracking: https://developers.google.com/analytics/devguides/collection/analyticsjs/user-opt-out
-    window['ga-disable-UA-144237234-1'] = true;
-  }
-  // html5boilerplate recommended tracking code
-  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-  ga('create', 'UA-144237234-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set','transport','beacon'); ga('send', 'pageview');
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
-<!-- end Google Analytics -->
+{% include google-analytics.html %}
 </body>
 </html>
