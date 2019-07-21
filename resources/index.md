@@ -2,7 +2,7 @@
 #Jekyll front matter
 
 layout: resources
-title: "Report: 100 Jobs of the Future"
+title: "Resources: 100 Jobs of the Future"
 description: Experts have come together to predict 100 jobs of the future.
 ---
 # Support activities for teachers
