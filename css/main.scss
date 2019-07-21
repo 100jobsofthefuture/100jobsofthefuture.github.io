@@ -1026,10 +1026,10 @@ aside.pullquote p {
 .site-footer {
   clear: both;
  background-color: $ford-blue;
- padding: 48px 0;
  margin-top: 64px;
 }
 .site-footer .logos {
+  padding: 48px 0;
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
@@ -1037,6 +1037,16 @@ aside.pullquote p {
 .site-footer img {
  max-width: 240px;
  margin: 24px 48px;
+}
+.site-details {
+  background-color: darken($ford-blue, 5%);
+  padding: 16px 0;
+}
+.site-details p {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
 }
 
 .expert {
