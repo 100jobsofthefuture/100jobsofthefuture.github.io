@@ -293,7 +293,16 @@ label {
   display: block;
   font-size: 1.602em;
 }
-input, textarea {
+p label {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 1;
+}
+input[type="checkbox"] {
+  vertical-align: text-top;
+  margin-right: 8px;
+}
+input[type="text"], input[type="email"], textarea {
   display: block;
   padding: 12px;
   font-size: 1.266em;
@@ -1047,6 +1056,14 @@ aside.pullquote p {
   margin: 0;
   color: #fff;
   font-size: 12px;
+}
+.site-details a,
+.site-details a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+.site-details a:hover {
+  text-decoration: none;
 }
 
 .expert {

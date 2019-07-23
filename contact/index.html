@@ -15,11 +15,12 @@ description:
     <form method="POST" action="https://formspree.io/auscomms@ford.com">
       <input type="hidden" name="_subject" value="100jobsofthefuture.com contact form message">
       <label for="name">Your name</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" required>
       <label for="email">Your email</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" required>
       <label for="message">Your message</label>
-      <textarea id="message" name="message"></textarea>
+      <textarea id="message" name="message" required></textarea>
+      <p><input type="checkbox" id="privacy-consent" name="privacy-consent" required><label for="privacy-consent">I have read the <a href="/privacy/" target="_blank"> privacy notice</a> and confirm my agreement</label></p>
       <input type="text" name="_gotcha" class="hidden">
       <button type="submit">Send</button>
     </form>
