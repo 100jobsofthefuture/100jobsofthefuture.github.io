@@ -564,6 +564,10 @@ button.mobile-menu::before {
   max-width: 480px;
   background: #fff;
 }
+.logo p {
+  line-height: 0;
+  margin: 0;
+}
 .logo::after {
   content: "";
   display: block;
@@ -575,7 +579,7 @@ button.mobile-menu::before {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.logo span {
+.logo .byline {
   position: absolute;
   bottom: 0;
   transform: translateY(100%);
