@@ -554,39 +554,19 @@ button.mobile-menu::before {
   }
 }
 .logo {
-  position: relative;
   display: block;
-  text-indent: -9999px;
-  margin: 0 0 2em -10px;
-  padding: 0;
-  line-height: 0;
   width: 100%;
   max-width: 480px;
   background: #fff;
+  margin: 0 0 13px -10px;
 }
-.logo p {
-  line-height: 0;
-  margin: 0;
-}
-.logo::after {
-  content: "";
-  display: block;
-  height: 0;
-  width: 100%;
-  padding-bottom: 60%;
-  background-image: url('/img/logo-640by810.png');
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
+.logo img {
+  margin-top: -66.6667%;
 }
 .logo .byline {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(100%);
-  text-indent: 0;
+  margin: 0;
   line-height: 1.6;
   width: 100%;
-  left: 0;
   text-align: right;
   color: #495057;
   font-size: 0.75em;
@@ -1011,30 +991,26 @@ aside.pullquote p {
   padding: 8px 12px 12px 12px;
 }
 .site-header .logos img {
-  height: 60px;
   margin: 0 8px;
 }
 .site-header .logos img.deakin {
   height: 80px;
+  width: 80px;
 }
 .site-header .logos img.griffith {
   height: 40px;
+  width: 104px;
+}
+.site-header .logos img.ford {
+  height: 60px;
+  width: 100px;
 }
 @media only screen and (min-width: 900px) {
   .site-header .logos {
     display: block;
+    display: flex;
+    align-items: center;
   }
-  /*
-  .home .site-header .logos img {
-    height: 100px;
-  }
-  .home .site-header .logos img.deakin {
-    height: 120px;
-  }
-  .home .site-header .logos img.griffith {
-    height: 60px;
-  }
-  */
 }
 .site-footer {
   clear: both;
