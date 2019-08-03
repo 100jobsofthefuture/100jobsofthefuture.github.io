@@ -30,7 +30,7 @@ title: Quiz results
     <div class="wide container">
       <ul class="results job-card-listing">
       {% for job in site.data.jobs %}
-        <li class="job-card {{ job.aow | remove: "," }} {{ job.riasec  | remove: "," }}">
+        <li class="job-card {{ job.aow | remove: "," }} {{ job.riasec  | remove: "," }}" tabindex="0">
           <header class="job-card-header">
             <h3>{{ job.title }}</h3>
           </header>
