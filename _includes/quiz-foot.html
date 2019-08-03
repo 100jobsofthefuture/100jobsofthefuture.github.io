@@ -27,6 +27,40 @@
  *  jquery.ui.mouse.js
  */
 !function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
+// make jquery sortable keyboard accessible https://codepen.io/bartz/pen/rrgyjw
+jQuery.fn.extend({
+  ksortable: function(options) {
+    this.sortable(options);
+    $('li', this).attr('tabindex', 0).bind('keydown', function(event) {
+        if(event.which == 37 || event.which == 38) { // left or up
+          $(this).insertBefore($(this).prev());
+        }
+        if(event.which == 39 || event.which == 40) { // right or down
+          $(this).insertAfter($(this).next());
+        }
+        if (event.which == 84 || event.which == 33) { // "t" or page-up
+          $(this).parent().prepend($(this));
+        }
+        if (event.which == 66 || event.which == 34) { // "b" or page-down
+          $(this).parent().append($(this));
+        }
+        if(event.which == 82) { // "r"
+          var p = $(this).parent();
+          p.children().each(function(){p.prepend($(this))})
+        }
+        if(event.which == 83) { // "s"
+          var p = $(this).parent();
+          p.children().each(function(){
+            if(Math.random()<.5)
+              p.prepend($(this));
+            else
+              p.append($(this));
+          })
+        }
+        $(this).focus();
+    });
+  }
+});
 
 $( document ).ready(function() {
 /*
@@ -117,7 +151,7 @@ function updateScore() {
 updateScore();
 
 // initiate sortable with change
-$( ".sortable" ).sortable({
+$( ".sortable" ).ksortable({
   axis: "y",
   containment: "parent",
   stop: function( event, ui ) {}
@@ -143,8 +177,13 @@ $( window ).resize(function() {
     $( '.wrapper' ).scrollLeft(2*width);
   }
 });
+
+$('#q2, #q3, #q4').css('visibility','hidden');
 // question pagination
 $( '.next, .back' ).on( 'click', function( event ) {
+    var thiscreen =  $(this).parents('.question').attr('id');
+    var nextscreen = $(this).attr('href');
+    $(nextscreen).css('visibility','visible');
     event.preventDefault();
     var width = $( '.scroll-wrapper' ).width();
     if( $( this ).hasClass( 'next' ) ) {
@@ -160,6 +199,7 @@ $( '.next, .back' ).on( 'click', function( event ) {
             scrollTop: 0
         }, 300, function() {
           // Animation complete.
+          $('#'+thiscreen).css('visibility','hidden');
         });
     });
 });
@@ -171,11 +211,14 @@ var currentVerticalFrame = 0;
 // scrollDown
 $( '#start-button' ).on( 'click', function( event ) {
     event.preventDefault();
+    $('#tool').show();
     verticalScroll(1);
     currentVerticalFrame = 1;
+    $('.browse-exit').attr('tabindex','-1');
 });
 $( '#continue-button' ).on( 'click', function( event ) {
     event.preventDefault();
+    $('#areas').show();
     verticalScroll(2);
     currentVerticalFrame = 2;
 });
@@ -203,7 +246,7 @@ $('.areasofwork input:checked').prop( "checked", false );
 var howmanychecked = 0;
 console.log(howmanychecked);
 if(howmanychecked > 1) {
-  $('.results.button').css('opacity', 1);
+  $('.results.button').removeClass('isDisabled');
 }
 $('.areasofwork input').on('change', function(){
   if($(this).prop('checked')){
@@ -212,9 +255,9 @@ $('.areasofwork input').on('change', function(){
     howmanychecked--;
   }
   if(howmanychecked == 2){
-    $('.results.button').css('opacity', 1);
+    $('.results.button').removeClass('isDisabled');
   } else if(howmanychecked <= 1){
-    $('.results.button').css('opacity', 0.2);
+    $('.results.button').addClass('isDisabled');
   }
   if(howmanychecked == 3){
     $('.areasofwork input').each(function (index){
@@ -236,18 +279,12 @@ $('.areasofwork input').on('change', function(){
   $('#results-button').attr('href', href);
 });
 
-/* click handler for results button
+/* click handler for results button */
 $( '#results-button' ).on( 'click', function( event ) {
-  event.preventDefault();
-  if($(this).css('opacity') == 1) {
-    var aow = [];
-    $.each($(".areasofwork input:checked"), function(){
-      aow.push($(this).val());
-    });
-    var params = "type="+highest+"&aow1="+aow[0]+"&aow2="+aow[1]+"&aow3="+aow[2];
-    window.top.location.assign("results?"+params); // window.top allows linking from iframe to main window
+  if($(this).hasClass('isDisabled')){
+    event.preventDefault();
   }
-});*/
+});
 
 /* clicj handler for readmore */
 $('.readmore').on( 'click', function( event ) {

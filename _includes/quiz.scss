@@ -150,7 +150,7 @@ background-size: 100%;
 background-position: center;
 margin-left: 12px;
 }
-.button.results {
+.button.results.isDisabled {
 opacity: 0.2;
 transition: opacity 1s ease;
 }
@@ -548,6 +548,12 @@ font-size: 1em;
 opacity: 0;
 position: absolute;
 left: -9999px;
+}
+.areasofwork input[type="checkbox"]:focus + label {
+  outline-color: rgb(77, 144, 254); // #4D90FE
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
 }
 .areasofwork label {
 background: #eee;
