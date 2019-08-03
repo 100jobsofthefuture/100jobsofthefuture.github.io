@@ -30,7 +30,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "tech" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -45,7 +45,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "people" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -60,7 +60,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "buslaw" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -75,7 +75,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "env" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -90,7 +90,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "urban" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -105,7 +105,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "ag" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -120,7 +120,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "space" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -135,7 +135,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "health" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -150,7 +150,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "data" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
@@ -165,7 +165,7 @@ The 100 jobs are listed here alphabetically under each broad category, you can a
   {% if job.category == "ex" %}
     {% assign jobno = jobno | plus: 1 %}
   <div>
-    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}"><span>{{ jobno }}</span> {{ job.title }}</h3>
+    <h3 class="report-job-heading {% if job.new == "new" %}new{% endif %}" tabindex="0"><span>{{ jobno }}</span> {{ job.title }}</h3>
     <div class="report-job-details">
       {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
       {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}

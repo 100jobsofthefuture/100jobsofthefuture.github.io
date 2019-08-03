@@ -11,12 +11,23 @@ $(document).ready(function() {
     $('.overlay').on('click', function() {
       $('.report .contents').toggleClass('open');
       $('body').toggleClass('noScroll');
+
+      // for job card details function below
+      $('.job-card-full-descrip').hide();
     });
+
 
     // job card details
     $('.job-card').on('click', function(){
-      $(this).find('.job-card-full-descrip').toggle();
-      $('body').toggleClass('noScroll');
+        $(this).find('.job-card-full-descrip').toggle();
+        $('body').toggleClass('noScroll');
+    });
+    // enter key version for keyboard ally
+    $('.job-card').on('keypress', function(event){
+      if (event.which == 13){
+        $(this).find('.job-card-full-descrip').toggle();
+        $('body').toggleClass('noScroll');
+      }
     });
 
     // job browse filters
@@ -38,6 +49,13 @@ $(document).ready(function() {
     $('.report-job-heading').on('click', function(){
       $(this).toggleClass('open');
       $(this).next().slideToggle();
+    });
+    // enter key version for keyboard ally
+    $('.report-job-heading').on('keypress', function(){
+      if (event.which == 13){
+        $(this).toggleClass('open');
+        $(this).next().slideToggle();
+      }
     });
 
     $('#results-aow-toggle').on('click', function(){

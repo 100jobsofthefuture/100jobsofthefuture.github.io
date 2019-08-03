@@ -29,7 +29,7 @@ description:
   <div class="">
     <ul class="job-card-listing">
     {% for job in site.data.jobs %}
-      <li class="job-card {% unless job.image == nil %}job-card-image{% endunless %} {{ job.aow | remove: "," }} {{ job.riasec  | remove: "," }} {{ job.category }}">
+      <li class="job-card {% unless job.image == nil %}job-card-image{% endunless %} {{ job.aow | remove: "," }} {{ job.riasec  | remove: "," }} {{ job.category }}" tabindex="0">
         <header class="job-card-header">
           <h3><span>{{ job.title }}</span></h3>
         </header>
