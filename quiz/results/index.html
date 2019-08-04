@@ -37,7 +37,7 @@ title: Quiz results
           <div class="job-card-descrip">
             <p>{{ job.description }}</p>
           </div>
-          <div class="job-card-full-descrip">
+          <div class="job-card-full-descrip" tabindex="0">
             <h4>{{ job.title }}</h4>
             {% assign paragraphs = job.full-description | newline_to_br | split: '<br />' %}
             {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
